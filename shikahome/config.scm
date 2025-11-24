@@ -1,0 +1,86 @@
+(define-module (shikahome config)
+  )
+
+(use-modules (gnu home)
+             (gnu packages)
+             (gnu home services)
+             (gnu services)
+             (gnu home services sound)
+             (gnu home services desktop)
+             (gnu home services dotfiles)
+             (gnu home services gnupg)
+             (guix gexp)
+             (guix packages)
+             (guix download)
+             (nonguix utils)
+             (gnu installer utils)
+             (nongnu packages nvidia)
+             (gnu home services shepherd))
+
+(define (home-dir)
+  (getenv "HOME"))
+
+(define (xdg-data-home)
+  (or (getenv "XDG_DATA_HOME")
+      (string-append home-dir "/.local/share")))
+
+(with-transformation replace-mesa
+                     (home-environment
+                       (packages (load "packages.scm"))
+
+                       (services
+                        (append (list (service home-dbus-service-type)
+                                      (service home-pipewire-service-type)
+                                      (service home-gpg-agent-service-type
+                                               (home-gpg-agent-configuration (pinentry-program
+                                                                              (file-append
+                                                                               (specification->package
+                                                                                "pinentry")
+                                                                               "/bin/pinentry"))
+                                                                             (ssh-support?
+                                                                              #t)))
+                                      (simple-service 'env-vars-service
+                                       home-environment-variables-service-type
+                                       `(("NIXPKGS_ALLOW_UNFREE" . "1")
+					 ("EDITOR" . "nvim")))
+
+                                      (service home-dotfiles-service-type
+                                               (home-dotfiles-configuration (directories '
+                                                                             ("../shikadotfiles"))
+                                                                            (layout 'stow)
+                                                                            (packages '
+                                                                             ("fastfetch"
+                                                                              "kitty"
+                                                                              "mangowc"
+                                                                              "neovim"
+                                                                              "jujutsu"
+                                                                              "git"
+                                                                              "tmux"
+                                                                              "fish"
+                                                                              "rofi"))))
+                                      (service home-files-service-type
+                                               `((".wakatime/wakatime-cli" ,(file-append
+                                                                             (specification->package
+                                                                              "wakatime-cli")
+                                                                             "/bin/wakatime-cli"))))
+                                      (simple-service 'pull-gpg
+                                       home-activation-service-type
+                                       #~(begin
+                                           (use-modules (guix gexp))
+                                           (system
+                                            "gpg --fetch-keys https://codeberg.org/ch4og.gpg")))
+
+                                      (simple-service 'home-manager
+                                       home-activation-service-type
+                                       #~(begin
+                                           (use-modules (guix gexp)
+                                                        (shikalib config-root))
+                                           (system (string-append "nix run "
+                                                    (dirname config-root)
+                                                    "/shikanix"
+                                                    " -- switch --flake "
+                                                    (dirname config-root)
+                                                    "/shikanix"))))
+
+                                      ) %base-home-services))))
+

@@ -1,0 +1,15 @@
+(channel
+ (version 0)
+ (name 'shikanox)
+ (url "https://codeberg.org/ch4og/shikanox.git")
+ (branch "main")
+ (dependencies
+  (channel
+   (name nonguix)
+   (url "https://gitlab.com/nonguix/nonguix.git")
+   (introduction
+    (channel-introduction
+     (version 0)
+     (commit "0f68c1684169cbef8824fb246dfefa3e6832225b")
+     (signer "2A39 3FFF 68F4 EF7A 3D29  12AF 6F51 20A0 22FB B2D5"))))))
+

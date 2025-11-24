@@ -1,0 +1,4 @@
+- [ ] Fix gpg-agent ssh integration
+- [ ] Set GTK theme, icons, cursor and font
+- [ ] Hellwal
+- [ ] Deal with portals
