@@ -56,6 +56,7 @@
                                                                               "kitty"
                                                                               "mangowc"
                                                                               "neovim"
+									      "nix"
                                                                               "jujutsu"
                                                                               "git"
                                                                               "tmux"
