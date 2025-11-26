@@ -35,6 +35,7 @@
                     "jujutsu"
                     "kdenlive"
                     "krita"
+		    "lazygit"
                     "libreoffice"
                     "mangowc"
                     "mpv"
