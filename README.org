@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Nikita Mitasov <me@ch4og.com>
+# SPDX-License-Identifier: CC0-1.0
+
 #+TITLE: Shikanox - Personal GNU/Linux [Early WIP]
 #+OPTIONS: toc:nil
 
