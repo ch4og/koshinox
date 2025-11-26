@@ -8,6 +8,7 @@
   home.packages = with pkgs; [
     kitty
     spotify
+    steam-run
     amnezia-vpn
     ayugram-desktop
     aagl.honkers-railway-launcher
