@@ -45,7 +45,7 @@
                                        home-environment-variables-service-type
                                        `(("NIXPKGS_ALLOW_UNFREE" . "1")
 					 ("EDITOR" . "nvim")
-					 ("FONTCONFIG_PATH" . "~/.guix-home/profile/etc/fonts/")))
+					 ("FONTCONFIG_PATH" . ,(string-append (home-dir) "/.guix-home/profile/etc/fonts/"))))
 
                                       (service home-dotfiles-service-type
                                                (home-dotfiles-configuration (directories '
@@ -56,7 +56,6 @@
                                                                               "kitty"
                                                                               "mangowc"
                                                                               "neovim"
-									      "nix"
                                                                               "jujutsu"
                                                                               "git"
                                                                               "tmux"
