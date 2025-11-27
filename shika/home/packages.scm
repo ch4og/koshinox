@@ -30,6 +30,7 @@
                     "font-awesome-nonfree"
                     "fontforge"
                     "font-google-noto"
+		    "font-google-noto-emoji"
                     "fzf"
                     "gnupg"
                     "grim"
