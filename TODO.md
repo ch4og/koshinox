@@ -19,3 +19,4 @@
 - [ ] satty
 - [ ] wlogout maybe
 - [ ] Gamemode try setting platform-profile
+- [ ] wl-mirror
