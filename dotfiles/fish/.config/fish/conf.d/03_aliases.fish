@@ -9,5 +9,6 @@ if status is-interactive
   alias ip='ip -c'
   alias cat='bat -pp'
   alias t='tmux'
+  alias lg='lazygit'
   abbr -a !! --position anywhere --function last_history_item
 end
