@@ -15,11 +15,6 @@
     "modules": [
         {
             "type": "custom",
-            "key": " ",
-            "text": " "
-        },
-        {
-            "type": "custom",
             "key": "╭──────────╮",
             "text": ""
         },
