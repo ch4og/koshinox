@@ -2,9 +2,7 @@ if status is-interactive
   alias ls="eza --icons auto"
   alias ll='eza -l --icons auto'
   alias tree='eza --tree --icons auto'
-  alias v='nvim'
-  alias vi='nvim'
-  alias vim='nvim'
+  alias e='emacsclient -t'
   alias cd='z'
   alias grep='grep --color=auto'
   alias dust='dust -d 1 '
