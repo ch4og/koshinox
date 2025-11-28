@@ -67,6 +67,7 @@
                     "swww"
                     "tmux"
                     "torbrowser"
+		    "uxplay"
                     "unzip"
                     "virt-manager"
                     "waybar"
