@@ -68,10 +68,9 @@
 							      "Emacs daemon")
 							     (provision '(emacs-server))
 							     (start #~(lambda _
-									(system* "emacs" "--fg-daemon")))
+									(system* "emacs" "-daemon")))
 							     (stop #~(lambda _
-								       (system* "emacsclient" "--eval" "'(kill-emacs)'")))
-							     (one-shot? #f))))
+								       (system* "emacsclient" "--eval" "'(kill-emacs)'"))))))
                                       (service home-files-service-type
                                                `((".wakatime/wakatime-cli" ,(file-append
                                                                              (specification->package
