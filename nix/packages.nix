@@ -6,7 +6,6 @@
   ...
 }: {
   home.packages = with pkgs; [
-    kitty
     spotify
     steam-run
     amnezia-vpn
