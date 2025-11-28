@@ -44,7 +44,7 @@
                                       (simple-service 'env-vars-service
                                        home-environment-variables-service-type
                                        `(("NIXPKGS_ALLOW_UNFREE" . "1")
-					 ("EDITOR" . "nvim")
+					 ("EDITOR" . "emacsclient")
 					 ("FONTCONFIG_PATH" . ,(string-append (home-dir) "/.guix-home/profile/etc/fonts/"))))
 
                                       (service home-dotfiles-service-type
@@ -55,7 +55,7 @@
                                                                              ("fastfetch"
                                                                               "kitty"
                                                                               "mangowc"
-                                                                              "neovim"
+                                                                              "emacs"
                                                                               "jujutsu"
                                                                               "git"
                                                                               "tmux"
