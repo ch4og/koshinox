@@ -61,6 +61,19 @@ automatically linked into =~= via the =home-dotfiles-service-type=.
   stow mangowc zsh other-package-name -t ~
 #+end_src
 
+* Reconfigure script
+
+This repository provides a helper script =config=.
+
+Instead of running long =guix time-machine= invocations manually, you can simply do:
+
+#+BEGIN_SRC sh
+config system
+config home
+#+END_SRC
+
+(Loaded to =$PATH= from =./scripts/config= with direnv)
+
 * Acknowledgments
 
 Big thanks to people and projects that inspired me:

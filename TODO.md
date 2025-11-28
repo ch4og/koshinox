@@ -20,4 +20,3 @@
 - [ ] wlogout maybe
 - [ ] Gamemode try setting platform-profile
 - [ ] Emacs
-- [ ] Move parts to time-machine
