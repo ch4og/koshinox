@@ -6,7 +6,7 @@
         "width": 22,
         "padding": {
             "left": 3,
-            "top": 1
+            "top": 2
         }
     },
     "display": {
@@ -15,58 +15,60 @@
     "modules": [
         {
             "type": "custom",
-            "key": " ",
+            "key": " \n",
             "text": " "
         },
         {
-            "type": "custom",
-            "key": "╭──────────╮",
-            "text": ""
-        },
-        {
             "type": "title",
-            "key": "│  User   │",
-            "format": "{1}@{2}"
+            "key": "\u001b[37m╭────┬────",
+            "format": "\u001b[33m{1}@{2} \u001b[37m───────────"
         },
         {
-            "type": "command",
-            "key": "│󰗮  OS     │",
-            "text": "echo \"$(grep '^PRETTY_NAME=' /etc/os-release | cut -d= -f2- | tr -d '\"') ($(awk '/commit/ { getline; print substr($1,2,7); exit }' /run/current-system/channels.scm))\""
+            "type": "os",
+            "key": "\u001b[37m│\u001b[33m   \u001b[37m│",
+	    "format": "Shikanox {2}"
         },
         {
             "type": "kernel",
-            "key": "│  Kernel │",
-            "format": "{1} {2} {4}"
+            "key": "\u001b[37m│\u001b[33m 󰻀  \u001b[37m│",
+            "format": "{1} {2}"
         },
         {
-            "type": "command",
-            "key": "│  CPU    │",
-            "text": "grep '^model name' /proc/cpuinfo | head -1 | cut -d: -f2- | sed 's/(R)//g; s/(TM)//g; s/CPU//g; s/@.*//; s/with.*//; s/^ *//; s/  */ /g'"
+            "type": "cpu",
+            "key": "\u001b[37m│\u001b[33m   \u001b[37m│",
+	    "format": "{1}"
         },
         {
             "type": "memory",
-            "key": "│  RAM    │",
+            "key": "\u001b[37m│\u001b[33m   \u001b[37m│",
             "format": "{1} | {2}"
         },
         {
-            "type": "wm",
-            "key": "│󰍹  WM     │"
+            "type": "command",
+            "key": "\u001b[37m│\u001b[33m   \u001b[37m│",
+	    "text": "echo \"guix @$(awk '/commit/ { getline; print substr($1,2,7); exit }' /run/current-system/channels.scm)\""
         },
         {
-            "type": "Shell",
-            "key": "│  Shell  │"
+            "type": "shell",
+            "key": "\u001b[37m│\u001b[33m   \u001b[37m│"
         },
         {
             "type": "terminal",
-            "key": "│  Term   │"
+            "key": "\u001b[37m│\u001b[33m   \u001b[37m│"
         },
         {
-            "type": "command",
-            "key": "│  OS age │",
-            "text": "echo \"$(( ( $(date +%s) - $(stat -c %W /) ) / 86400 )) days\""
-        }, {
+            "type": "wm",
+            "key": "\u001b[37m│\u001b[33m 󰍹  \u001b[37m│"
+        },
+        {
+            "type": "packages",
+	    
+            "key": "\u001b[37m│\u001b[33m 󰏖  \u001b[37m│",
+            "format": "{guix-all} Guix, {nix-all} Nix"
+        },
+	{
             "type": "custom",
-            "key": "╰──────────╯",
+            "key": "\u001b[37m╰────┴────────────────────────",
             "text": ""
         }
     ]
