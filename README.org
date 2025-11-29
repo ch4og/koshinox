@@ -8,7 +8,7 @@
 #+HTML: <a href="https://codeberg.org/ch4og/shikanox" rel="nofollow noopener"><img src="https://img.shields.io/badge/source-Codeberg-5993C8?logo=codeberg&logoColor=white&labelColor=24292e"></a>
 #+HTML: <a href="https://gnu.org/software/guile/" rel="nofollow noopener"><img src="https://codeberg.org/luis-felipe/guile-graphics/raw/branch/trunk/badges/gnu-guile-made.svg"></a>
 
-[[./assets/screenshot.png]]
+#+HTML: <p align="center"><img src="./assets/screenshot.png" width="70%"/></p>
 
 A complete personal config "distro" built on GNU Guix System, GNU Guix Home and Nix Home Manager.
 
