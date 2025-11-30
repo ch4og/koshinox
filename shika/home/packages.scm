@@ -17,6 +17,7 @@
              (map specification->package
                   '("bat"
                     "blueman"
+                    "bibata-cursor-theme"
                     "btop"
                     "curl"
                     "direnv"
