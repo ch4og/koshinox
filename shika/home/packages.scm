@@ -75,7 +75,7 @@
                     "uxplay"
                     "unzip"
                     "virt-manager"
-                    "waybar"
+                    "waybar-experimental"
                     "wireplumber"
                     "wl-clipboard"
                     "wtype"

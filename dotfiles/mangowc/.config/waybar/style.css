@@ -17,19 +17,19 @@ window#waybar {
   font-family: "Ubuntu";
 }
 /*
-#tags {
+#workspaces {
     padding: 0 5px;
 }
 */
 
-#tags button {
+#workspaces button {
   padding: 0 5px;
   background: transparent;
   color: white;
   border-top: 2px solid transparent;
 }
 
-#tags button.active {
+#workspaces button.active {
   color: #5d6fc9;
   border-top: 2px solid #5d6fc9;
 }
@@ -106,4 +106,3 @@ window#waybar {
 
 #tray {
 }
-

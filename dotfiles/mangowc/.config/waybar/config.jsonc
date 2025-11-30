@@ -61,10 +61,11 @@
       // "format-en": "🦅",
       // "format-ru": "💤"
     },
-    "dwl/tags": {
-      "num-tags": 9,
-      // "tag-labels":
-      "format": "{name}"
+    "ext/workspaces": {
+        "format": "{icon}",
+        "ignore-hidden": true,
+        "on-click": "activate",
+        "sort-by-id": true,
     },
     "layer": "top",
     "memory": {
@@ -74,7 +75,7 @@
       "custom/spotify"
     ],
     "modules-left": [
-      "dwl/tags"
+      "ext/workspaces"
     ],
     "modules-right": [
       "custom/swaync",
