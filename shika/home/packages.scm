@@ -57,6 +57,7 @@
                     "pcmanfm"
                     "pinentry"
                     "pipewire"
+		    "protonup"
                     "qbittorrent-enhanced"
                     "remmina"
                     "reuse"
