@@ -86,6 +86,7 @@
                     "waybar-experimental"
                     "wireplumber"
                     "wl-clipboard"
+                    "wlr-dpms"
                     "wtype"
                     "xdg-desktop-portal"
                     "xdg-desktop-portal-gtk"

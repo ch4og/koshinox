@@ -4,7 +4,6 @@
 - [ ] Set GTK theme, icons, cursor and font
 - [ ] Hellwal
 - [ ] Deal with portals (xdg-desktop-portal-wlr)
-- [ ] Try DankMaterialShell
 - [ ] wlr-dpms
 - [ ] Display manager
 - [ ] swayidle
@@ -12,5 +11,4 @@
 - [ ] satty
 - [ ] wlogout maybe
 - [ ] Gamemode try setting platform-profile
-- [ ] wl-mirror
 - [ ] Fix audio crackings in some wine games
