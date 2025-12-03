@@ -55,18 +55,24 @@
      (lambda (f) (string-suffix? ".scm" f))
      (scandir (string-append repo-root "/shika/packages"))))))
 
+(define (run-format)
+  (system "find shika -type f -name \"*.scm\" -exec emacs --batch {} --eval '(progn (indent-region (point-min) (point-max)) (save-buffer))' \\; ;")
+  (system "find scripts -type f -exec emacs --batch {} --eval '(progn (indent-region (point-min) (point-max)) (save-buffer))' \\;"))
+
 (define (usage command)
   (display (string-append "Usage: " command " COMMAND [args...]\n\n"))
   (display "Commands:\n")
   (display "  system   [args...]  - reconfigure system\n")
   (display "  home     [args...]  - reconfigure home\n")
-  (display "  refresh  [args...]  - refresh channel packages\n"))
+  (display "  refresh  [args...]  - refresh channel packages\n")
+  (display "  format              - format code with Emacs"))
 
 (define (selection cmd)
   (match (cdr cmd)
     (("system" . rest) (run-guix "system" rest))
     (("home" . rest) (run-guix "home" rest))
     (("refresh" . rest) (run-refresh rest))
+    (("format") (run-format))
     (_ (usage (car cmd)) (exit 1))))
 
 (selection (command-line))
