@@ -19,6 +19,7 @@
                      nix
                      desktop
                      security-token
+                     linux
                      mcron
                      shepherd
                      dbus
@@ -106,6 +107,7 @@
                                      (udev-rules-service 'fido2
                                                          (specification->package "libfido2")
                                                          #:groups '("plugdev"))
+                                     (service kernel-module-loader-service-type '("ntsync"))
                                      (service nix-service-type
                                               (nix-configuration (extra-config
                                                                   (list (string-join '
