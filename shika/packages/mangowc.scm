@@ -20,38 +20,38 @@
 
 (define-public mangowc
   (package
-    (name "mangowc")
-    (version "0.10.6")
-    (source
-     (origin
-       (method git-fetch)
-       (uri (git-reference
-             (url "https://github.com/DreamMaoMao/mangowc")
-             (commit version)))
-       (file-name (git-file-name name version))
-       (sha256
-        (base32 "024k246s7hmvh2hv83ifxvfdzcmrjzxmj6i6j13zyjwjw80pgjlh"))))
-    (build-system meson-build-system)
-    (inputs (list wayland
-                  wayland-protocols
-                  libinput
-                  libdrm
-                  libxkbcommon
-                  pixman
-                  libdisplay-info
-                  libliftoff
-                  hwdata
-                  seatd
-                  pcre2
-                  libxcb
-                  xcb-util-wm
-                  wlroots
-                  scenefx))
-    (native-inputs (list meson ninja pkg-config))
-    (home-page "https://github.com/DreamMaoMao/mangowc")
-    (synopsis "Wayland compositor based on wlroots and scenefx")
-    (description "A Wayland compositor based on wlroots and scenefx,
+   (name "mangowc")
+   (version "0.10.6")
+   (source
+    (origin
+     (method git-fetch)
+     (uri (git-reference
+           (url "https://github.com/DreamMaoMao/mangowc")
+           (commit version)))
+     (file-name (git-file-name name version))
+     (sha256
+      (base32 "024k246s7hmvh2hv83ifxvfdzcmrjzxmj6i6j13zyjwjw80pgjlh"))))
+   (build-system meson-build-system)
+   (inputs (list wayland
+                 wayland-protocols
+                 libinput
+                 libdrm
+                 libxkbcommon
+                 pixman
+                 libdisplay-info
+                 libliftoff
+                 hwdata
+                 seatd
+                 pcre2
+                 libxcb
+                 xcb-util-wm
+                 wlroots
+                 scenefx))
+   (native-inputs (list meson ninja pkg-config))
+   (home-page "https://github.com/DreamMaoMao/mangowc")
+   (synopsis "Wayland compositor based on wlroots and scenefx")
+   (description "A Wayland compositor based on wlroots and scenefx,
 inspired by dwl but aiming to be more feature-rich.")
-    (license gpl3)))
+   (license gpl3)))
 
 mangowc
