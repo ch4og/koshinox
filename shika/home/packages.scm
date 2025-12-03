@@ -17,11 +17,13 @@
              (map specification->package
                   '("bat"
                     "blueman"
+                    "bluez"
                     "bibata-cursor-theme"
                     "btop"
                     "cliphist"
                     "curl"
                     "direnv"
+                    "dmenu-bluetooth"
                     "emacs-no-x"
                     "eog"
                     "eza"
