@@ -84,6 +84,20 @@
                                            (system
                                             "gpg --fetch-keys https://codeberg.org/ch4og.gpg")))
 
+                                      (simple-service 'reload-mango
+                                       home-activation-service-type
+                                       #~(begin
+                                           (use-modules (guix gexp))
+                                           (system
+                                            "pgrep mango && mmsg -d reload_config")))
+
+                                      (simple-service 'reload-waybar
+                                       home-activation-service-type
+                                       #~(begin
+                                           (use-modules (guix gexp))
+                                           (system
+                                            "pgrep waybar && killall -SIGUSR2 waybar")))
+
                                       (simple-service 'home-manager
                                        home-activation-service-type
                                        #~(begin
