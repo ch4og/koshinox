@@ -6,4 +6,4 @@
 
 (define-public shika-layout
   (keyboard-layout "us,ru" "colemak,"
-		   #:options '("grp:alt_shift_toggle")))
+		               #:options '("grp:alt_shift_toggle")))
