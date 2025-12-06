@@ -12,4 +12,6 @@ wl-clip-persist --clipboard regular --reconnect-tries 0 &
 
 wl-paste --watch cliphist store &
 
-mmsg -d focusmon,eDP-1
+mmsg -d focusmon,eDP-1 &
+
+env ~/.config/mango/scripts/switch_layouts.sh

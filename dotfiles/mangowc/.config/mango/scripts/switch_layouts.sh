@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
-layout_file="/tmp/current-layout"
-current_layout=$(cat "$layout_file" 2>/dev/null || echo "qwerty")
+targets="starrail.exe"
+declare -A state
 
-if [[ "$current_layout" == "qwerty" ]]; then
-    mmsg -d "setoption,xkb_rules_variant,colemak,"
-    echo "colemak" > /tmp/current-layout
-    echo "Switched to Colemak"
-else
-    mmsg -d "setoption,xkb_rules_variant,"
-    echo "qwerty" > /tmp/current-layout
-    echo "Switched to Qwerty"
-fi
+mmsg -w | while read monitor field value; do
+    [ "$field" = "appid" ] || continue
+    prev="${state[$monitor]}"
+    if echo "$value" | grep -qE "^($targets)$"; then
+        [ "$prev" != "in" ] && mmsg -d "setoption,xkb_rules_variant,"
+        state[$monitor]="in"
+    else
+        [ "$prev" = "in" ] && mmsg -d "setoption,xkb_rules_variant,colemak,"
+        state[$monitor]="out"
+    fi
+done

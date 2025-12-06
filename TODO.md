@@ -11,5 +11,4 @@
 - [ ] Gamemode try setting platform-profile
 - [ ] Tela icons
 - [ ] Waybar new config
-- [ ] Add mechanism that watches on curretly focused app and if it is game w/o rebinds switch to qwerty
 - [ ] Add shika update
