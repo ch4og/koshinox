@@ -51,6 +51,7 @@
                                                                            (layout 'stow)
                                                                            (packages '
                                                                             ("fastfetch"
+                                                                             "dxvk"
                                                                              "ghostty"
                                                                              "mangowc"
                                                                              "emacs"

@@ -55,7 +55,6 @@
                     "mangowc"
                     "mpv-nvidia"
                     "ncurses"
-                    "network-manager-applet"
                     "networkmanager-dmenu"
                     "nftables"
                     "obs-nvidia"
