@@ -80,6 +80,7 @@
                     "swaynotificationcenter"
                     "swww"
                     "tmux"
+                    "tokyonight-gtk-theme"
                     "torbrowser"
                     "uxplay"
                     "unzip"
