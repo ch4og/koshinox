@@ -11,6 +11,8 @@
   (channel
    (name nonguix)
    (url "https://gitlab.com/nonguix/nonguix.git")
+   (branch "master")
+   (commit "d741f41eca0a04694775118eedaa332ffa1a26f8")
    (introduction
     (channel-introduction
      (version 0)
