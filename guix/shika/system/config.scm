@@ -76,9 +76,9 @@
 
                                    %base-user-accounts))
 
-                      (packages (map replace-mesa (append (map specification->package
-                                                               '("vim" "fish" "openssh" "git" "kmscon"))
-                                                          %base-packages)))
+                      (packages (append (map specification->package
+                                             '("vim" "fish" "openssh" "git" "kmscon"))
+                                        %base-packages))
                       (services
                        (append (list (service network-manager-service-type
                                               (network-manager-configuration
@@ -132,32 +132,32 @@
                                                                    (virtual-terminal "tty1")
                                                                    (hardware-acceleration? #t)
                                                                    (keyboard-layout shika-layout)
-                                                                   (kmscon (replace-mesa kmscon))))
+                                                                   (kmscon kmscon)))
                                      (service kmscon-service-type (kmscon-configuration
                                                                    (virtual-terminal "tty2")
                                                                    (hardware-acceleration? #t)
                                                                    (keyboard-layout shika-layout)
-                                                                   (kmscon (replace-mesa kmscon))))
+                                                                   (kmscon kmscon)))
                                      (service kmscon-service-type (kmscon-configuration
                                                                    (virtual-terminal "tty3")
                                                                    (hardware-acceleration? #t)
                                                                    (keyboard-layout shika-layout)
-                                                                   (kmscon (replace-mesa kmscon))))
+                                                                   (kmscon kmscon)))
                                      (service kmscon-service-type (kmscon-configuration
                                                                    (virtual-terminal "tty4")
                                                                    (hardware-acceleration? #t)
                                                                    (keyboard-layout shika-layout)
-                                                                   (kmscon (replace-mesa kmscon))))
+                                                                   (kmscon kmscon)))
                                      (service kmscon-service-type (kmscon-configuration
                                                                    (virtual-terminal "tty5")
                                                                    (hardware-acceleration? #t)
                                                                    (keyboard-layout shika-layout)
-                                                                   (kmscon (replace-mesa kmscon))))
+                                                                   (kmscon kmscon)))
                                      (service kmscon-service-type (kmscon-configuration
                                                                    (virtual-terminal "tty6")
                                                                    (hardware-acceleration? #t)
                                                                    (keyboard-layout shika-layout)
-                                                                   (kmscon (replace-mesa kmscon))))
+                                                                   (kmscon kmscon)))
 
                                      (simple-service 'cron-jobs
                                                      mcron-service-type
