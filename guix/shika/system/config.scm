@@ -110,6 +110,10 @@
                                                          (specification->package "libfido2")
                                                          #:groups '("plugdev"))
                                      (service kernel-module-loader-service-type '("ntsync"))
+                                     (set-xorg-configuration
+                                      (xorg-configuration
+                                       (modules (cons nvda %default-xorg-modules))
+                                       (drivers '("nvidia"))))
                                      (service nix-service-type
                                               (nix-configuration (extra-config
                                                                   (list (string-join '
