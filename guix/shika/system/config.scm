@@ -16,6 +16,7 @@
              (guix gexp))
 
 (use-service-modules networking
+                     docker
 		                 avahi
                      ssh
                      nix
@@ -72,12 +73,13 @@
                                                          "fish") "/bin/fish"))
                                     (supplementary-groups '("wheel" "seat"
                                                             "audio" "netdev"
-                                                            "video" "plugdev")))
+                                                            "video" "plugdev"
+                                                            "docker")))
 
                                    %base-user-accounts))
 
                       (packages (append (map specification->package
-                                             '("vim" "fish" "openssh" "git" "kmscon"))
+                                             '("vim" "fish" "openssh" "git" "kmscon" "docker"))
                                         %base-packages))
                       (services
                        (append (list (service network-manager-service-type
@@ -90,6 +92,8 @@
                                      (service pcscd-service-type)
                                      (service bluetooth-service-type)
                                      (service polkit-service-type)
+                                     (service containerd-service-type)
+                                     (service docker-service-type)
                                      (service screen-locker-service-type
                                               (screen-locker-configuration
                                                (name "swaylock")
