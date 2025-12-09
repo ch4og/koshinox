@@ -6,7 +6,7 @@
   #:use-module (guix channels)
   #:use-module (srfi srfi-1))
 
-(define-public shika-chs
+(define-public %shika-chs
   (list (channel
          (name 'guix)
          (url "https://git.guix.gnu.org/guix.git")
@@ -46,4 +46,4 @@
            (openpgp-fingerprint
             "7C9E 7EBA 828C 58DF DACE  5BED 4DCC 7AB7 FC75 319B"))))))
 
-shika-chs
+%shika-chs

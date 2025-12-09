@@ -30,7 +30,7 @@
                                        kind
                                        "reconfigure"
                                        (string-append repo-guix-root "/shika/" kind "/config.scm")
-                                       shika-subs-urls
+                                       %shika-subs-urls
                                        "-L"
                                        repo-guix-root) extra-args) " "))))
 
