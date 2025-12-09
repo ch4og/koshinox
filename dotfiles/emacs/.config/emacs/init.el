@@ -53,5 +53,6 @@
 
 (add-hook 'after-make-frame-functions 'on-frame-open)
 (setq create-lockfiles nil)
+(setq backup-directory-alist '(("." . "~/.cache/emacs")))
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode +1)
