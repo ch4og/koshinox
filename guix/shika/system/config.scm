@@ -13,6 +13,7 @@
              (shika lib layout)
              (gnu services xorg)
              (koshi packages kmscon)
+             (aagl services hosts)
              (guix gexp))
 
 (use-service-modules networking
@@ -94,6 +95,7 @@
                                      (service polkit-service-type)
                                      (service containerd-service-type)
                                      (service docker-service-type)
+                                     (service aagl-hosts-service-type)
                                      (service screen-locker-service-type
                                               (screen-locker-configuration
                                                (name "swaylock")
@@ -168,27 +170,6 @@
                                                      (list #~(job "5 0 * * *"
                                                                   "guix gc -d 1d -F 1G")))
 
-                                     (simple-service 'add-extra-hosts
-                                                     hosts-service-type
-                                                     (list (host "0.0.0.0"
-                                                                 "overseauspider.yuanshen.com"
-                                                                 '("log-upload-os.hoyoverse.com"
-                                                                   "log-upload-os.mihoyo.com"
-                                                                   "dump.gamesafe.qq.com"
-                                                                   "apm-log-upload-os.hoyoverse.com"
-                                                                   "zzz-log-upload-os.hoyoverse.com"
-                                                                   "log-upload.mihoyo.com"
-                                                                   "devlog-upload.mihoyo.com"
-                                                                   "uspider.yuanshen.com"
-                                                                   "sg-public-data-api.hoyoverse.com"
-                                                                   "hkrpg-log-upload-os.hoyoverse.com"
-                                                                   "public-data-api.mihoyo.com"
-                                                                   "prd-lender.cdp.internal.unity3d.com"
-                                                                   "thind-prd-knob.data.ie.unity3d.com"
-                                                                   "thind-gke-usc.prd.data.corp.unity3d.com"
-                                                                   "cdp.cloud.unity3d.com"
-                                                                   "remote-config-proxy-prd.uca.cloud.unity3d.com"
-                                                                   "pc.crashsight.wetest.net"))))
                                      (simple-service 'runtime-dir
                                                      shepherd-root-service-type
                                                      (list (shepherd-service (documentation

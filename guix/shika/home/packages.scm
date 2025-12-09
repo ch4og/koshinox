@@ -42,6 +42,7 @@
                     "grim"
                     "grimblast"
                     "heroic-nvidia"
+                    "honkers-railway-launcher-nvidia"
                     "hyprpicker"
                     "imagemagick"
                     "jq"
