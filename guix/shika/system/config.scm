@@ -39,6 +39,6 @@
   (make-shika-os "ch" "noko" "Europe/Moscow" "en_US.utf8"))
 
 (define-public %shika-os-nvidia
-  (with-transformation replace-mesa %shika-os)
+  (with-transformation replace-mesa %shika-os))
 
 %shika-os-nvidia
