@@ -10,3 +10,5 @@
 - [ ] Gamemode try setting platform-profile
 - [ ] Waybar new config
 - [ ] Add shika update
+- [ ] ext sched
+- [ ] btrfs backups and scrub
