@@ -5,11 +5,10 @@
 
 (define-public %shika-subs
   '("https://mirror.yandex.ru/mirrors/guix"
-    "https://ci-guix-gnu-org.b-cdn.net"
-    "https://substitutes-nonguix-org.b-cdn.net"
     "https://mirror.sjtu.edu.cn/guix"
     "https://bordeaux.guix.gnu.org"
-    "https://substitutes.nonguix.org/"
+    "https://nonguix-proxy.ditigal.xyz"
+    "https://substitutes.nonguix.org"
     "https://guix.bordeaux.inria.fr"))
 
 (define-public %shika-subs-urls
