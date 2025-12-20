@@ -103,7 +103,7 @@
                                                      #~(begin
                                                          (use-modules (guix gexp))
                                                          (system
-                                                          "gpg --fetch-keys https://codeberg.org/ch4og.gpg")))
+                                                          "gpg --list-keys ch4og >/dev/null || gpg --fetch-keys https://codeberg.org/ch4og.gpg")))
 
                                      (simple-service 'reload-mango
                                                      home-activation-service-type
