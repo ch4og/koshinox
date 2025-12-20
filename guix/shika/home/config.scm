@@ -19,7 +19,8 @@
              (gnu installer utils)
              (nongnu packages nvidia)
              (gnu home services shepherd)
-             (koshi utils config-root))
+             (koshi utils config-root)
+             (shika home packages))
 
 (define (home-dir)
   (getenv "HOME"))
@@ -30,7 +31,7 @@
 
 (with-transformation replace-mesa
                      (home-environment
-                      (packages (load "packages.scm"))
+                      (packages %shika-home-packages)
 
                       (services
                        (append (list (service home-dbus-service-type)
