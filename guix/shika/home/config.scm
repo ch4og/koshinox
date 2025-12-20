@@ -25,10 +25,6 @@
 (define (home-dir)
   (getenv "HOME"))
 
-(define (xdg-data-home)
-  (or (getenv "XDG_DATA_HOME")
-      (string-append home-dir "/.local/share")))
-
 (with-transformation replace-mesa
                      (home-environment
                       (packages %shika-home-packages)
@@ -43,7 +39,8 @@
                                                (ssh-support? #t)))
                                      (simple-service 'env-vars-service
                                                      home-environment-variables-service-type
-                                                     `(("NIXPKGS_ALLOW_UNFREE" . "1")
+                                                     `(("TZ" . "Europe/Moscow")
+                                                       ("NIXPKGS_ALLOW_UNFREE" . "1")
 					                                             ("EDITOR" . "emacsclient")
                                                        ("GUIX_SANDBOX_EXTRA_SHARES" . "/games")
 					                                             ("FONTCONFIG_PATH" . ,(string-append (home-dir) "/.guix-home/profile/etc/fonts/"))))
@@ -76,7 +73,7 @@
 							                                               "Emacs daemon")
 							                                              (provision '(emacs-server))
 							                                              (start #~(lambda _
-									                                                     (system* "emacs" "-daemon")))
+									                                                     (system* "emacsclient" "--eval" "'(kill-emacs)'" "&&" "emacs" "-daemon")))
 							                                              (stop #~(lambda _
 								                                                      (system* "emacsclient" "--eval" "'(kill-emacs)'"))))))
                                      (service home-files-service-type
