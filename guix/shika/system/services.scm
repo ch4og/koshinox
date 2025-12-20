@@ -10,6 +10,7 @@
   #:use-module (gnu services dbus)
   #:use-module (gnu services desktop)
   #:use-module (gnu services docker)
+  #:use-module (gnu packages games)
   #:use-module (gnu services networking)
   #:use-module (gnu services nix)
   #:use-module (gnu services shepherd)
@@ -59,6 +60,8 @@
          (set-xorg-configuration %shika-xorg-configuration)
 
          (service aagl-hosts-service-type)
+
+         (udev-rules-service 'steam steam-devices-udev-rules)
 
          %shika-base-services))
 
