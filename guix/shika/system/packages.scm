@@ -21,5 +21,4 @@
          font-google-noto
          font-google-noto-emoji
          font-google-noto-sans-cjk
-         nss-certs
          %base-packages))
