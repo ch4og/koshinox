@@ -19,7 +19,7 @@
              (gnu installer utils)
              (nongnu packages nvidia)
              (gnu home services shepherd)
-             (koshi lib config-root))
+             (koshi utils config-root))
 
 (define (home-dir)
   (getenv "HOME"))
@@ -123,7 +123,7 @@
                                                      home-activation-service-type
                                                      #~(begin
                                                          (use-modules (guix gexp)
-                                                                      (koshi lib config-root))
+                                                                      (koshi utils config-root))
                                                          (system (string-append "nix run "
                                                                                 config-root
                                                                                 "/nix/hm"
