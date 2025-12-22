@@ -5,5 +5,4 @@
   #:use-module (gnu system keyboard))
 
 (define-public %shika-layout
-  (keyboard-layout "us,ru" "colemak,"
-		               #:options '("grp:alt_shift_toggle")))
+  (keyboard-layout "us,ru" "colemak," #:options '("grp:alt_shift_toggle")))

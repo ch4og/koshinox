@@ -10,6 +10,5 @@
 (define-public %shika-initrd microcode-initrd)
 
 (define-public %shika-kernel-arguments
-  '("loglevel=4"
-    "nvidia_drm.modeset=1"
+  '("nvidia_drm.modeset=1"
     "module_blacklist=pcspkr,nouveau"))

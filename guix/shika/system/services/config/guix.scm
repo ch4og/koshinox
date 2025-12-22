@@ -15,4 +15,4 @@
    (guix (guix-for-channels %shika-chs))
    (substitute-urls %shika-subs)
    (extra-options `("--gc-keep-derivations=yes" "--gc-keep-outputs=yes"))
-   (authorized-keys (append %shika-keys %default-authorized-guix-keys))))
+   (authorized-keys %shika-keys)))
