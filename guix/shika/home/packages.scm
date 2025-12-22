@@ -94,7 +94,7 @@
      "wl-mirror"
      "wlr-dpms"
      "wtype"
-     "xdg-desktop-portal"
+     ;"xdg-desktop-portal"
      "xdg-desktop-portal-gtk"
      "xdg-desktop-portal-wlr@0.8.1"
      "xdg-utils"

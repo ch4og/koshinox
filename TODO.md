@@ -16,3 +16,4 @@
 - [ ] locate-service-type
 - [ ] nonguix PR GUIX_SANDBOX_EXTRA_ENVS
 - [ ] consider using justfile instead of scripts
+- [ ] try out sops-guix
