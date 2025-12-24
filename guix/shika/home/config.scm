@@ -74,7 +74,8 @@
 							                                               "Emacs daemon")
 							                                              (provision '(emacs-server))
 							                                              (start #~(lambda _
-									                                                     (system* "emacsclient" "--eval" "'(kill-emacs)'" "&&" "emacs" "-daemon")))
+									                                                     (system* "emacsclient" "--eval" "'(kill-emacs)'" "||" "true")
+															     (system* "emacs" "-daemon")))
 							                                              (stop #~(lambda _
 								                                                      (system* "emacsclient" "--eval" "'(kill-emacs)'"))))))
                                      (service home-files-service-type
