@@ -46,6 +46,7 @@
          (service polkit-service-type)
          (service containerd-service-type)
          (service docker-service-type)
+         (service ntp-service-type)
 
          (service polkit-network-manager-service-type)
          (service runtime-dir-service-type)
