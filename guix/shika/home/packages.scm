@@ -1,12 +1,9 @@
 ;;; SPDX-FileCopyrightText: 2025 Nikita Mitasov <me@ch4og.com>
 ;;; SPDX-License-Identifier: GPL-3.0-or-later
 
-(define-module (shika home packages))
-(use-modules (guix utils)
-             (gnu packages)
-             (gnu packages dns)
-             (guix transformations)
-             (nongnu packages nvidia))
+(define-module (shika home packages)
+  #:use-module (guix utils)
+  #:use-module (gnu packages))
 
 (define-public %shika-home-packages
   (specifications->packages
@@ -14,6 +11,7 @@
      "bat"
      "bibata-cursor-theme"
      "bind:utils"
+     "binutils"
      "blueman"
      "bluez"
      "btop"
