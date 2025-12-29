@@ -16,4 +16,4 @@
    (theme (grub-theme
            (inherit (grub-theme))
            (image (file-append %artwork-repository "/grub/GuixSD-16-9.svg"))
-           (gfxmode '("1920x1080x32" "auto"))))))
+           (gfxmode '("1920x1080x32"))))))

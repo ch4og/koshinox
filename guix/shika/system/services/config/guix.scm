@@ -14,5 +14,5 @@
    (channels %shika-chs)
    (guix (guix-for-channels %shika-chs))
    (substitute-urls %shika-subs)
-   (extra-options `("--gc-keep-derivations=yes" "--gc-keep-outputs=yes"))
+   (extra-options `("--gc-keep-derivations=yes" "--gc-keep-outputs=yes" "--cores=16"))
    (authorized-keys %shika-keys)))

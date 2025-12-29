@@ -18,8 +18,6 @@
   #:use-module (gnu services ssh)
   #:use-module (gnu services sysctl)
   #:use-module (gnu services xorg)
-  #:use-module (nongnu packages nvidia)
-  #:use-module (nongnu services nvidia)
   #:use-module (koshi services guix-gc)
   #:use-module (koshi services ntsync)
   #:use-module (koshi services polkit-nm)
@@ -34,13 +32,13 @@
   #:use-module (shika system services config screen-locker)
   #:use-module (shika system services config xorg)
   #:use-module (aagl services hosts)
-  #:use-module (koshi services runtime-dir))
+  #:use-module (koshi services runtime-dir)
+  #:use-module (koshi services btrfs))
 
 (define-public %shika-system-services
   (cons* (service wpa-supplicant-service-type)
 				 (service avahi-service-type)
          (service seatd-service-type)
-         (service nvidia-service-type)
          (service pcscd-service-type)
          (service bluetooth-service-type)
          (service polkit-service-type)
@@ -53,6 +51,20 @@
          (service guix-gc-service-type)
          (service udev-fido2-service-type)
          (service ntsync-service-type)
+
+         (service btrfs-scrub-service-type
+                  (btrfs-scrub-configuration
+                   (schedule "0 0 * * 0")
+                   (filesystems '("/dev/mapper/root" "/dev/mapper/home"))))
+
+         (service btrfs-balance-service-type
+                  (btrfs-balance-configuration
+                   (schedule '(lambda (current-time) (+ current-time (* 2 7 24 60 60))))
+                   (filesystems '("/dev/mapper/root" "/dev/mapper/home"))))
+
+         (udev-rules-service 'steam steam-devices-udev-rules)
+         (service pam-limits-service-type
+                  (list (pam-limits-entry "*" 'both 'nofile 524288)))
 
          (service network-manager-service-type %shika-network-manager-configuration)
          (service nix-service-type %shika-nix-configuration)
