@@ -14,7 +14,7 @@
    (supplementary-groups '("wheel" "seat"
                            "audio" "netdev"
                            "video" "plugdev"
-                           "docker"))))
+                           "docker" "input"))))
 
 (define-public (make-shika-users username)
   (cons (make-shika-user username) %base-user-accounts))
