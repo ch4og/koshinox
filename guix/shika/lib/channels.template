@@ -1,5 +1,5 @@
 ;; -*- mode: scheme -*-
-;;; SPDX-FileCopyrightText: 2025 Nikita Mitasov <me@ch4og.com>
+;;; SPDX-FileCopyrightText: 2025-2026 Nikita Mitasov <me@ch4og.com>
 ;;; SPDX-License-Identifier: GPL-3.0-or-later
 
 (define-module (shika lib channels)
@@ -11,7 +11,7 @@
 ;;; %shika-chs start
 (cons* (channel
         (name 'nonguix)
-        (url "https://gitlab.com/nonguix/nonguix.git")
+        (url "https://gitlab.com/nonguix/nonguix")
         (branch "master")
         (introduction
          (make-channel-introduction

@@ -19,3 +19,5 @@
 - [ ] switch to librewolf
 - [ ] imv
 - [ ] literate programming?
+- [ ] autoinstall pre-commit hook
+- [ ] update license year in pre-commit hook

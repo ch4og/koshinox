@@ -1,5 +1,5 @@
 ;; -*- mode: scheme -*-
-;;; SPDX-FileCopyrightText: 2025 Nikita Mitasov <me@ch4og.com>
+;;; SPDX-FileCopyrightText: 2025-2026 Nikita Mitasov <me@ch4og.com>
 ;;; SPDX-License-Identifier: GPL-3.0-or-later
 
 (define-module (shika lib channels)
@@ -9,11 +9,22 @@
 
 (define-public %shika-chs
   (list (channel
+         (name 'nonguix)
+         (url "https://gitlab.com/nonguix/nonguix")
+         (branch "master")
+         (commit
+          "889b2f01dc2375bfdd3d3fda378c45159fa06f00")
+         (introduction
+          (make-channel-introduction
+           "897c1a470da759236cc11798f4e0a5f7d4d59fbc"
+           (openpgp-fingerprint
+            "2A39 3FFF 68F4 EF7A 3D29  12AF 6F51 20A0 22FB B2D5"))))
+        (channel
          (name 'mangowc)
          (url "https://github.com/DreamMaoMao/mangowc")
          (branch "main")
          (commit
-          "14f15ec997694a19326c0d132148d35c934bf665"))
+          "23d550e04d5873f3b5194ab92321ff0c1fa1e5d3"))
         (channel
          (name 'quickshell)
          (url "https://github.com/ch4og/quickshell.git")
@@ -25,7 +36,7 @@
          (url "https://codeberg.org/ch4og/aagl-guix.git")
          (branch "main")
          (commit
-          "53390838f459050202a2496bd9cd48503d63feb2")
+          "faf6aebeb4f01354cfe84558bd01d1c4e45d05ee")
          (introduction
           (make-channel-introduction
            "1055d880e124d69a2aef85cac98a813d442a55fa"
@@ -47,21 +58,21 @@
          (url "https://git.guix.gnu.org/guix.git")
          (branch "master")
          (commit
-          "aff9ce37616997647e7124edb0b3636ef98be68b")
+          "e5a2571204e050ce1c3353d1d006e4da88400525")
          (introduction
           (make-channel-introduction
            "9edb3f66fd807b096b48283debdcddccfea34bad"
            (openpgp-fingerprint
             "BBB0 2DDF 2CEA F6A8 0D1D  E643 A2A0 6DF2 A33A 54FA"))))
         (channel
-         (name 'nonguix)
-         (url "https://gitlab.com/nonguix/nonguix.git")
+         (name 'nonguix-for-aagl)
+         (url "https://gitlab.com/nonguix/nonguix")
          (branch "master")
          (commit
-          "a6376bff79bfccc5e9519cf20954a89197884fac")
+          "889b2f01dc2375bfdd3d3fda378c45159fa06f00")
          (introduction
           (make-channel-introduction
-           "0f68c1684169cbef8824fb246dfefa3e6832225b"
+           "897c1a470da759236cc11798f4e0a5f7d4d59fbc"
            (openpgp-fingerprint
             "2A39 3FFF 68F4 EF7A 3D29  12AF 6F51 20A0 22FB B2D5"))))))
 
