@@ -6,7 +6,7 @@ swaync &
 
 swww-daemon & swww restore &
 
-waybar &
+env ~/.config/mango/scripts/waybar.sh &
 
 wl-clip-persist --clipboard regular --reconnect-tries 0 &
 

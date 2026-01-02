@@ -2,7 +2,7 @@
   {
     "layer": "top",
     "height": 34,
-    "output": "HDMI-A-1",
+    "output": "@@WAYBAR_OUTPUT@@",
     "modules-left": [
       "ext/workspaces"
     ],

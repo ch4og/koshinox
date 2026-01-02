@@ -1,4 +1,4 @@
-<!--SPDX-FileCopyrightText: 2025 Nikita Mitasov <me@ch4og.com>-->
+<!--SPDX-FileCopyrightText: 2025-2026 Nikita Mitasov <me@ch4og.com>-->
 <!--SPDX-License-Identifier: CC0-1.0-->
 
 - [ ] Hellwal
@@ -15,7 +15,6 @@
 - [ ] try out sops-guix
 - [ ] throne, superfile
 - [ ] lavd sched (maybe ext)
-- [ ] move waybar config to separate config package
 - [ ] pam u2f
 - [ ] switch to librewolf
 - [ ] imv
