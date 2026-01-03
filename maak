@@ -1,0 +1,110 @@
+#!/usr/bin/env -S GUILE_AUTO_COMPILE=0 guix shell maak -- env -S GUILE_AUTO_COMPILE=0 maak -f
+;; -*- mode: scheme -*-
+;; SPDX-FileCopyrightText: 2026 Nikita Mitasov <me@ch4og.com>
+;; SPDX-License-Identifier: GPL-3.0-or-later
+!#
+
+(define-module (maak)
+  #:declarative? #t
+  #:use-module (maak maak)
+  #:use-module (ice-9 match)
+  #:use-module (ice-9 ftw))
+
+(define config-root
+  (dirname (canonicalize-path (current-filename))))
+
+(define repo-guix-root
+  (string-append config-root "/guix"))
+
+(add-to-load-path repo-guix-root)
+
+(define (guix-reconfigure type)
+  (let ((sudo (if (string=? type "system") "sudo" "")))
+    ($ `("cd" ,repo-guix-root
+         "&&"
+         ,sudo
+         "guix time-machine -C"
+         "shika/lib/channels.scm"
+         "--"
+         ,type
+         "reconfigure"
+         ,(string-append "shika/" type "/config.scm")
+         ,(@ (shika lib substitutes) %shika-subs-urls)
+         "-L."
+         "--allow-downgrades")
+       #:verbose? #t)))
+
+(define (fmt mod)
+  ($ `("find" ,(string-append repo-guix-root "/" mod) "-type f -name '*.scm'"
+       "-exec emacs --batch {} --eval '(progn (indent-region (point-min) (point-max)) (save-buffer))' \\;")
+     #:verbose? #t))
+
+(define (default)
+  ($ `(,(current-filename) "--list")
+     #:verbose? #t))
+
+(define (shika-fmt)
+  "Format Shika"
+  (fmt "shika"))
+
+(define (shika-update)
+  "Update Shika channels"
+  (let* ((input "shika/lib/channels.template")
+        (output "shika/lib/channels.scm")
+        (replacement (string-append "$(guix time-machine --channels=" input " -- describe --format=channels)")))
+  ($ `("cd" ,repo-guix-root
+       "&&"
+       ,(string-append "awk -v rep=\"" replacement
+                       "\"\\) '/;;; %shika-chs start/ {print rep; skip=1; next} skip && /;;; %shika-chs end/ {skip=0; next} !skip {print}' "
+                       input
+                       " > " output))
+     #:verbose? #t)
+  ($ `("emacs --batch"
+       ,(string-append repo-guix-root "/shika/lib/channels.scm")
+       "--eval '(progn (indent-region (point-min) (point-max)) (save-buffer))' \\;")
+     #:verbose? #t)))
+
+(define (shika-system)
+  "Reconfigure Shika system"
+  (guix-reconfigure "system"))
+
+(define (shika-home)
+  "Reconfigure Shika home"
+  (guix-reconfigure "home")
+  (bashame-switch))
+
+(define (bashame-update)
+  "Update Bashame channels"
+  ($ `("cd" ,(string-append config-root "/nix/bashame") "&& nix flake update")
+     #:verbose? #t))
+
+(define (bashame-fmt)
+  "Format Bashame"
+  ($ `("cd" ,(string-append config-root "/nix/bashame") "&& nix fmt .")
+     #:verbose? #t))
+
+(define (bashame-switch)
+  "Reconfigure Bashame"
+  ($ `("cd" ,(string-append config-root "/nix/bashame")
+       "&& nix run . -- switch --flake .")
+     #:verbose? #t))
+
+(define (koshi-fmt)
+  "Format Koshi"
+  (fmt "koshi"))
+
+(define (koshi-update)
+  "Update Koshi packages"
+  (for-each (lambda (name)
+              (format #t "Refreshing ~a~%" name)
+              ($ `("guix refresh" "-L"
+                   ,repo-guix-root "-u"
+                   ,(string-append "--select='module:(koshi packages " name ")'"))
+                 #:verbose? #t))
+            (map (lambda (f)
+                   (substring f 0
+                              (- (string-length f) 4)))
+                 (filter (lambda (f)
+                           (string-suffix? ".scm" f))
+                         (scandir (string-append repo-guix-root
+                                                 "/koshi/packages"))))))

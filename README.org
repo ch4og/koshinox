@@ -60,19 +60,19 @@ automatically linked into =~= via the =home-dotfiles-service-type=.
   stow fish mangowc other-package-name -t ~
 #+end_src
 
-* Reconfigure script
+* Maak file
 
-This repository provides helper scripts =shika=, =koshi=, =bashame=.
+This repository uses [[https://codeberg.org/jjba23/maak][maak]].
 
 Instead of running long guix and nix invocations manually, you can for example do:
 
 #+BEGIN_SRC sh
-  shika system
-  koshi format
-  bashame update
+  maak shika-system
+  maak koshi-fmt
+  maak bashame-update
 #+END_SRC
 
-(Loaded to =$PATH= from =./bin= with direnv)
+(Hacky maak wrapper binary loaded to =$PATH= with direnv)
 
 * Acknowledgments
 
@@ -95,5 +95,6 @@ Big thanks to people and projects that inspired me:
 - [[https://sr.ht/~abcdw/rde/][~abcdw/rde]]
 - [[https://codeberg.org/hako/Testament][hako/Testament]]
 - [[https://github.com/podiki/dot.me][podiki/dot.me]]
+- [[https://codeberg.org/jjba23/sss][jjba23/sss]]
 
 All files that include code by others have a license note about it in their heading, original license is kept.

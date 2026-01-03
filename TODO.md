@@ -23,3 +23,4 @@
 - [ ] update license year in pre-commit hook
 - [ ] Decrypt partitions from /boot keyfile
 - [ ] yubikey as user password
+- [ ] consider moving dotfiles to just stow so it can be deployed without reconfiguring guix home

@@ -53,6 +53,7 @@
      "kdenlive"
      "lazygit"
      "libreoffice"
+     "maak"
      "mangohud"
      "mangowc"
      "mpv-nvidia"
