@@ -24,7 +24,7 @@
          (url "https://github.com/DreamMaoMao/mangowc")
          (branch "main")
          (commit
-          "23d550e04d5873f3b5194ab92321ff0c1fa1e5d3"))
+          "d2894f0babaa5f934a03eb73a5e2af2965ecbd11"))
         (channel
          (name 'quickshell)
          (url "https://github.com/ch4og/quickshell.git")
@@ -36,7 +36,7 @@
          (url "https://codeberg.org/ch4og/aagl-guix.git")
          (branch "main")
          (commit
-          "faf6aebeb4f01354cfe84558bd01d1c4e45d05ee")
+          "0682d68f0677f33d71c203841195ec6a4460e323")
          (introduction
           (make-channel-introduction
            "1055d880e124d69a2aef85cac98a813d442a55fa"
@@ -58,7 +58,7 @@
          (url "https://git.guix.gnu.org/guix.git")
          (branch "master")
          (commit
-          "e5a2571204e050ce1c3353d1d006e4da88400525")
+          "135ff24edb87f7cf78fe62a5931b5221c21bde7a")
          (introduction
           (make-channel-introduction
            "9edb3f66fd807b096b48283debdcddccfea34bad"
