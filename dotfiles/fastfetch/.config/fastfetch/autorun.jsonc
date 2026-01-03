@@ -20,8 +20,7 @@
         },
         {
             "type": "os",
-            "key": "\u001b[37m│\u001b[33m   \u001b[37m│",
-	    "format": "Shikanox {2}"
+            "key": "\u001b[37m│\u001b[33m   \u001b[37m│"
         },
         {
             "type": "kernel",
@@ -41,7 +40,7 @@
         {
             "type": "command",
             "key": "\u001b[37m│\u001b[33m   \u001b[37m│",
-	    "text": "echo \"guix @$(awk '/commit/ { getline; print substr($1,2,7); exit }' /run/current-system/channels.scm)\""
+	    "text": "guile --no-auto-compile ~/.config/fastfetch/guix.scm"
         },
         {
             "type": "shell",

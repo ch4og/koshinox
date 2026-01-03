@@ -21,3 +21,5 @@
 - [ ] literate programming?
 - [ ] autoinstall pre-commit hook
 - [ ] update license year in pre-commit hook
+- [ ] Decrypt partitions from /boot keyfile
+- [ ] yubikey as user password
