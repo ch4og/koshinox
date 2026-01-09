@@ -1,38 +1,16 @@
 # SPDX-FileCopyrightText: 2025-2026 Nikita Mitasov <me@ch4og.com>
 # SPDX-License-Identifier: CC0-1.0
 
-#+TITLE: Shikanox - Personal GNU/Linux [WIP]
+#+TITLE: Koshinox - Personal Shikanox Configuration [WIP]
 #+OPTIONS: toc:nil
 
-#+HTML: <a href="https://api.reuse.software/info/codeberg.org/ch4og/shikanox" rel="nofollow noopener"><img src="https://img.shields.io/reuse/compliance/codeberg.org%2Fch4og%2Fshikanox?logo=open-source-initiative&logoColor=white&label=REUSE&labelColor=24292e"></a>
-#+HTML: <a href="https://codeberg.org/ch4og/shikanox" rel="nofollow noopener"><img src="https://img.shields.io/badge/source-Codeberg-5993C8?logo=codeberg&logoColor=white&labelColor=24292e"></a>
+#+HTML: <a href="https://api.reuse.software/info/codeberg.org/ch4og/koshinox" rel="nofollow noopener"><img src="https://img.shields.io/reuse/compliance/codeberg.org%2Fch4og%2Fkoshinox?logo=open-source-initiative&logoColor=white&label=REUSE&labelColor=24292e"></a>
+#+HTML: <a href="https://codeberg.org/ch4og/koshinox" rel="nofollow noopener"><img src="https://img.shields.io/badge/source-Codeberg-5993C8?logo=codeberg&logoColor=white&labelColor=24292e"></a>
 #+HTML: <a href="https://gnu.org/software/guile/" rel="nofollow noopener"><img src="https://codeberg.org/luis-felipe/guile-graphics/raw/branch/trunk/badges/gnu-guile-made.svg"></a>
 
 #+HTML: <p align="center"><img src="./assets/screenshot.png" width="70%"/></p>
 
-A complete personal config "distro" built on GNU Guix System, GNU Guix Home and Nix Home Manager.
-
-*** *This repo includes packaged nonfree and proprietary software.*
-
-* This repo defines:
-
-- *[[./guix/shika][guix/shika]]* :: GNU Guix System and Home configurations
-- *[[./guix/koshi][guix/koshi]]* :: GNU Guix Channel with packages and services
-- *[[./nix/bashame][nix/bashame]]* :: Nix Home Manager configuration
-- *[[./dotfiles][dotfiles]]* :: Dotfiles
-
-* Add channel to your system
-
-#+BEGIN_SRC scheme
-(channel
- (name 'shikanox)
- (url "https://codeberg.org/ch4og/shikanox.git")
- (introduction
-  (make-channel-introduction
-   "fe3b5f72aa676c69f4d43507bdd18fb051906917"
-   (openpgp-fingerprint
-    "7C9E 7EBA 828C 58DF DACE  5BED 4DCC 7AB7 FC75 319B"))))
-#+END_SRC
+A personal config for [[https://codeberg.org/ch4og/shikanox][Shikanox]] "distro" built on GNU Guix System, GNU Guix Home and Nix Home Manager.
 
 * Dotfiles
 
@@ -67,34 +45,15 @@ This repository uses [[https://codeberg.org/jjba23/maak][maak]].
 Instead of running long guix and nix invocations manually, you can for example do:
 
 #+BEGIN_SRC sh
-  maak shika-system
-  maak koshi-fmt
-  maak bashame-update
+  maak system
+  maak fmt
+  maak nix-update
 #+END_SRC
 
 (Hacky maak wrapper binary loaded to =$PATH= with direnv)
 
 * Acknowledgments
 
-Big thanks to people and projects that inspired me:
-
-- [[https://github.com/Gylvaris/nix-config][Gylvaris/nix-config]] (Never would try declarative OSes without him!)
-- [[https://github.com/s0me1newithhand7s/myNixConf][s0me1newithhand7s/myNixConf]]
-- [[https://github.com/krypt0nn/dotfiles][krypt0nn/dotfiles]]
-- [[https://github.com/TheMaxMur/NixOS-Configuration][TheMaxMur/NixOS-Configuration]]
-- [[https://github.com/s0me1newithhand7s/reNixos][s0me1newithhand7s/reNixOS]]
-- [[https://github.com/romek-codes/nix-config][romek-codes/nix-config]]
-- [[https://github.com/Sk7Str1p3/dotFiles][Sk7Str1p3/dotFiles]]
-- [[https://github.com/Frost-Phoenix/nixos-config][Frost-Phoenix/nixos-config]]
-- [[https://codeberg.org/agx-r][@agx-r]]
-- [[https://codeberg.org/daviwil][@daviwil]] & [[https://systemcrafters.net/][System Crafters]]
-- [[https://github.com/sarg/dotfiles][sarg/dotfiles]]
-- [[https://github.com/franzos/awesome-guix][franzos/awesome-guix]]
-- [[https://github.com/hiecaq/guix-config][hiecaq/guix-config]]
-- [[https://github.com/DreamMaoMao/mango-config][DreamMaoMao/mango-config]]
-- [[https://sr.ht/~abcdw/rde/][~abcdw/rde]]
-- [[https://codeberg.org/hako/Testament][hako/Testament]]
-- [[https://github.com/podiki/dot.me][podiki/dot.me]]
-- [[https://codeberg.org/jjba23/sss][jjba23/sss]]
+See at [[https://codeberg.org/ch4og/shikanox][Shikanox]].
 
 All files that include code by others have a license note about it in their heading, original license is kept.

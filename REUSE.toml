@@ -1,22 +1,19 @@
 version = 1
-SPDX-PackageName = "shikanox"
+SPDX-PackageName = "koshinox"
 SPDX-PackageSupplier = "Nikita Mitasov <me@ch4og.com>"
-SPDX-PackageDownloadLocation = "https://codeberg.org/ch4og/shikanox"
+SPDX-PackageDownloadLocation = "https://codeberg.org/ch4og/koshinox"
 
 [[annotations]]
 path = ["dotfiles/**"]
-precedence = "aggregate"
 SPDX-FileCopyrightText = "2025-2026 Nikita Mitasov <me@ch4og.com>"
 SPDX-License-Identifier = "MIT"
 
 [[annotations]]
 path = ["assets/screenshot.png"]
-precedence = "aggregate"
 SPDX-FileCopyrightText = "2025 Nikita Mitasov <me@ch4og.com>"
 SPDX-License-Identifier = "CC-BY-SA-4.0"
 
 [[annotations]]
-path = ["nix/bashame/flake.lock"]
-precedence = "aggregate"
+path = ["bashame/flake.lock"]
 SPDX-FileCopyrightText = "2025-2026 Nikita Mitasov <me@ch4og.com>"
 SPDX-License-Identifier = "GPL-3.0-or-later"
