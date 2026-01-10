@@ -9,7 +9,9 @@
   (specifications->packages
    '("gamescope"
      "heroic-nvidia"
+     "anime-game-launcher-nvidia"
      "honkers-railway-launcher-nvidia"
+     "sleepy-launcher-nvidia"
      "mangohud"
      "prismlauncher-dolly"
      "protonup"
