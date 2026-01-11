@@ -43,6 +43,7 @@
                                      ("NIXPKGS_ALLOW_UNFREE" . "1")
 					                           ("EDITOR" . "emacsclient")
                                      ("GUIX_SANDBOX_EXTRA_SHARES" . "/games")
+                                     ("NIXOS_OZONE_WL" . "1")
 					                           ("FONTCONFIG_PATH" . ,(string-append (home-dir) "/.guix-home/profile/etc/fonts/"))))
 
                    (service home-dotfiles-service-type
