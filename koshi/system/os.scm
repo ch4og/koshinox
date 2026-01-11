@@ -24,5 +24,5 @@
     (swap-devices %koshi-swap-devices)
     (users (make-koshi-users username))
     (packages %koshi-system-packages)
-    (services %koshi-system-services)
+    (services (make-koshi-system-services username))
     (name-service-switch %mdns-host-lookup-nss)))

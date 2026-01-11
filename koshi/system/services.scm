@@ -10,13 +10,15 @@
   #:use-module (gnu services dbus)
   #:use-module (gnu services desktop)
   #:use-module (gnu packages games)
+  #:use-module (gnu services containers)
   #:use-module (gnu services networking)
   #:use-module (gnu services nix)
-  #:use-module (gnu services shepherd)
   #:use-module (gnu services security-token)
+  #:use-module (gnu services shepherd)
   #:use-module (gnu services ssh)
   #:use-module (gnu services sysctl)
   #:use-module (gnu services xorg)
+  #:use-module (gnu system accounts)
   #:use-module (shika services guix-gc)
   #:use-module (shika services ntsync)
   #:use-module (shika services polkit-nm)
@@ -33,7 +35,7 @@
   #:use-module (shika services runtime-dir)
   #:use-module (shika services btrfs))
 
-(define-public %koshi-system-services
+(define-public (make-koshi-system-services username)
   (cons* (service wpa-supplicant-service-type)
 				 (service avahi-service-type)
          (service seatd-service-type)
@@ -42,19 +44,12 @@
          (service polkit-service-type)
          (service ntp-service-type)
 
-         (simple-service
-          'podman-subuid-subgid
-          etc-service-type
-          `(("subuid"
-             ,(plain-file
-               "subuid"
-               (string-append "ch" ":100000:65536\n")))
-            ("subgid"
-             ,(plain-file
-               "subgid"
-               (string-append "ch" ":100000:65536\n")))))
-         (service iptables-service-type
-                  (iptables-configuration))
+         (service rootless-podman-service-type
+                  (rootless-podman-configuration
+                   (subgids
+                    (list (subid-range (name username))))
+                   (subuids
+                    (list (subid-range (name username))))))
 
          (service polkit-network-manager-service-type)
          (service runtime-dir-service-type)
@@ -86,4 +81,3 @@
          (udev-rules-service 'steam steam-devices-udev-rules)
 
          %koshi-base-services))
-

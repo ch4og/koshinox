@@ -14,7 +14,7 @@
     (supplementary-groups '("wheel" "seat"
                             "audio" "netdev"
                             "video" "plugdev"
-                            "input"))))
+                            "input" "cgroup"))))
 
 (define-public (make-koshi-users username)
   (cons (make-koshi-user username) %base-user-accounts))
