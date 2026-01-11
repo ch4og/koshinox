@@ -1,5 +1,43 @@
 [commit]
 	gpgsign = true
+
 [user]
 	name = Nikita Mitasov
 	email = me@ch4og.com
+
+[init]
+    defaultBranch = main
+
+[tag]
+    gpgSign = true
+
+[pull]
+    rebase = true
+
+[rebase]
+    autoStash = true
+
+[alias]
+    amend = commit --amend --no-edit
+    st = status -sb
+
+[diff]
+    colorMoved = default
+    algorithm = histogram
+
+[merge]
+    conflictStyle = zdiff3
+
+[push]
+    autoSetupRemote = true
+
+[url "git@github.com:"]
+    pushInsteadOf = https://github.com/
+[url "git@codeberg.org:"]
+    pushInsteadOf = https://codeberg.org/
+[url "git@gitlab.com:"]
+    pushInsteadOf = https://gitlab.com/
+
+# For other remotes that I don't want to show publically
+[include]
+    path = ~/.config/git/extra-config
