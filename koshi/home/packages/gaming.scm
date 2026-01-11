@@ -14,5 +14,6 @@
      "sleepy-launcher-nvidia"
      "mangohud"
      "prismlauncher-dolly"
+     "openjdk"
      "protonup"
      "steam-nvidia")))
