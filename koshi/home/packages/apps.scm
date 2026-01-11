@@ -8,7 +8,7 @@
 (define-public %koshi-apps-home-packages
   (specifications->packages
    '("blueman"
-     "emacs"
+     "emacs-pgtk"
      "eog"
      "file-roller"
      "filezilla"
