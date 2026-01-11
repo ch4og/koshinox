@@ -10,10 +10,45 @@
   #:use-module (ice-9 match)
   #:use-module (ice-9 ftw))
 
+(define dotfiles-list
+  '("btop"
+    "dxvk"
+    "emacs"
+    "fastfetch"
+    "fish"
+    "ghostty"
+    "git"
+    "gtk"
+    "jujutsu"
+    "mangohud"
+    "mangowc"
+    "pipewire"
+    "podman"
+    "protonup"
+    "rofi"
+    "swappy"
+    "tmux"
+    "waybar"))
+
 (define config-root
   (dirname (canonicalize-path (current-filename))))
 
 (add-to-load-path config-root)
+
+(define (dotfiles)
+  "Reconfigure dotfiles"
+  (let ((dotfiles-dir (string-append config-root "/dotfiles")))
+    (define (run-stow flags target)
+      ($ `("cd" ,dotfiles-dir "&&"
+           "stow" ,@flags "--dotfiles -t ~" ,target)
+         #:verbose? #t))
+    (display "Unstowing all dotfiles...\n")
+    (run-stow '("-D") "*")
+    (display "Stowing selected dotfiles:\n")
+    (for-each
+     (lambda (dotfile)
+       (run-stow '() dotfile))
+     dotfiles-list)))
 
 (define (guix-reconfigure type)
   (let ((sudo (if (string=? type "system") "sudo" "")))
@@ -65,7 +100,8 @@
 (define (home)
   "Reconfigure Koshi home"
   (guix-reconfigure "home")
-  (nix-switch))
+  (nix-switch)
+  (dotfiles))
 
 (define (nix-update)
   "Update Bashame channels"

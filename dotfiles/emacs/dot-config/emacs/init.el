@@ -109,8 +109,6 @@
 (customize-set-variable 'tool-bar-mode nil)
 (customize-set-variable 'scroll-bar-mode nil)
 
-(set-frame-font "Comic Code NerdFont SemiBold 12")
-
 (xterm-mouse-mode)
 (setq mouse-autoselect-window 't)
 
@@ -123,6 +121,9 @@
 (pixel-scroll-mode)
 (setq compilation-window-height 15)
 (setq-default truncate-lines t)
+
+(add-to-list 'default-frame-alist '(alpha-background . 95))
+(add-to-list 'default-frame-alist '(font . "Comic Code NerdFont SemiBold-12"))
 
 (defun on-frame-open (&optional frame)
   (unless (display-graphic-p frame)
@@ -139,3 +140,6 @@
 (if (not (file-exists-p custom-file))
     (make-empty-file custom-file)
   (load custom-file))
+
+(add-hook 'evil-insert-state-entry-hook (lambda () (cua-mode 1)))
+(add-hook 'evil-insert-state-exit-hook (lambda () (cua-mode 0)))

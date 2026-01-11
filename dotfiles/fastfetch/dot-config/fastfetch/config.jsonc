@@ -45,7 +45,7 @@
         {
             "type": "command",
             "key": "\u001b[37m│\u001b[33m   \u001b[37m│",
-	    "text": "guile --no-auto-compile ~/.config/fastfetch/guix.scm"
+	    "text": "env ~/.config/fastfetch/guix"
         },
         {
             "type": "shell",
@@ -61,7 +61,7 @@
         },
         {
             "type": "packages",
-	    
+
             "key": "\u001b[37m│\u001b[33m 󰏖  \u001b[37m│",
             "format": "{guix-all} Guix, {nix-all} Nix"
         },
@@ -72,4 +72,3 @@
         }
     ]
 }
-

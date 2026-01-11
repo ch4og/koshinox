@@ -1,3 +1,9 @@
+#!/usr/bin/env -S guile --no-auto-compile
+;; -*- mode: scheme -*-
+;; SPDX-FileCopyrightText: 2026 Nikita Mitasov <me@ch4og.com>
+;; SPDX-License-Identifier: GPL-3.0-or-later
+!#
+
 (define raw-channels
   (call-with-input-file "/run/current-system/channels.scm" read))
 

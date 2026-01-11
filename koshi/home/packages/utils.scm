@@ -26,6 +26,7 @@
      "playerctl"
      "ripgrep"
      "starship"
+     "stow"
      "tmux"
      "unzip"
      "xdg-utils"

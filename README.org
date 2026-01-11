@@ -17,25 +17,13 @@ A personal config for [[https://codeberg.org/ch4og/shikanox][Shikanox]] "distro"
 Personal dotfiles are organized using a layout compatible with [[https://www.gnu.org/software/stow/manual/stow.html#Introduction][GNU Stow]].
 
 Each subdirectory here represents a *"package"* of configuration files,
-automatically linked into =~= via the =home-dotfiles-service-type=.
+automatically linked into =~= via the =maak dotfiles=.
 
 ** Usage
 
-*** Guix Home
-
-#+begin_src scheme
-  (service home-dotfiles-service-type
-  	 (home-dotfiles-configuration
-  	  (directories '("./dotfiles"))
-  	  (layout 'stow)
-  	  (packages '("fish" "mangowc" "other-package-name"))))
-#+end_src
-
-*** GNU Stow (recommended on non-Guix)
-
 #+begin_src sh
   cd dotfiles
-  stow fish mangowc other-package-name -t ~
+  stow fish mangowc other-package-name -t ~ --dotfiles
 #+end_src
 
 * Maak file
