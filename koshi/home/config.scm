@@ -21,9 +21,6 @@
              (gnu home services shepherd)
              (koshi home packages))
 
-(define (home-dir)
-  (getenv "HOME"))
-
 (define %koshi-home
   (home-environment
    (packages %koshi-home-packages)
@@ -39,20 +36,25 @@
                                   home-environment-variables-service-type
                                   `(("TZ" . "Europe/Moscow")
                                     ("NIXPKGS_ALLOW_UNFREE" . "1")
-					                          ("EDITOR" . "emacsclient")
+                                    ("EDITOR" . "emacsclient")
                                     ("GUIX_SANDBOX_EXTRA_SHARES" . "/games")
                                     ("NIXOS_OZONE_WL" . "1")
-					                          ("FONTCONFIG_PATH" . ,(string-append (home-dir) "/.guix-home/profile/etc/fonts/"))))
-				          (simple-service 'emacs-server
-						                      home-shepherd-service-type
-						                      (list (shepherd-service
-							                           (documentation "Emacs daemon")
-							                           (provision '(emacs-server))
-							                           (start #~(lambda _
-									                                  (system* "emacsclient" "--eval" "'(kill-emacs)'" "||" "true")
-															                      (system* "emacs" "-daemon")))
-							                           (stop #~(lambda _
-								                                   (system* "emacsclient" "--eval" "'(kill-emacs)'"))))))
+                                    ("NPM_CONFIG_USERCONFIG" . ,(string-append (getenv "XDG_CONFIG_HOME") "/npm/npmrc"))
+                                    ("NPM_CONFIG_CACHE" . ,(string-append (getenv "XDG_CACHE_HOME") "/npm"))
+                                    ("NODE_REPL_HISTORY" . ,(string-append (getenv "XDG_STATE_HOME") "/node_repl_history"))
+                                    ("CARGO_HOME" . ,(string-append (getenv "XDG_DATA_HOME") "/cargo"))
+                                    ("WAKATIME_HOME" . ,(string-append (getenv "XDG_CONFIG_HOME") "/wakatime"))
+                                    ("FONTCONFIG_PATH" . ,(string-append (getenv "HOME") "/.guix-home/profile/etc/fonts/"))))
+                  (simple-service 'emacs-server
+                                  home-shepherd-service-type
+                                  (list (shepherd-service
+                                         (documentation "Emacs daemon")
+                                         (provision '(emacs-server))
+                                         (start #~(lambda _
+                                                    (system* "emacsclient" "--eval" "'(kill-emacs)'" "||" "true")
+                                                    (system* "emacs" "-daemon")))
+                                         (stop #~(lambda _
+                                                   (system* "emacsclient" "--eval" "'(kill-emacs)'"))))))
                   (service home-files-service-type
                            `((".wakatime/wakatime-cli"
                               ,(file-append

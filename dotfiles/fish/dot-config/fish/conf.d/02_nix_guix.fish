@@ -10,6 +10,8 @@ if not set -q GUIX_ENVIRONMENT
             end
         end
 
+        fish_add_path /run/setuid-programs
+
         # Guix specific fix
         gpg-connect-agent updatestartuptty /bye >/dev/null 2>&1
     end
