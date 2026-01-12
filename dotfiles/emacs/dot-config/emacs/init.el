@@ -32,6 +32,9 @@
 (straight-use-package 'use-package)
 (setq straight-use-package-by-default t)
 
+(use-package nix-mode
+  :mode "\\.nix\\'")
+
 (use-package which-key
   :config
   (which-key-setup-side-window-right-bottom)
