@@ -31,10 +31,14 @@ handle_focus_change() {
             mmsg -d "setoption,xkb_rules_variant,,"
             mmsg -d "setoption,xkb_rules_variant,,"
             mmsg -d "setoption,xkb_rules_variant,,"
+            mmsg -d "setoption,xkb_rules_variant,,"
+            mmsg -d "setoption,xkb_rules_variant,,"
             CURRENT_LAYOUT="game"
         fi
     elif [ "$CURRENT_LAYOUT" = "game" ]; then
         echo "Switching back to 'default' layout on monitor '$monitor'..."
+        mmsg -d "setoption,xkb_rules_variant,colemak,"
+        mmsg -d "setoption,xkb_rules_variant,colemak,"
         mmsg -d "setoption,xkb_rules_variant,colemak,"
         mmsg -d "setoption,xkb_rules_variant,colemak,"
         mmsg -d "setoption,xkb_rules_variant,colemak,"
