@@ -78,6 +78,4 @@
 
          (service aagl-hosts-service-type)
 
-         (udev-rules-service 'steam steam-devices-udev-rules)
-
          %koshi-base-services))
