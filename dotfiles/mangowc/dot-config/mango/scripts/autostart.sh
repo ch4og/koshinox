@@ -12,4 +12,6 @@ wl-clip-persist --clipboard regular --reconnect-tries 0 &
 
 wl-paste --watch cliphist store &
 
+wl-paste --type text --watch xclip -selection clipboard &
+
 env ~/.config/mango/scripts/switch_layouts.sh
