@@ -27,3 +27,4 @@
 - [ ] fix bluetooth
 - [ ] port chaotic-nyx's discord-krisp
 - [ ] wakatime thru sops
+- [ ] spotatui package

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env -S guix shell setxkbmap bash -- bash
 
 TARGET_APPS=(
     "\.exe$"
@@ -27,22 +27,12 @@ handle_focus_change() {
     if is_target_app "$appid"; then
         if [ "$CURRENT_LAYOUT" != "game" ]; then
             echo "Switching layout to 'game' for app '$appid' on monitor '$monitor'..."
-            mmsg -d "setoption,xkb_rules_variant,,"
-            mmsg -d "setoption,xkb_rules_variant,,"
-            mmsg -d "setoption,xkb_rules_variant,,"
-            mmsg -d "setoption,xkb_rules_variant,,"
-            mmsg -d "setoption,xkb_rules_variant,,"
-            mmsg -d "setoption,xkb_rules_variant,,"
+            setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
             CURRENT_LAYOUT="game"
         fi
     elif [ "$CURRENT_LAYOUT" = "game" ]; then
         echo "Switching back to 'default' layout on monitor '$monitor'..."
-        mmsg -d "setoption,xkb_rules_variant,colemak,"
-        mmsg -d "setoption,xkb_rules_variant,colemak,"
-        mmsg -d "setoption,xkb_rules_variant,colemak,"
-        mmsg -d "setoption,xkb_rules_variant,colemak,"
-        mmsg -d "setoption,xkb_rules_variant,colemak,"
-        mmsg -d "setoption,xkb_rules_variant,colemak,"
+        setxkbmap -model pc105 -layout us,ru -variant colemak, -option grp:alt_shift_toggle
         CURRENT_LAYOUT="default"
     fi
 
