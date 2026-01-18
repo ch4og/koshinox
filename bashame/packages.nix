@@ -5,6 +5,5 @@
     spotify
     amnezia-vpn
     ayugram-desktop
-    wl-clip-persist
   ];
 }

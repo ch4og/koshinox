@@ -23,6 +23,7 @@
      "pcmanfm"
      "qbittorrent-enhanced"
      "remmina"
+     "spotatui"
      "torbrowser"
      "uxplay"
      "virt-manager")))

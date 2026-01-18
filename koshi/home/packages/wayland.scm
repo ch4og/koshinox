@@ -24,6 +24,7 @@
      "swww"
      "waybar-experimental"
      "wl-clipboard"
+     "wl-clip-persist"
      "wl-mirror"
      "wlr-dpms"
      "wtype"
