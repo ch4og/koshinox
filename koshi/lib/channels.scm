@@ -13,7 +13,7 @@
          (url "https://gitlab.com/nonguix/nonguix")
          (branch "master")
          (commit
-          "bd8c5ca23e694be0b1a8cf72f05f81c70b1d7fc5")
+          "67bfb5b37b6614bf903220d6287685fbab92e2f6")
          (introduction
           (make-channel-introduction
            "897c1a470da759236cc11798f4e0a5f7d4d59fbc"
@@ -24,7 +24,7 @@
          (url "https://codeberg.org/ch4og/shikanox.git")
          (branch "main")
          (commit
-          "56c7054ea05047eb87fac09123a6c629d6e08916")
+          "adbf1882c1d908826964382d5106573b82916df2")
          (introduction
           (make-channel-introduction
            "fe3b5f72aa676c69f4d43507bdd18fb051906917"
@@ -35,7 +35,7 @@
          (url "https://github.com/DreamMaoMao/mangowc")
          (branch "main")
          (commit
-          "4efb8c5e06debc3a32a711e3508593cfd1e1fb48"))
+          "48737bb58c43140bb29df07ee000055f4bc882d8"))
         (channel
          (name 'quickshell)
          (url "https://github.com/ch4og/quickshell.git")
@@ -47,7 +47,7 @@
          (url "https://codeberg.org/ch4og/aagl-guix.git")
          (branch "main")
          (commit
-          "2f4c4a9bb2e1d1dc2944bffbb2b63ee04405c1e8")
+          "2ec2eafa7ad813c800a8135ee54059d5028f112a")
          (introduction
           (make-channel-introduction
            "1055d880e124d69a2aef85cac98a813d442a55fa"
@@ -58,7 +58,7 @@
          (url "https://codeberg.org/hako/rosenthal.git")
          (branch "trunk")
          (commit
-          "f15c27b931bb07cf76d6f8774730860263234676")
+          "371186d95ac1730b03ddcfb735becb87e0434442")
          (introduction
           (make-channel-introduction
            "7677db76330121a901604dfbad19077893865f35"
@@ -69,7 +69,7 @@
          (url "https://git.guix.gnu.org/guix.git")
          (branch "master")
          (commit
-          "c2700f2c0be0fc93a59b244662a3bf18b94a6f98")
+          "0fb6feed2c2d346bdab405fd6bad45ac98cd313d")
          (introduction
           (make-channel-introduction
            "9edb3f66fd807b096b48283debdcddccfea34bad"
