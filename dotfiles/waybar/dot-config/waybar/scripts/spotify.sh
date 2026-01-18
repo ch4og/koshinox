@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-status=$(playerctl -p spotify status 2>/dev/null)
+status=$(playerctl -p spotify,spotifyd,spotatui status 2>/dev/null)
 
-title=$(playerctl -p spotify metadata title 2>/dev/null)
+title=$(playerctl -p spotify,spotifyd,spotatui metadata title 2>/dev/null)
 
-artist=$(playerctl -p spotify metadata artist 2>/dev/null)
+artist=$(playerctl -p spotify,spotifyd,spotatui metadata artist 2>/dev/null)
 
 if [[ "$status" == "Playing" ]]; then
 	text="$artist - $title"

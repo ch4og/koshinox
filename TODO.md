@@ -22,9 +22,7 @@
 - [ ] update license year in pre-commit hook
 - [ ] Decrypt partitions from /boot keyfile
 - [ ] yubikey as user password
-- [ ] Wakatime package use nix-go-build-system
 - [ ] fix nm polkit
 - [ ] fix bluetooth
 - [ ] port chaotic-nyx's discord-krisp
 - [ ] wakatime thru sops
-- [ ] spotatui package
