@@ -35,6 +35,10 @@
 (use-package nix-mode
   :mode "\\.nix\\'")
 
+(use-package zig-mode
+  :mode "\\.zig\\'")
+
+
 (use-package which-key
   :config
   (which-key-setup-side-window-right-bottom)
