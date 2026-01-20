@@ -53,7 +53,7 @@
       "format-icons": {
         "default": "",
         "paused": " ",
-        "playing": "  "
+        "playing": " "
       },
       "interval": 1,
       "on-click": "playerctl -p spotify,spotifyd,spotatui play-pause",

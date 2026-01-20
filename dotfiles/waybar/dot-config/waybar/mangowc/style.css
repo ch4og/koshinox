@@ -20,7 +20,7 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "ComicCode Nerd Font SemiBold", sans;
   font-size: 13px;
   min-height: 0;
 }
@@ -245,15 +245,12 @@ tooltip label {
 
 #battery,
 #network,
-#pulseaudio,
 #custom-swaync,
 #tray {
   min-width: 22px;
 }
 
-#battery,
 #network,
-#pulseaudio,
 #custom-swaync {
   padding-left: 8px;
   padding-right: 4px;
