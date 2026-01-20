@@ -149,6 +149,3 @@
 (if (not (file-exists-p custom-file))
     (make-empty-file custom-file)
   (load custom-file))
-
-(add-hook 'evil-insert-state-entry-hook (lambda () (cua-mode 1)))
-(add-hook 'evil-insert-state-exit-hook (lambda () (cua-mode 0)))
