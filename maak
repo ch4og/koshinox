@@ -1,4 +1,4 @@
-#!/usr/bin/env -S GUILE_AUTO_COMPILE=0 guix shell maak -- env -S GUILE_AUTO_COMPILE=0 maak -f
+#!/usr/bin/env -S GUILE_AUTO_COMPILE=0 guix shell maak stow -- env -S GUILE_AUTO_COMPILE=0 maak -f
 ;; -*- mode: scheme -*-
 ;; SPDX-FileCopyrightText: 2026 Nikita Mitasov <me@ch4og.com>
 ;; SPDX-License-Identifier: GPL-3.0-or-later
@@ -40,31 +40,36 @@
   "Reconfigure dotfiles"
   (let ((dotfiles-dir (string-append config-root "/dotfiles")))
     (define (run-stow flags target)
-      ($ `("cd" ,dotfiles-dir "&&"
-           "stow" ,@flags "--dotfiles -t ~" ,target)
+      ($ `("cd" ,dotfiles-dir
+           "&&"
+           "stow"
+           ,@flags
+           "~"
+           ,target)
          #:verbose? #t))
     (display "Unstowing all dotfiles...\n")
-    (run-stow '("-D") "*")
+    (run-stow '("-D" "--dotfiles" "-t") "*")
     (display "Stowing selected dotfiles:\n")
     (for-each
      (lambda (dotfile)
-       (run-stow '() dotfile))
+       (run-stow '("--dotfiles" "-t") dotfile))
      dotfiles-list)))
 
 (define (guix-reconfigure type)
-  (let ((sudo (if (string=? type "system") "sudo" "")))
-    ($ `("cd" ,config-root
+  "Reconfigure Koshi"
+  (let* ((time-machine '("sudo" "guix" "time-machine" "-C" "koshi/lib/channels.scm" "--"))
+         (guix (if (string=? type "system") time-machine '("guix")))
+         (config-file (string-append "koshi/" type "/config.scm"))
+         (subs (@ (koshi lib substitutes) %koshi-subs-urls))
+         (args `(,subs "-L." "--allow-downgrades")))
+    ($ `("cd"
+         ,config-root
          "&&"
-         ,sudo
-         "guix time-machine -C"
-         "koshi/lib/channels.scm"
-         "--"
+         ,@guix
          ,type
          "reconfigure"
-         ,(string-append "koshi/" type "/config.scm")
-         ,(@ (koshi lib substitutes) %koshi-subs-urls)
-         "-L."
-         "--allow-downgrades")
+         ,config-file
+         ,@args)
        #:verbose? #t)))
 
 (define (fmt)
