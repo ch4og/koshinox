@@ -55,12 +55,6 @@
                                                     (system* "emacs" "-daemon")))
                                          (stop #~(lambda _
                                                    (system* "emacsclient" "--eval" "'(kill-emacs)'"))))))
-                  (service home-files-service-type
-                           `((".wakatime/wakatime-cli"
-                              ,(file-append
-                                (specification->package
-                                 "wakatime-cli")
-                                "/bin/wakatime-cli"))))
                   (service home-xdg-user-directories-service-type
                            (home-xdg-user-directories-configuration
                             (desktop     "$HOME")
