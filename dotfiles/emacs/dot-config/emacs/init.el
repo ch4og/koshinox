@@ -112,6 +112,8 @@
 (setq inhibit-splash-screen t)
 (setq initial-scratch-message nil)
 
+(setq-default require-final-newline t)
+
 (customize-set-variable 'menu-bar-mode nil)
 (customize-set-variable 'tool-bar-mode nil)
 (customize-set-variable 'scroll-bar-mode nil)
