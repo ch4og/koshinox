@@ -6,13 +6,13 @@
 
 (define-public %koshi-nix-configuration
   (nix-configuration
-    (extra-config
-     (list
-      (string-join
-       '("allowed-users = @wheel root"
-         "auto-optimise-store = true"
-         "experimental-features = nix-command flakes"
-         "substituters = https://nixos-cache-proxy.cofob.dev https://cache.nixos.org/"
-         "trusted-users = @wheel root"
-         "warn-dirty = false")
-       "\n")))))
+   (extra-config
+    (list
+     (string-join
+      '("allowed-users = @wheel root"
+        "auto-optimise-store = true"
+        "experimental-features = nix-command flakes"
+        "substituters = https://nixos-cache-proxy.cofob.dev https://cache.nixos.org/"
+        "trusted-users = @wheel root"
+        "warn-dirty = false")
+      "\n")))))

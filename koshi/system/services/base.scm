@@ -9,6 +9,6 @@
 
 (define-public %koshi-base-services
   (modify-services
-      %base-services
-    (guix-service-type config => (make-koshi-guix-configuration config))
-    (sysctl-service-type config => (make-koshi-sysctl-configuration config))))
+   %base-services
+   (guix-service-type config => (make-koshi-guix-configuration config))
+   (sysctl-service-type config => (make-koshi-sysctl-configuration config))))

@@ -6,4 +6,4 @@
 
 (define-public %koshi-network-manager-configuration
   (network-manager-configuration
-    (dns "dnsmasq")))
+   (dns "dnsmasq")))
