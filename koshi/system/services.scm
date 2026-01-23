@@ -33,7 +33,8 @@
   #:use-module (koshi system services config screen-locker)
   #:use-module (aagl services hosts)
   #:use-module (shika services runtime-dir)
-  #:use-module (shika services btrfs))
+  #:use-module (shika services btrfs)
+  #:use-module (koshi system services endfield-hosts))
 
 (define-public (make-koshi-system-services username)
   (cons* (service wpa-supplicant-service-type)
@@ -77,5 +78,6 @@
          (service screen-locker-service-type %koshi-screen-locker-configuration)
 
          (service aagl-hosts-service-type)
+         (service endfield-hosts-service-type)
 
          %koshi-base-services))
