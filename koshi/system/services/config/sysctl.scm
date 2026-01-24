@@ -9,6 +9,6 @@
   (sysctl-configuration
    (settings
     (append
-     '(("vm.swappiness" . "10")
+     '(("vm.swappiness" . "60")
        ("vm.max_map_count" . "1048576"))
      %default-sysctl-settings))))

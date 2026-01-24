@@ -7,4 +7,4 @@
   '("quiet"
     "module_blacklist=pcspkr"
     "zswap.enabled=1"
-    "zswap.max_pool_percent=60"))
+    "zswap.max_pool_percent=20"))
