@@ -36,7 +36,7 @@
 
 (add-to-load-path config-root)
 
-(define (dotfiles)
+(define (dots)
   "Reconfigure dotfiles"
   (let ((dotfiles-dir (string-append config-root "/dotfiles")))
     (define (run-stow flags target)
@@ -82,7 +82,7 @@
   ($ `(,(current-filename) "--list")
      #:verbose? #t))
 
-(define (update)
+(define (up)
   "Update Koshi channels"
   (let* ((input "koshi/lib/channels.template")
          (output "koshi/lib/channels.scm")
@@ -106,10 +106,10 @@
 (define (home)
   "Reconfigure Koshi home"
   (guix-reconfigure "home")
-  (nix-switch)
-  (dotfiles))
+  (nix)
+  (dots))
 
-(define (nix-update)
+(define (nix-up)
   "Update Bashame channels"
   ($ `("cd" ,(string-append config-root "/bashame") "&& nix flake update")
      #:verbose? #t))
@@ -119,7 +119,7 @@
   ($ `("cd" ,(string-append config-root "/bashame") "&& nix fmt .")
      #:verbose? #t))
 
-(define (nix-switch)
+(define (nix)
   "Reconfigure Bashame"
   ($ `("cd" ,(string-append config-root "/bashame")
        "&& nix run . -- switch --flake .")
