@@ -15,5 +15,5 @@
      "mangohud"
      "prismlauncher-dolly"
      "openjdk"
-     "protonup"
+     "protonplus-sandbox"
      "steam-nvidia")))
