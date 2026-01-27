@@ -30,7 +30,7 @@
    (simple-service
     'env-vars-service
     home-environment-variables-service-type
-    (let* ((home       (or (getenv "HOME")             "/home/ch"))
+    (let* ((home       (or (getenv "HOME")            (string-append "/home/" username)))
            (xdg-config (or (getenv "XDG_CONFIG_HOME") (string-append home "/.config")))
            (xdg-cache  (or (getenv "XDG_CACHE_HOME")  (string-append home "/.cache")))
            (xdg-state  (or (getenv "XDG_STATE_HOME")  (string-append home "/.local/state")))
