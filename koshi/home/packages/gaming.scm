@@ -9,11 +9,11 @@
   (specifications->packages
    '("gamescope"
      "heroic-nvidia"
-     "anime-game-launcher-nvidia"
-     "honkers-railway-launcher-nvidia"
-     "sleepy-launcher-nvidia"
+     "an-anime-game-launcher-nvidia"
      "mangohud"
-     "prismlauncher-dolly"
      "openjdk"
+     "prismlauncher-dolly"
      "protonplus-sandbox"
+     "sleepy-launcher-nvidia"
+     "the-honkers-railway-launcher-nvidia"
      "steam-nvidia")))
