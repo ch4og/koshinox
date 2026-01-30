@@ -109,17 +109,17 @@
   (dots))
 
 (define (nix-up)
-  "Update Bashame channels"
-  ($ `("cd" ,(string-append config-root "/bashame") "&& nix flake update")
+  "Update Nix channels"
+  ($ `("cd" ,(string-append config-root "/nix") "&& nix flake update")
      #:verbose? #t))
 
 (define (nix-fmt)
-  "Format Bashame"
-  ($ `("cd" ,(string-append config-root "/bashame") "&& nix fmt .")
+  "Format Nix"
+  ($ `("cd" ,(string-append config-root "/nix") "&& nix fmt .")
      #:verbose? #t))
 
 (define (nix)
-  "Reconfigure Bashame"
-  ($ `("cd" ,(string-append config-root "/bashame")
+  "Reconfigure Nix"
+  ($ `("cd" ,(string-append config-root "/nix")
        "&& nix run . -- switch --flake .")
      #:verbose? #t))

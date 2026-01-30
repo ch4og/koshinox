@@ -2,8 +2,9 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    spotify
     amnezia-vpn
     ayugram-desktop
+    spotify
+    vscode
   ];
 }
