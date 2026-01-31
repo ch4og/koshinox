@@ -13,6 +13,7 @@
      "grimblast"
      "hyprpicker"
      "mangowc@git"
+     "mate-polkit"
      "networkmanager-dmenu"
      "quickshell@git"
      "rofi"

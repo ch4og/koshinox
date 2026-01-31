@@ -2,6 +2,8 @@
 
 dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
 
+env ~/.config/mango/scripts/polkit.sh &
+
 swaync &
 
 swww-daemon & swww restore &
