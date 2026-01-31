@@ -25,3 +25,5 @@
 - [ ] fix bluetooth
 - [ ] port chaotic-nyx's discord-krisp
 - [ ] wakatime thru sops
+- [ ] replace grub with upstream package when argon2 gets to guix
+- [ ] use https://github.com/Jappie3/wayfreeze

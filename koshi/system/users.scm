@@ -11,7 +11,7 @@
    (name username)
    (group "users")
    (shell (file-append fish "/bin/fish"))
-   (supplementary-groups '("wheel" "seat"
+   (supplementary-groups '("wheel"
                            "audio" "netdev"
                            "video" "plugdev"
                            "input" "cgroup"))))

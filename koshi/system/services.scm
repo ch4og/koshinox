@@ -32,14 +32,13 @@
   #:use-module (koshi system services config openssh)
   #:use-module (koshi system services config screen-locker)
   #:use-module (aagl services hosts)
-  #:use-module (shika services runtime-dir)
   #:use-module (shika services btrfs)
   #:use-module (koshi system services endfield-hosts))
 
 (define-public (make-koshi-system-services username)
   (cons* (service wpa-supplicant-service-type)
 				 (service avahi-service-type)
-         (service seatd-service-type)
+         (service elogind-service-type)
          (service pcscd-service-type)
          (service bluetooth-service-type)
          (service polkit-service-type)
@@ -53,7 +52,6 @@
                     (list (subid-range (name username))))))
 
          (service polkit-network-manager-service-type)
-         (service runtime-dir-service-type)
          (service guix-gc-service-type)
          (service udev-fido2-service-type)
          (service ntsync-service-type)
