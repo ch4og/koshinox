@@ -1,4 +1,4 @@
-#!/usr/bin/env -S guix shell setxkbmap bash -- bash
+#!/usr/bin/env bash
 
 TARGET_APPIDS=(
     "\.exe$"
