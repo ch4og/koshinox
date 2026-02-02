@@ -24,7 +24,7 @@
          (url "https://codeberg.org/ch4og/shikanox.git")
          (branch "main")
          (commit
-          "a1b5f485185901058f0361cbc23338ed27dfeeb5")
+          "d768ef4cff065c37f0019647465bcc73055dc289")
          (introduction
           (make-channel-introduction
            "fe3b5f72aa676c69f4d43507bdd18fb051906917"
@@ -35,7 +35,7 @@
          (url "https://github.com/DreamMaoMao/mangowc")
          (branch "main")
          (commit
-          "ca09aa69db29adf7e9cbaab74885724b4d469c66"))
+          "eb0607501d3cdfa352dcc29ba35c46b79bc2fba8"))
         (channel
          (name 'quickshell)
          (url "https://github.com/ch4og/quickshell.git")
@@ -69,7 +69,7 @@
          (url "https://git.guix.gnu.org/guix.git")
          (branch "master")
          (commit
-          "7ab990a50aee368af304a62bf0bee1d6fc055182")
+          "4a1fedd453eeb6305a64d16e88d0029cb23f998d")
          (introduction
           (make-channel-introduction
            "9edb3f66fd807b096b48283debdcddccfea34bad"
