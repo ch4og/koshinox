@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-grimblast --freeze copy area - && wl-paste | swappy -f -
+wayfreeze --after-freeze-cmd "bash -c 'grim -g \"\$(slurp)\" - > >(swappy -f -); killall wayfreeze'"

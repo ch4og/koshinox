@@ -25,6 +25,7 @@
      "swaynotificationcenter"
      "swww"
      "waybar-experimental"
+     "wayfreeze"
      "wl-clipboard"
      "wl-clip-persist"
      "wl-mirror"
