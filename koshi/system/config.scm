@@ -3,6 +3,8 @@
 
 (define-module (koshi system config)
   #:use-module (koshi system os)
+  #:use-module (nongnu packages linux)
+  #:use-module (nongnu packages nvidia)
   #:use-module (nonguix utils)
   #:use-module (nonguix transformations))
 
@@ -10,8 +12,8 @@
   (make-koshi-os "ch" "noko"))
 
 (define-public %koshi-os-nvidia
-  ((compose (nonguix-transformation-nvidia)
-            (nonguix-transformation-linux))
+  ((compose (nonguix-transformation-nvidia #:driver nvdb)
+            (nonguix-transformation-linux  #:linux linux-6.18))
    %koshi-os))
 
 %koshi-os-nvidia
