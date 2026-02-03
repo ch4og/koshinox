@@ -3,17 +3,18 @@
 
 (define-module (koshi home packages gaming)
   #:use-module (guix utils)
-  #:use-module (gnu packages))
+  #:use-module (gnu packages)
+  #:use-module (aagl)
+  #:use-module (nongnu packages game-client)
+  #:use-module (nongnu packages nvidia))
 
 (define-public %koshi-gaming-home-packages
-  (specifications->packages
-   '("gamescope"
-     "heroic-nvidia"
-     "an-anime-game-launcher-nvidia"
-     "mangohud"
-     "openjdk"
-     "prismlauncher-dolly"
-     "protonplus-sandbox"
-     "sleepy-launcher-nvidia"
-     "the-honkers-railway-launcher-nvidia"
-     "steam-nvidia")))
+  `(,@(specifications->packages
+       '("gamescope"
+         "mangohud"
+         "openjdk"
+         "prismlauncher-dolly"
+         "protonplus-sandbox"))
+    ,(heroic-for nvdb)
+    ,(steam-for nvdb)
+    ,(the-honkers-railway-launcher-for nvdb)))
