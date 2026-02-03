@@ -52,9 +52,12 @@
                     (list (subid-range (name username))))))
 
          (service polkit-network-manager-service-type)
-         (service guix-gc-service-type)
          (service udev-fido2-service-type)
          (service ntsync-service-type)
+
+         (service guix-gc-service-type
+                  (guix-gc-configuration
+                   (delete-system-generations "14d")))
 
          (service btrfs-scrub-service-type
                   (btrfs-scrub-configuration
