@@ -13,7 +13,7 @@
          (url "https://gitlab.com/nonguix/nonguix")
          (branch "master")
          (commit
-          "712c2eb688fcd47f8dd6b27697c3552895fc2ed2")
+          "6c0ea215e0bd089bf3b2097e5c59dd726fbbe304")
          (introduction
           (make-channel-introduction
            "897c1a470da759236cc11798f4e0a5f7d4d59fbc"
@@ -24,7 +24,7 @@
          (url "https://codeberg.org/ch4og/shikanox.git")
          (branch "main")
          (commit
-          "f04a4acf44080725cbd951d7f0ac84d31584d73e")
+          "d3d216f61fce07e2ea0c5196de8100c09099d0f7")
          (introduction
           (make-channel-introduction
            "fe3b5f72aa676c69f4d43507bdd18fb051906917"
@@ -35,7 +35,7 @@
          (url "https://github.com/DreamMaoMao/mangowc")
          (branch "main")
          (commit
-          "50b67ac539e65f68ae177de258c7f2fca59bc350"))
+          "b05bc1ce65bdb32b9d2db10ef4e1514c34bf10dd"))
         (channel
          (name 'quickshell)
          (url "https://github.com/ch4og/quickshell.git")
@@ -58,7 +58,7 @@
          (url "https://codeberg.org/hako/rosenthal.git")
          (branch "trunk")
          (commit
-          "4f027bc4566a306ef42626414d3c323e1e8841f4")
+          "f8d4113975b0b4c8f0367e4f0cf93ca2167b2aa8")
          (introduction
           (make-channel-introduction
            "7677db76330121a901604dfbad19077893865f35"
@@ -69,7 +69,7 @@
          (url "https://git.guix.gnu.org/guix.git")
          (branch "master")
          (commit
-          "e81ea17c5fb679c4408d32d58796745085d9d335")
+          "f2c664190f766b489d12d8e21840d7467ecdabe1")
          (introduction
           (make-channel-introduction
            "9edb3f66fd807b096b48283debdcddccfea34bad"

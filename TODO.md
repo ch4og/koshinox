@@ -5,7 +5,6 @@
 - [ ] Display manager (maybe use xsession?)
 - [ ] swayidle
 - [ ] swayosd
-- [ ] satty
 - [ ] wlogout maybe
 - [ ] Gamemode try setting platform-profile
 - [ ] Waybar new config
