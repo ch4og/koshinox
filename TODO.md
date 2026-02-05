@@ -1,7 +1,7 @@
 <!--SPDX-FileCopyrightText: 2025-2026 Nikita Mitasov <me@ch4og.com>-->
 <!--SPDX-License-Identifier: CC0-1.0-->
 
-- [ ] Hellwal
+- [ ] Matugen
 - [ ] Display manager (maybe use xsession?)
 - [ ] swayidle
 - [ ] swayosd
@@ -25,3 +25,4 @@
 - [ ] port chaotic-nyx's discord-krisp
 - [ ] wakatime thru sops
 - [ ] replace grub with upstream package when argon2 gets to guix
+- [ ] package awww when rust bumps
