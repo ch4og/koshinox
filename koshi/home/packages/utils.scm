@@ -24,6 +24,8 @@
      "ncurses"
      "pinentry"
      "playerctl"
+     "python-yubikey-manager"
+     "rbw"
      "ripgrep"
      "starship"
      "stow"

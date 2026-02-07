@@ -17,6 +17,7 @@
      "networkmanager-dmenu"
      "quickshell@git"
      "rofi"
+     "rofi-rbw"
      "setxkbmap"
      "slurp"
      "swappy"
