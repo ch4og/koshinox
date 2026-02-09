@@ -8,13 +8,16 @@
 
 (define (make-koshi-user username)
   (user-account
-   (name username)
-   (group "users")
-   (shell (file-append fish "/bin/fish"))
-   (supplementary-groups '("wheel"
-                           "audio" "netdev"
-                           "video" "plugdev"
-                           "input" "cgroup"))))
+    (name username)
+    (group "users")
+    (shell (file-append fish "/bin/fish"))
+    (supplementary-groups '("audio"
+                            "cgroup"
+                            "input"
+                            "netdev"
+                            "plugdev"
+                            "video"
+                            "wheel"))))
 
 (define-public (make-koshi-users username)
   (cons (make-koshi-user username) %base-user-accounts))

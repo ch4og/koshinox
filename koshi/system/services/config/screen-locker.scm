@@ -7,8 +7,7 @@
   #:use-module (guix gexp))
 
 (define-public %koshi-screen-locker-configuration
-  (screen-locker-configuration
-   (name "swaylock")
-   (program (file-append swaylock-effects "/bin/swaylock"))
-   (using-pam? #t)
-   (using-setuid? #f)))
+  (screen-locker-configuration (name "swaylock")
+                               (program (file-append swaylock-effects "/bin/swaylock"))
+                               (using-pam? #t)
+                               (using-setuid? #f)))

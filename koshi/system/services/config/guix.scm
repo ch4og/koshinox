@@ -9,10 +9,11 @@
   #:use-module (koshi lib substitutes))
 
 (define-public (make-koshi-guix-configuration config)
-  (guix-configuration
-   (inherit config)
-   (channels %koshi-chs)
-   (guix (guix-for-channels %koshi-chs))
-   (substitute-urls %koshi-subs)
-   (extra-options `("--gc-keep-derivations=yes" "--gc-keep-outputs=yes" "--cores=16"))
-   (authorized-keys %koshi-keys)))
+  (guix-configuration (inherit config)
+                      (channels %koshi-chs)
+                      (guix (guix-for-channels %koshi-chs))
+                      (substitute-urls %koshi-subs)
+                      (extra-options `("--gc-keep-derivations=yes"
+                                       "--gc-keep-outputs=yes"
+                                       "--cores=16"))
+                      (authorized-keys %koshi-keys)))

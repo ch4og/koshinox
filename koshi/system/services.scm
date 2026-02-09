@@ -37,7 +37,7 @@
 
 (define-public (make-koshi-system-services username)
   (cons* (service wpa-supplicant-service-type)
-				 (service avahi-service-type)
+         (service avahi-service-type)
          (service elogind-service-type)
          (service pcscd-service-type)
          (service bluetooth-service-type)
@@ -45,29 +45,26 @@
          (service ntp-service-type)
 
          (service rootless-podman-service-type
-                  (rootless-podman-configuration
-                   (subgids
-                    (list (subid-range (name username))))
-                   (subuids
-                    (list (subid-range (name username))))))
+                  (rootless-podman-configuration (subgids (list (subid-range (name username))))
+                                                 (subuids (list (subid-range (name username))))))
 
          (service polkit-network-manager-service-type)
          (service udev-fido2-service-type)
          (service ntsync-service-type)
 
          (service guix-gc-service-type
-                  (guix-gc-configuration
-                   (delete-system-generations "14d")))
+                  (guix-gc-configuration (delete-system-generations "14d")))
 
          (service btrfs-scrub-service-type
-                  (btrfs-scrub-configuration
-                   (schedule "0 0 * * 0")
-                   (filesystems '("/dev/mapper/root" "/dev/mapper/home"))))
+                  (btrfs-scrub-configuration (schedule "0 0 * * 0")
+                                             (filesystems '("/dev/mapper/root"
+                                                            "/dev/mapper/home"))))
 
          (service btrfs-balance-service-type
-                  (btrfs-balance-configuration
-                   (schedule '(lambda (current-time) (+ current-time (* 2 7 24 60 60))))
-                   (filesystems '("/dev/mapper/root" "/dev/mapper/home"))))
+                  (btrfs-balance-configuration (schedule '(lambda (current-time)
+                                                            (+ current-time (* 2 7 24 60 60))))
+                                               (filesystems '("/dev/mapper/root"
+                                                              "/dev/mapper/home"))))
 
          (udev-rules-service 'steam steam-devices-udev-rules)
          (service pam-limits-service-type

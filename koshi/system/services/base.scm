@@ -8,7 +8,8 @@
   #:use-module (koshi system services config sysctl))
 
 (define-public %koshi-base-services
-  (modify-services
-   %base-services
-   (guix-service-type config => (make-koshi-guix-configuration config))
-   (sysctl-service-type config => (make-koshi-sysctl-configuration config))))
+  (modify-services %base-services
+    (guix-service-type config =>
+                       (make-koshi-guix-configuration config))
+    (sysctl-service-type config =>
+                         (make-koshi-sysctl-configuration config))))

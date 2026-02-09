@@ -13,7 +13,7 @@
 
 (define-public %koshi-os-nvidia
   ((compose (nonguix-transformation-nvidia #:driver nvdb)
-            (nonguix-transformation-linux  #:linux linux-6.18))
+            (nonguix-transformation-linux #:linux linux-6.18))
    %koshi-os))
 
 %koshi-os-nvidia

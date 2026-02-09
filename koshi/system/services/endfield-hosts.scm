@@ -18,21 +18,17 @@
 (define (domains->blocked-hosts domains)
   (if (null? domains)
       '()
-      (list
-       (host "0.0.0.0"
-             (car domains)
-             (cdr domains)))))
+      (list (host "0.0.0.0"
+                  (car domains)
+                  (cdr domains)))))
 
 (define %endfield-hosts
   (domains->blocked-hosts %endfield-blocked-domains))
 
 (define endfield-hosts-service-type
-  (service-type
-    (name 'endfield-hosts)
-    (extensions
-     (list (service-extension
-            hosts-service-type
-            (const %endfield-hosts))))
-    (default-value #f)
-    (description
-     "Add /etc/hosts entries to block Endfield telemetry endpoints.")))
+  (service-type (name 'endfield-hosts)
+                (extensions (list (service-extension hosts-service-type
+                                                     (const %endfield-hosts))))
+                (default-value #f)
+                (description
+                 "Add /etc/hosts entries to block Endfield telemetry endpoints.")))

@@ -5,5 +5,4 @@
   #:use-module (gnu services networking))
 
 (define-public %koshi-network-manager-configuration
-  (network-manager-configuration
-   (dns "dnsmasq")))
+  (network-manager-configuration (dns "dnsmasq")))
