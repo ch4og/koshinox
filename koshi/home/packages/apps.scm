@@ -23,6 +23,7 @@
      "pcmanfm"
      "qbittorrent-enhanced"
      "remmina"
+     "senpai"
      "spotatui"
      "torbrowser"
      "uxplay"
