@@ -74,7 +74,7 @@
 (define (fmt)
   "Format Koshi"
   ($ `("find" ,(string-append config-root "/koshi") "-type f -name '*.scm'"
-       "-exec emacs --batch {} --eval '(progn (indent-region (point-min) (point-max)) (save-buffer))' \\;")
+       "-exec guix style -f {} \\;")
      #:verbose? #t))
 
 (define (default)

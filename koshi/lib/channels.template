@@ -35,9 +35,9 @@
            (branch "main"))
 
          (channel
-	         (name 'quickshell)
-	         (url "https://github.com/ch4og/quickshell.git")
-	         (branch "master"))
+           (name 'quickshell)
+           (url "https://github.com/ch4og/quickshell.git")
+           (branch "master"))
 
          (channel
            (name 'aagl)
