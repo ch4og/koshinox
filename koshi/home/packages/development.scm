@@ -6,15 +6,14 @@
   #:use-module (gnu packages))
 
 (define-public %koshi-development-home-packages
-  (specifications->packages
-   '("direnv"
-     "jujutsu"
-     "lazygit"
-     "maak"
-     "passt"
-     "podman"
-     "podman-compose"
-     "reuse"
-     "slirp4netns"
-     "vscodium"
-     "wakatime-cli")))
+  (specifications->packages (list "direnv"
+                                  "jujutsu"
+                                  "lazygit"
+                                  "maak"
+                                  "passt"
+                                  "podman"
+                                  "podman-compose"
+                                  "reuse"
+                                  "slirp4netns"
+                                  "vscodium"
+                                  "wakatime-cli")))

@@ -6,9 +6,8 @@
   #:use-module (gnu packages))
 
 (define-public %koshi-browser-home-packages
-  (specifications->packages
-   '("librewolf"
-     "adaptive-tab-bar-colour-icecat"
-     "bitwarden-icecat"
-     "livemarks-icecat"
-     "ublock-origin-icecat")))
+  (specifications->packages (list "librewolf"
+                                  "adaptive-tab-bar-colour-icecat"
+                                  "bitwarden-icecat"
+                                  "livemarks-icecat"
+                                  "ublock-origin-icecat")))

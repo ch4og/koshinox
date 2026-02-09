@@ -6,9 +6,8 @@
   #:use-module (gnu packages))
 
 (define-public %koshi-theming-home-packages
-  (specifications->packages
-   '("bibata-cursor-theme"
-     "gnome-themes-extra"
-     "murrine"
-     "qogir-icon-theme"
-     "tokyonight-gtk-theme")))
+  (specifications->packages (list "bibata-cursor-theme"
+                                  "gnome-themes-extra"
+                                  "murrine"
+                                  "qogir-icon-theme"
+                                  "tokyonight-gtk-theme")))

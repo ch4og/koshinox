@@ -6,9 +6,8 @@
   #:use-module (gnu packages))
 
 (define-public %koshi-services-home-packages
-  (specifications->packages
-   '("bluez"
-     "pipewire"
-     "wireplumber"
-     "nftables"
-     "zapret")))
+  (specifications->packages (list "bluez"
+                                  "pipewire"
+                                  "wireplumber"
+                                  "nftables"
+                                  "zapret")))

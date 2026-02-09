@@ -6,10 +6,9 @@
   #:use-module (gnu packages))
 
 (define-public %koshi-fonts-home-packages
-  (specifications->packages
-   '("font-awesome-nonfree"
-     "fontforge"
-     "font-google-noto"
-     "font-google-noto-emoji"
-     "font-google-noto-sans-cjk"
-     "font-microsoft-web-core-fonts")))
+  (specifications->packages (list "font-awesome-nonfree"
+                                  "fontforge"
+                                  "font-google-noto"
+                                  "font-google-noto-emoji"
+                                  "font-google-noto-sans-cjk"
+                                  "font-microsoft-web-core-fonts")))
