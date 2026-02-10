@@ -12,7 +12,7 @@
          "eog"
          "file-roller"
          "filezilla"
-         "ghostty"
+         "foot"
          "gimp"
          "kdenlive"
          "libreoffice"
