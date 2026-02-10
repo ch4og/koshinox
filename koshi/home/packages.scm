@@ -19,15 +19,15 @@
               (symbol-append '%koshi- category '-home-packages)))
 
 (define %package-categories
-  (list apps
-        browser
-        development
-        fonts
-        gaming
-        services
-        theming
-        utils
-        wayland))
+  '(apps
+    browser
+    development
+    fonts
+    gaming
+    services
+    theming
+    utils
+    wayland))
 
 (define-public %koshi-home-packages
   (apply append
