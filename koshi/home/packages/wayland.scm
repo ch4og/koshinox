@@ -15,7 +15,7 @@
                                   "mate-polkit"
                                   "matugen-shika"
                                   "networkmanager-dmenu"
-                                  "quickshell@git"
+                                  "quickshell"
                                   "rofi"
                                   "rofi-rbw"
                                   "setxkbmap"
