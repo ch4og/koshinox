@@ -35,11 +35,6 @@
            (branch "main"))
 
          (channel
-           (name 'quickshell)
-           (url "https://github.com/ch4og/quickshell.git")
-           (branch "master"))
-
-         (channel
            (name 'aagl)
            (url "https://codeberg.org/ch4og/aagl-guix.git")
            (branch "main")
@@ -48,6 +43,16 @@
              "1055d880e124d69a2aef85cac98a813d442a55fa"
              (openpgp-fingerprint
               "7C9E 7EBA 828C 58DF DACE  5BED 4DCC 7AB7 FC75 319B"))))
+
+         (channel
+           (name 'bluebox)
+           (branch "main")
+           (url "https://codeberg.org/lapislazuli/bluebox")
+           (introduction
+            (make-channel-introduction
+             "63350484aaacc362aea28fb14236019fced4050f"
+             (openpgp-fingerprint
+              "5132 3571 CEED 988F 52FC 467C 6F98 DBF3 EA7F 4B37"))))
 
          (channel
            (name 'rosenthal)
