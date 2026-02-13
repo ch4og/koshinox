@@ -41,7 +41,7 @@
          (url "https://codeberg.org/ch4og/aagl-guix.git")
          (branch "main")
          (commit
-          "83af3ef85c2d33fc03255665bde859db7985be31")
+          "f28a1e25819337273a65fc1dffa33d3056887102")
          (introduction
           (make-channel-introduction
            "1055d880e124d69a2aef85cac98a813d442a55fa"
