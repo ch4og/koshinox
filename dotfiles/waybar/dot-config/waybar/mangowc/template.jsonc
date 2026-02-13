@@ -47,9 +47,9 @@
       "format": "{usage}% "
     },
     "custom/spotify": {
-      "exec": "$HOME/.config/waybar/scripts/spotify.sh 2> /dev/null",
+      "exec": "env $HOME/.config/waybar/scripts/spotify.sh 2> /dev/null",
       "exec-if": "pgrep spotify || pgrep spotifyd || pgrep spotatui",
-      "format": "{icon} {}",
+      "format": "{icon} {text}",
       "format-icons": {
         "default": "",
         "paused": " ",
