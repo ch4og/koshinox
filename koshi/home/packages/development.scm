@@ -6,10 +6,10 @@
   #:use-module (gnu packages))
 
 (define-public %koshi-development-home-packages
-  (specifications->packages (list "direnv"
+  (specifications->packages (list "blue"
+                                  "direnv"
                                   "jujutsu"
                                   "lazygit"
-                                  "maak"
                                   "passt"
                                   "podman"
                                   "podman-compose"

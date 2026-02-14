@@ -26,4 +26,4 @@
 - [ ] wakatime thru sops
 - [ ] replace grub with upstream package when argon2 gets to guix
 - [ ] package awww when rust bumps
-- [ ] switch to BLUE?
+- [ ] lookup info about rootless daemon

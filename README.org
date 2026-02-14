@@ -17,7 +17,7 @@ A personal config for [[https://codeberg.org/ch4og/shikanox][Shikanox]] "distro"
 Personal dotfiles are organized using a layout compatible with [[https://www.gnu.org/software/stow/manual/stow.html#Introduction][GNU Stow]].
 
 Each subdirectory here represents a *"package"* of configuration files,
-automatically linked into =~= via the =maak dotfiles=.
+automatically linked into =~= via the =blue dots=.
 
 ** Usage
 
@@ -26,19 +26,19 @@ automatically linked into =~= via the =maak dotfiles=.
   stow fish mangowc other-package-name -t ~ --dotfiles
 #+end_src
 
-* Maak file
+* Blueprint file
 
-This repository uses [[https://codeberg.org/jjba23/maak][maak]].
+This repository uses [[https://codeberg.org/lapislazuli/blue][blue]].
 
 Instead of running long guix and nix invocations manually, you can for example do:
 
 #+BEGIN_SRC sh
-  maak system
-  maak fmt
-  maak nix-update
+  blue system
+  blue style
+  blue nix up
 #+END_SRC
 
-(Hacky maak wrapper binary loaded to =$PATH= with direnv)
+(Hacky blue wrapper binary loaded to =$PATH= with direnv)
 
 * Acknowledgments
 

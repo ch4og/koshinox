@@ -1,0 +1,158 @@
+#!/usr/bin/env -S guix shell blue stow -- env -S blue -f
+;; -*- mode: scheme -*-
+;; SPDX-FileCopyrightText: 2026 Nikita Mitasov <me@ch4og.com>
+;; SPDX-License-Identifier: GPL-3.0-or-later
+!#
+
+(use-modules
+ (blue types blueprint)
+ (blue types command))
+
+(define dotfiles-list
+  '("btop"
+    "dxvk"
+    "emacs"
+    "fastfetch"
+    "fish"
+    "foot"
+    "ghostty"
+    "git"
+    "gtk"
+    "jujutsu"
+    "mangohud"
+    "mangowc"
+    "pipewire"
+    "podman"
+    "rofi"
+    "ssh"
+    "swappy"
+    "tmux"
+    "waybar"))
+
+(define config-root
+  (dirname (canonicalize-path (current-filename))))
+
+(add-to-load-path config-root)
+
+(define-command (dotfiles-command args)
+  ;; TODO: Parse args list, if passed unstow and restow only selected.
+  ;; TODO: Fix that junky flags solution.
+  ((invoke "dots")
+   (category 'koshi)
+   (synopsis "Reconfigure dotfiles")
+   (help "Reconfigure all listed dotfiles or only selected ones"))
+  (let ((dotfiles-dir (string-append config-root "/dotfiles")))
+    (define (run-stow flags selection)
+      (system (string-join `("cd" ,dotfiles-dir
+                             "&&"
+                             "stow"
+                             ,@flags
+                             "~"
+                             ,selection) " ")))
+    (display "Unstowing all dotfiles...\n")
+    (run-stow '("-D" "--dotfiles" "-t") "*")
+    (display "Stowing selected dotfiles:\n")
+    (for-each
+     (lambda (dotfile)
+       (display (string-append "Stowing " dotfile "\n"))
+       (run-stow '("--dotfiles" "-t") dotfile))
+     dotfiles-list)))
+
+(define (guix-reconfigure type)
+  ;; TODO: Rootless setup somehow.  Maybe deploy?
+  (let* ((time-machine '("sudo" "guix" "time-machine" "-C" "koshi/lib/channels.scm" "--"))
+         (guix (if (string=? type "system") time-machine '("guix")))
+         (config-file (string-append "koshi/" type "/config.scm"))
+         (subs (@ (koshi lib substitutes) %koshi-subs-urls))
+         (args `(,subs "-L." "--allow-downgrades")))
+    (display (string-append "Reconfiguring " type "...\n"))
+    (system (string-join `("cd" ,config-root "&&"
+                           ,@guix ,type
+                           "reconfigure" ,config-file
+                           ,@args) " "))))
+
+(define-command (style-command args)
+  ((invoke "style")
+   (category 'koshi)
+   (synopsis "Style all files")
+   (help "Style all .scm files"))
+  (system (string-join `("find" ,(string-append config-root "/koshi")
+                         "-type f"
+                         "-name '*.scm'"
+                         "-exec guix style -f {} \\;") " ")))
+
+(define-command (update-command args)
+  ((invoke "up")
+   (category 'koshi)
+   (synopsis "Update channels")
+   (help "Update channels.scm pinned commits"))
+  (let* ((input "koshi/lib/channels.template")
+         (output "koshi/lib/channels.scm")
+         (replacement (string-join `("guix" "time-machine"
+                                     "-C" ,input "--"
+                                     "describe"
+                                     "-f" "channels") " ")))
+    (display "Updating channels.scm...\n")
+    (system (string-join `("cd" ,config-root
+                           "&&"
+                           "awk -v rep=\"$(" ,replacement ")\"\\)"
+                           "'/;;; %koshi-chs start/ {print rep; skip=1; next}"
+                           "skip && /;;; %koshi-chs end/ {skip=0; next}"
+                           "!skip {print}'"
+                           ,input ">" ,output) " "))
+
+    (system (string-join `("guix style" "-f" output) " "))))
+
+(define-command (system-command args)
+  ((invoke "system")
+   (category 'koshi)
+   (synopsis "Reconfigure Guix System")
+   (help "Run 'guix system reconfigure' of current config"))
+  (guix-reconfigure "system"))
+
+(define-command (home-command args)
+  ((invoke "home")
+   (category 'koshi)
+   (synopsis "Reconfigure Guix Home")
+   (help "Run 'guix home reconfigure' of current config"))
+  (guix-reconfigure "home"))
+
+(define-command (nix-command args)
+  ((invoke "nix")
+   (category 'koshi)
+   (synopsis "Nix specific commands")
+   (help "Run 'nix fmt', 'nix up' and just 'nix'."))
+  (let ((first (car `(,@args ""))))
+    (if (string=? first "")
+        (begin
+          (display "Reconfiguring Nix Home Manager...\n")
+          (system (string-join `("cd" ,(string-append config-root "/nix")
+                                 "&&"
+                                 "nix run ."
+                                 "-- switch"
+                                 "--flake .") " ")))
+        (if (string=? first "fmt")
+            (begin
+              (display "Formatting Nix files...\n")
+              (system (string-join `("cd" ,(string-append config-root "/nix")
+                                     "&&"
+                                     "nix fmt .") " ")))
+            (if (string=? first "up")
+                (begin
+                  (display "Updating Nix flake.lock...\n")
+                  (system (string-join `("cd" ,(string-append config-root "/nix")
+                                         "&&"
+                                         "nix flake update") " ")))
+                (display (string-join `("Unknow Nix action specified."
+                                        ""
+                                        "Please specify one of:"
+                                        "'nix' 'nix fmt' 'nix up'"
+                                        "") "\n")))))))
+
+(blueprint
+ (commands (list style-command
+                 dotfiles-command
+                 update-command
+                 system-command
+                 home-command
+                 nix-command)))
