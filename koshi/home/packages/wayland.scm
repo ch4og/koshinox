@@ -8,8 +8,10 @@
 (define-public %koshi-wayland-home-packages
   (specifications->packages (list "cliphist"
                                   "dmenu-bluetooth"
+                                  "glib:bin"
                                   "grim"
                                   "grimblast"
+                                  "gsettings-desktop-schemas"
                                   "hyprpicker"
                                   "mangowc@git"
                                   "mate-polkit"

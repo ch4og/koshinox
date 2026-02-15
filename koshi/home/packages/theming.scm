@@ -6,8 +6,14 @@
   #:use-module (gnu packages))
 
 (define-public %koshi-theming-home-packages
-  (specifications->packages (list "bibata-cursor-theme"
+  (specifications->packages (list "adw-gtk3-theme"
+                                  "bibata-cursor-theme"
+                                  "breeze"
+                                  "breeze-gtk"
                                   "gnome-themes-extra"
+                                  "kvantum"
                                   "murrine"
                                   "qogir-icon-theme"
+                                  "qt5ct"
+                                  "qt6ct"
                                   "tokyonight-gtk-theme")))

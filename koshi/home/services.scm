@@ -25,29 +25,31 @@
                     (pinentry-program
                      (file-append pinentry "/bin/pinentry"))))
 
-   (simple-service
-    'env-vars-service
-    home-environment-variables-service-type
-    (let* ((home (or (getenv "HOME") (string-append "/home/" username)))
-           (xdg-config (or (getenv "XDG_CONFIG_HOME") (string-append home "/.config")))
-           (xdg-cache (or (getenv "XDG_CACHE_HOME") (string-append home "/.cache")))
-           (xdg-state (or (getenv "XDG_STATE_HOME") (string-append home "/.local/state")))
-           (xdg-data (or (getenv "XDG_DATA_HOME") (string-append home "/.local/share"))))
-      `(("TZ" . "Europe/Moscow")
-        ("NIXPKGS_ALLOW_UNFREE" . "1")
-        ("NIXOS_OZONE_WL" . "1")
-        ("EDITOR" . "emacsclient")
-        ("GUIX_SANDBOX_EXTRA_SHARES" . ,(string-join `(,(string-append home "/.config/MangoHud/")
-                                                       ,(string-append home "/.config/dxvk/")
-                                                       "/games")
-                                                     ":"))
-        ("NPM_CONFIG_USERCONFIG" . ,(string-append xdg-config "/npm/npmrc"))
-        ("NPM_CONFIG_CACHE" . ,(string-append xdg-cache "/npm"))
-        ("NODE_REPL_HISTORY" . ,(string-append xdg-state "/node_repl_history"))
-        ("CARGO_HOME" . ,(string-append xdg-data "/cargo"))
-        ("WAKATIME_HOME" . ,(string-append xdg-config "/wakatime"))
-        ("FONTCONFIG_PATH" . ,(string-append home "/.guix-home/profile/etc/fonts/")))))
-
+         (simple-service
+          'env-vars-service
+          home-environment-variables-service-type
+          (let* ((home (or (getenv "HOME") (string-append "/home/" username)))
+                 (xdg-config (or (getenv "XDG_CONFIG_HOME") (string-append home "/.config")))
+                 (xdg-cache (or (getenv "XDG_CACHE_HOME") (string-append home "/.cache")))
+                 (xdg-state (or (getenv "XDG_STATE_HOME") (string-append home "/.local/state")))
+                 (xdg-data (or (getenv "XDG_DATA_HOME") (string-append home "/.local/share"))))
+            `(("TZ" . "Europe/Moscow")
+              ("NIXPKGS_ALLOW_UNFREE" . "1")
+              ("NIXOS_OZONE_WL" . "1")
+              ("EDITOR" . "emacsclient")
+              ("GUIX_SANDBOX_EXTRA_SHARES" . ,(string-join `(,(string-append home "/.config/MangoHud/")
+                                                             ,(string-append home "/.config/dxvk/")
+                                                             "/games")
+                                                           ":"))
+              ("NPM_CONFIG_USERCONFIG" . ,(string-append xdg-config "/npm/npmrc"))
+              ("NPM_CONFIG_CACHE" . ,(string-append xdg-cache "/npm"))
+              ("NODE_REPL_HISTORY" . ,(string-append xdg-state "/node_repl_history"))
+              ("CARGO_HOME" . ,(string-append xdg-data "/cargo"))
+              ("WAKATIME_HOME" . ,(string-append xdg-config "/wakatime"))
+              ("FONTCONFIG_PATH" . ,(string-append home "/.guix-home/profile/etc/fonts/"))
+              ("QT_PLUGIN_PATH" . ,(string-join `(,(string-append home "/.guix-home/profile/lib/qt6/plugins")
+                                                  ,(string-append home "/.guix-home/profile/lib/qt5/plugins"))
+                                                ":")))))
 
    (service home-xdg-user-directories-service-type
             (home-xdg-user-directories-configuration

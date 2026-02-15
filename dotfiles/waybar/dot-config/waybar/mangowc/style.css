@@ -1,21 +1,4 @@
-@define-color color0 #cbc0b7;
-@define-color color1 #504030;
-@define-color color2 #605040;
-@define-color color3 #202020;
-@define-color color4 #706050;
-@define-color color5 #606050;
-@define-color color6 #605050;
-@define-color color7 #707060;
-@define-color color8 #fffeff;
-@define-color color9 #fffeff;
-@define-color color10 #000004;
-@define-color color11 #000000;
-@define-color color12 #040000;
-@define-color color13 #00105a;
-@define-color color14 #1f0000;
-@define-color color15 #000000;
-
-
+@import "../generated/colors.css";
 
 * {
   border: none;
@@ -29,13 +12,11 @@
 
 window#waybar {
   background: transparent;
-  color: @color8;
+  color: @on_surface;
 }
 
-
-
 #waybar > box {
-  margin: 6px 6px 0px 6px;
+  margin: 8px 8px 0px 8px;
 }
 
 
@@ -46,24 +27,22 @@ window#waybar {
   padding: 0 4px;
 }
 
-
-
 .modules-left > widget > *,
 .modules-center > widget > *,
 .modules-right > widget > * {
-  background: alpha(@color2, 0.85);
-  border-radius: 8px;
-  padding: 3px 8px;
+  background: alpha(@surface_container_low, 0.60);
+  border-radius: 10px;
+  padding: 4px 10px;
   margin: 0 4px;
-  border: 1px solid alpha(@color3, 0.6);
-  color: @color8;
+  border: 1px solid alpha(@outline_variant, 0.35);
+  box-shadow: inset 0 1px alpha(@surface_bright, 0.15);
+  color: @on_surface;
 }
 
-
-
+/* Slightly stronger center presence */
 .modules-center > widget > * {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 
@@ -74,48 +53,48 @@ window#waybar {
 
 #workspaces button {
   background: transparent;
-  color: @color8;
-  padding: 3px 9px;
+  color: @on_surface;
+  padding: 4px 10px;
   margin: 0 2px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid transparent;
 }
 
 #workspaces button:hover {
-  background: alpha(@color4, 0.35);
+  background: alpha(@primary_container, 0.30);
 }
 
 #workspaces button.active {
-  background: @color4;
-  color: @color8;
-  border-color: alpha(@color8, 0.5);
+  background: alpha(@primary_container, 0.85);
+  color: @on_primary_container;
+  border: 1px solid alpha(@primary, 0.5);
   font-weight: 600;
 }
 
 #workspaces button.urgent {
-  background: @color14;
-  color: @color8;
+  background: alpha(@error_container, 0.9);
+  color: @on_error_container;
 }
 
 
 
 #window {
   font-weight: 600;
-  color: @color8;
+  color: @on_surface;
 }
 
 #window.empty {
-  color: alpha(@color8, 0.45);
+  color: alpha(@on_surface, 0.45);
 }
 
 
 
 #mode {
-  background: @color13;
-  color: @color8;
-  border-radius: 8px;
-  border: 1px solid alpha(@color8, 0.4);
-  padding: 3px 10px;
+  background: alpha(@secondary_container, 0.75);
+  color: @on_secondary_container;
+  border-radius: 10px;
+  border: 1px solid alpha(@secondary, 0.4);
+  padding: 4px 12px;
 }
 
 
@@ -129,95 +108,65 @@ window#waybar {
 #custom-spotify,
 #tray,
 #mode {
-  margin: 0 3px;
+  margin: 0 4px;
 }
 
 
-
-#clock {
-  color: @color8;
-  font-weight: 500;
-}
-
-
-
-#battery {
-  color: @color8;
-}
 
 #battery.charging {
-  color: @color5;
+  color: @primary;
 }
 
 @keyframes battery-warn {
   0% {
-    background-color: alpha(@color1, 0.35);
-    color: @color8;
+    background-color: alpha(@error_container, 0.25);
   }
   100% {
-    background-color: alpha(@color1, 0.55);
-    color: @color8;
+    background-color: alpha(@error_container, 0.45);
   }
 }
 
 #battery.warning:not(.charging) {
-  animation: battery-warn 0.7s ease-in-out infinite alternate;
-  border-radius: 8px;
+  animation: battery-warn 0.8s ease-in-out infinite alternate;
+  border-radius: 10px;
 }
 
 
-
-#cpu,
-#memory {
-  color: @color8;
-}
 
 #cpu {
-  border-right: 1px solid alpha(@color3, 0.6);
-  padding-right: 7px;
+  border-right: 1px solid alpha(@outline_variant, 0.4);
+  padding-right: 8px;
 }
 
 #memory {
-  padding-left: 7px;
+  padding-left: 8px;
 }
 
 
-
-#network {
-  color: @color8;
-}
 
 #network.disconnected {
-  background: @color14;
-  color: @color8;
-  border-radius: 8px;
+  background: alpha(@error_container, 0.85);
+  color: @on_error_container;
+  border-radius: 10px;
 }
 
 
-
-#pulseaudio {
-  color: @color8;
-}
 
 #pulseaudio.muted {
-  color: alpha(@color8, 0.5);
-  background: alpha(@color3, 0.6);
+  color: alpha(@on_surface, 0.5);
+  background: alpha(@surface_variant, 0.6);
 }
 
 
-
-#custom-spotify {
-  color: @color8;
-}
 
 #custom-spotify.playing {
-  color: @color5;
+  color: @tertiary;
 }
 
 
 
 #tray {
-  padding-right: 6px;
+  padding-right: 8px;
 }
 
 #tray > .passive {
@@ -225,23 +174,25 @@ window#waybar {
 }
 
 #tray > .needs-attention {
-  background: @color1;
-  color: @color8;
-  border-radius: 6px;
+  background: alpha(@primary_container, 0.9);
+  color: @on_primary_container;
+  border-radius: 8px;
 }
 
 
 
 tooltip {
-  background: alpha(@color3, 0.95);
-  border-radius: 6px;
-  padding: 4px 8px;
-  border: 1px solid alpha(@color2, 0.8);
+  background: alpha(@surface_container_highest, 0.75);
+  border-radius: 8px;
+  padding: 6px 10px;
+  border: 1px solid alpha(@outline_variant, 0.6);
 }
 
 tooltip label {
-  color: @color8;
+  color: @on_surface;
 }
+
+
 
 #battery,
 #network,

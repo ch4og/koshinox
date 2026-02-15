@@ -2,7 +2,7 @@
 set -euo pipefail
 
 TEMPLATE="$HOME/.config/waybar/mangowc/template.jsonc"
-RUNTIME="/tmp/waybar-generated.jsonc"
+RUNTIME="$HOME/.config/waybar/generated/config.jsonc"
 STYLE="$HOME/.config/waybar/mangowc/style.css"
 
 cleanup() {

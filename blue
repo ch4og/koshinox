@@ -19,15 +19,19 @@
     "git"
     "gtk"
     "jujutsu"
+    "kvantum"
     "mangohud"
     "mangowc"
+    "matugen"
     "pipewire"
     "podman"
+    "qtct"
     "rofi"
     "ssh"
     "swappy"
     "tmux"
-    "waybar"))
+    "waybar"
+    "wezterm"))
 
 (define config-root
   (dirname (canonicalize-path (current-filename))))
