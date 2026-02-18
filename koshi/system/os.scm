@@ -3,7 +3,7 @@
 
 (define-module (koshi system os)
   #:use-module (gnu)
-  #:use-module (koshi lib layout)
+  #:use-module (koshi config layout)
   #:use-module (koshi system bootloader)
   #:use-module (koshi system filesystems)
   #:use-module (koshi system kernel)

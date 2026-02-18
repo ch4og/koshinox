@@ -64,10 +64,10 @@
 
 (define (guix-reconfigure type)
   ;; TODO: Rootless setup somehow.  Maybe deploy?
-  (let* ((time-machine '("sudo" "guix" "time-machine" "-C" "koshi/lib/channels.scm" "--"))
+  (let* ((time-machine '("sudo" "guix" "time-machine" "-C" "koshi/config/channels.scm" "--"))
          (guix (if (string=? type "system") time-machine '("guix")))
          (config-file (string-append "koshi/" type "/config.scm"))
-         (subs (@ (koshi lib substitutes) %koshi-subs-urls))
+         (subs (@ (koshi config substitutes) %koshi-subs-urls))
          (args `(,subs "-L." "--allow-downgrades")))
     (display (string-append "Reconfiguring " type "...\n"))
     (system (string-join `("cd" ,config-root "&&"
@@ -90,8 +90,8 @@
    (category 'koshi)
    (synopsis "Update channels")
    (help "Update channels.scm pinned commits"))
-  (let* ((input "koshi/lib/channels.template")
-         (output "koshi/lib/channels.scm")
+  (let* ((input "koshi/config/channels.template")
+         (output "koshi/config/channels.scm")
          (replacement (string-join `("guix" "time-machine"
                                      "-C" ,input "--"
                                      "describe"
@@ -105,7 +105,7 @@
                            "!skip {print}'"
                            ,input ">" ,output) " "))
 
-    (system (string-join `("guix style" "-f" output) " "))))
+    (system (string-join `("guix style" "-f" ,output) " "))))
 
 (define-command (system-command args)
   ((invoke "system")

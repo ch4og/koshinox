@@ -4,9 +4,9 @@
 (define-module (koshi system services config guix)
   #:use-module (gnu)
   #:use-module (gnu packages package-management)
-  #:use-module (koshi lib channels)
-  #:use-module (koshi lib keys)
-  #:use-module (koshi lib substitutes))
+  #:use-module (koshi config channels)
+  #:use-module (koshi config keys)
+  #:use-module (koshi config substitutes))
 
 (define-public (make-koshi-guix-configuration config)
   (guix-configuration (inherit config)
