@@ -15,7 +15,7 @@
                                   "hyprpicker"
                                   "mangowc@git"
                                   "mate-polkit"
-                                  "matugen-shika"
+                                  "matugen@4"
                                   "networkmanager-dmenu"
                                   "quickshell"
                                   "rofi"
