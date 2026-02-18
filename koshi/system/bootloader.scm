@@ -6,7 +6,7 @@
   #:use-module (gnu bootloader)
   #:use-module (gnu bootloader grub)
   #:use-module (rosenthal bootloader grub)
-  #:use-module (koshi lib layout))
+  #:use-module (koshi config layout))
 
 (define-public %koshi-bootloader-configuration
   (bootloader-configuration
