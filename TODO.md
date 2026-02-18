@@ -29,5 +29,7 @@
 - [ ] lookup info about rootless daemon
 - [ ] rofi matugen
 - [ ] spicetify matugen
-- [ ] term matugen
-- [ ] librewolf matugen?
+- [ ] starship matugen
+- [ ] steam matugen
+- [ ] telegram matugen
+- [ ] kmscon

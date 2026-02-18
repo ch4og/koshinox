@@ -38,3 +38,25 @@ output_path = '~/.config/Kvantum/matugen/matugen.kvconfig'
 [templates.kvantum_svg]
 input_path = './templates/kvantum.svg'
 output_path = '~/.config/Kvantum/matugen/matugen.svg'
+
+[templates.pywalfox]
+input_path = './templates/pywalfox.json'
+output_path = '~/.cache/wal/colors.json'
+post_hook = 'pywalfox update'
+
+[templates.obs]
+input_path = './templates/obs.obt'
+output_path = '~/.config/obs-studio/themes/matugen.obt'
+
+[templates.fish]
+input_path = './templates/fish.fish'
+output_path = '~/.config/fish/conf.d/000_colors.fish'
+
+[templates.terminal]
+input_path = './templates/terminal.sh'
+output_path = '~/.config/term-colors.sh'
+
+[templates.old-terminals]
+input_path = './templates/old-terminals.sh'
+output_path = '~/.cache/old-terminals.sh'
+post_hook = 'sh ~/.cache/old-terminals.sh'
