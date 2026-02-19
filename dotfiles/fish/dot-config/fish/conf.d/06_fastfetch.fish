@@ -1,11 +1,16 @@
 if status is-interactive
-    if string match -q "*ghostty*" $TERM || string match -q "*kitty*" $TERM
-        if test "$SHLVL" -eq 1
-            fastfetch --logo-type kitty -c ~/.config/fastfetch/autorun.jsonc
-        end
+    set should_run 0
+
+    if test "$SHLVL" -eq 1
+        set should_run 1
+    else if set -q KMS_START_SCRIPT; and test "$SHLVL" -eq 2
+        set should_run 1
     end
-    if string match -q "foot" $TERM
-        if test "$SHLVL" -eq 1
+
+    if test "$should_run" -eq 1
+        if string match -q "*ghostty*" $TERM; or string match -q "*kitty*" $TERM
+            fastfetch --logo-type kitty -c ~/.config/fastfetch/autorun.jsonc
+        else
             fastfetch -c ~/.config/fastfetch/autorun.jsonc
         end
     end

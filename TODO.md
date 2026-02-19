@@ -32,4 +32,5 @@
 - [ ] starship matugen
 - [ ] steam matugen
 - [ ] telegram matugen
-- [ ] kmscon
+- [ ] switch to bash/zsh
+- [ ] kmscon-service-type with setting font

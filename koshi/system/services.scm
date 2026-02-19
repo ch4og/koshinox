@@ -27,6 +27,7 @@
   #:use-module (koshi config keys)
   #:use-module (koshi config substitutes)
   #:use-module (koshi system services base)
+  #:use-module (koshi system services config kmscon)
   #:use-module (koshi system services config network-manager)
   #:use-module (koshi system services config nix)
   #:use-module (koshi system services config openssh)
@@ -43,6 +44,24 @@
          (service bluetooth-service-type)
          (service polkit-service-type)
          (service ntp-service-type)
+
+	 (service kmscon-service-type
+                  (generate-koshi-kmscon-configuration "tty1"))
+
+	 (service kmscon-service-type
+                  (generate-koshi-kmscon-configuration "tty2"))
+
+	 (service kmscon-service-type
+                  (generate-koshi-kmscon-configuration "tty3"))
+
+	 (service kmscon-service-type
+                  (generate-koshi-kmscon-configuration "tty4"))
+
+	 (service kmscon-service-type
+                  (generate-koshi-kmscon-configuration "tty5"))
+
+	 (service kmscon-service-type
+                  (generate-koshi-kmscon-configuration "tty6"))
 
          (service rootless-podman-service-type
                   (rootless-podman-configuration (subgids (list (subid-range (name username))))

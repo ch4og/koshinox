@@ -9,6 +9,8 @@
 
 (define-public %koshi-base-services
   (modify-services %base-services
+    (delete mingetty-service-type)
+    (delete console-font-service-type)
     (guix-service-type config =>
                        (make-koshi-guix-configuration config))
     (sysctl-service-type config =>
