@@ -1,7 +1,7 @@
 if status is-interactive
     set should_run 0
 
-    if test "$SHLVL" -eq 1
+    if test "$SHLVL" -eq 1; and not string match -q "linux" $TERM
         set should_run 1
     else if set -q KMS_START_SCRIPT; and test "$SHLVL" -eq 2
         set should_run 1
