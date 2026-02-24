@@ -30,11 +30,6 @@
               "7C9E 7EBA 828C 58DF DACE  5BED 4DCC 7AB7 FC75 319B"))))
 
          (channel
-           (name 'mangowc)
-           (url "https://github.com/DreamMaoMao/mangowc")
-           (branch "main"))
-
-         (channel
            (name 'aagl)
            (url "https://codeberg.org/ch4og/aagl-guix.git")
            (branch "main")

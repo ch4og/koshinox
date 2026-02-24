@@ -24,8 +24,8 @@
 - [ ] fix bluetooth
 - [ ] port chaotic-nyx's discord-krisp
 - [ ] wakatime thru sops
-- [ ] replace grub with upstream package when argon2 gets to guix
-- [ ] package awww when rust bumps
+- [ ] replace grub with upstream package when argon2 gets to guix (!6457)
+- [ ] package awww when rust bumps (!6728)
 - [ ] lookup info about rootless daemon
 - [ ] rofi matugen
 - [ ] spicetify matugen
@@ -34,3 +34,4 @@
 - [ ] telegram matugen
 - [ ] switch to bash/zsh
 - [ ] kmscon-service-type with setting font
+- [ ] wait for upstream kmscon (!5889)
