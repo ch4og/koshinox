@@ -25,6 +25,5 @@
          "remmina"
          "senpai"
          "spotatui"
-         "torbrowser"
          "uxplay"
          "virt-manager")))
