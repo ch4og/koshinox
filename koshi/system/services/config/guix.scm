@@ -12,6 +12,7 @@
   (guix-configuration (inherit config)
                       (channels %koshi-chs)
                       (guix (guix-for-channels %koshi-chs))
+                      (privileged? #f)
                       (substitute-urls %koshi-subs)
                       (extra-options `("--gc-keep-derivations=yes"
                                        "--gc-keep-outputs=yes"

@@ -2,7 +2,6 @@
 <!--SPDX-License-Identifier: CC0-1.0-->
 
 General:
-- [ ] lookup info about rootless daemon
 - [ ] nonguix PR GUIX_SANDBOX_EXTRA_ENVS
 - [ ] package awww when it bumps
 - [ ] wait for upstream kmscon (guix #5889)
