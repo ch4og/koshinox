@@ -8,6 +8,7 @@
 (define-public %koshi-development-home-packages
   (specifications->packages (list "blue"
                                   "direnv"
+                                  "git-delta"
                                   "jujutsu"
                                   "lazygit"
                                   "passt"
