@@ -13,7 +13,7 @@
                                   "curl"
                                   "dust"
                                   "eza"
-                                  "fastfetch"
+                                  "fastfetch-no-zfs"
                                   "fd"
                                   "file"
                                   "fzf"

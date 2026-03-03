@@ -22,7 +22,7 @@
           (name 'shikanox)
           (url "https://codeberg.org/ch4og/shikanox.git")
           (branch "main")
-          (commit "e1d161085e7a57f87eb28148e8ec990d659c54bf")
+          (commit "7728c6be78b0b56d96cf267438e743f66800ac40")
           (introduction
            (make-channel-introduction
             "fe3b5f72aa676c69f4d43507bdd18fb051906917"
