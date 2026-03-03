@@ -6,7 +6,9 @@
   #:use-module (gnu packages))
 
 (define-public %koshi-wayland-home-packages
-  (specifications->packages (list "cliphist"
+  (specifications->packages (list "avizo"
+                                  "brightnessctl"
+                                  "cliphist"
                                   "dmenu-bluetooth"
                                   "glib:bin"
                                   "grim"
@@ -17,6 +19,7 @@
                                   "mate-polkit"
                                   "matugen"
                                   "networkmanager-dmenu"
+                                  "pamixer"
                                   "quickshell"
                                   "rofi"
                                   "rofi-rbw"

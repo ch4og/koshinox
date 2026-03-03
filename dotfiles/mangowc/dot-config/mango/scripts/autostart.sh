@@ -6,6 +6,8 @@ env ~/.config/mango/scripts/polkit.sh &
 
 swaync &
 
+avizo-service &
+
 swww-daemon & swww restore &
 
 env ~/.config/mango/scripts/waybar.sh &

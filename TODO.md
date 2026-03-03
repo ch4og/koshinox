@@ -9,7 +9,6 @@ General:
 Koshi:
 - [ ] Display manager (maybe use xsession?)
 - [ ] swayidle
-- [ ] swayosd
 - [ ] swaync (with matugen)
 - [ ] wlogout maybe (with matugen)
 - [ ] Gamemode try setting platform-profile
@@ -28,7 +27,6 @@ Koshi:
 - [ ] replace grub with upstream package when argon2 gets to guix (!6457)
 - [ ] rofi matugen
 - [ ] spicetify matugen
-- [ ] starship matugen
 - [ ] steam matugen
 - [ ] telegram matugen
 - [ ] switch to bash/zsh
