@@ -11,6 +11,7 @@
   #:use-module (gnu services desktop)
   #:use-module (gnu packages games)
   #:use-module (gnu services containers)
+  #:use-module (gnu services guix)
   #:use-module (gnu services networking)
   #:use-module (gnu services nix)
   #:use-module (gnu services security-token)
@@ -44,6 +45,10 @@
          (service bluetooth-service-type)
          (service polkit-service-type)
          (service ntp-service-type)
+
+         (service shared-cache-service-type
+                  (shared-cache-configuration
+                   (users (list (user-cache (user username))))))
 
 	 (service kmscon-service-type
                   (generate-koshi-kmscon-configuration "tty1"))
