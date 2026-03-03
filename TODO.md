@@ -16,7 +16,6 @@
 - [ ] superfile
 - [ ] lavd sched (maybe ext)
 - [ ] pam u2f
-- [ ] imv
 - [ ] autoinstall pre-commit hook
 - [ ] update license year in pre-commit hook
 - [ ] Decrypt partitions from /boot keyfile

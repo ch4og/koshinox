@@ -9,11 +9,11 @@
   (specifications->packages
    (list "blueman"
          "emacs-pgtk"
-         "eog"
          "file-roller"
          "filezilla"
          "foot"
          "gimp"
+         "imv"
          "kdenlive"
          "libreoffice"
          "mpv-nvidia"
