@@ -9,6 +9,7 @@
   #:use-module (gnu services avahi)
   #:use-module (gnu services dbus)
   #:use-module (gnu services desktop)
+  #:use-module (gnu packages admin)
   #:use-module (gnu packages games)
   #:use-module (gnu services containers)
   #:use-module (gnu services guix)
@@ -67,6 +68,23 @@
 
 	 (service kmscon-service-type
                   (generate-koshi-kmscon-configuration "tty6"))
+
+         (service greetd-service-type
+                  (greetd-configuration
+                    (terminals
+                     (list
+                      (greetd-terminal-configuration
+                        (terminal-vt "7")
+                        (terminal-switch #t)
+                        (default-session-command
+                          (greetd-user-session
+                            (command (file-append tuigreet "/bin/tuigreet"))
+                            (command-args
+                             (list "-t" "-r" "-i" "--remember-session"
+                                   "--power-shutdown" "loginctl poweroff"
+                                   "--power-reboot" "loginctl reboot"
+                                   "--user-menu" "--sessions"
+                                   "/run/current-system/profile/share/wayland-sessions")))))))))
 
          (service rootless-podman-service-type
                   (rootless-podman-configuration (subgids (list (subid-range (name username))))

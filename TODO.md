@@ -4,10 +4,8 @@
 General:
 - [ ] nonguix PR GUIX_SANDBOX_EXTRA_ENVS
 - [ ] package awww when it bumps
-- [ ] wait for upstream kmscon (guix #5889)
 
 Koshi:
-- [ ] Display manager (maybe use xsession?)
 - [ ] swayidle
 - [ ] swaync (with matugen)
 - [ ] wlogout maybe (with matugen)
@@ -35,6 +33,7 @@ Koshi:
 - [ ] yazi
 - [ ] fix blueprint dotfiles command
 - [ ] bluepring guix system rootless setup somehow?
+- [ ] earlyoom n maybe ananicy?
 
 Shika:
 - [ ] btrfs backups
@@ -47,6 +46,7 @@ Shika:
 - [ ] port chaotic-nyx's discord-krisp
 - [ ] yazi
 - [ ] amneziavpn
+- [ ] wait for upstream kmscon (guix #5889)
 
 Aagl:
 - [ ] autoinstall pre-commit hook

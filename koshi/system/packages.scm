@@ -8,7 +8,8 @@
   #:use-module (gnu packages shells)
   #:use-module (gnu packages ssh)
   #:use-module (gnu packages version-control)
-  #:use-module (gnu packages vim))
+  #:use-module (gnu packages vim)
+  #:use-module (gnu packages wm))
 
 (define-public %koshi-system-packages
   (cons* vim
@@ -19,4 +20,5 @@
          font-google-noto
          font-google-noto-emoji
          font-google-noto-sans-cjk
+         mangowc
          %base-packages))
