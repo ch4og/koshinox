@@ -14,7 +14,8 @@
   #:use-module (gnu home services sound)
   #:use-module (gnu home services xdg)
   #:use-module (shika services home-emacs-daemon)
-  #:use-module (koshi home services config environment))
+  #:use-module (koshi home services config environment)
+  #:use-module (koshi home services config user-directories))
 
 ;;; Right now we don't use username anywhere but let's keep it.
 (define-public (make-koshi-home-services username)
@@ -30,16 +31,8 @@
                          home-environment-variables-service-type
                          %koshi-home-environment-variables-configuration)
 
-   (service home-xdg-user-directories-service-type
-            (home-xdg-user-directories-configuration
-              (desktop     "$HOME")
-              (documents   "$HOME/documents")
-              (download    "$HOME/downloads")
-              (music       "$HOME")
-              (pictures    "$HOME/pictures")
-              (publicshare "$HOME")
-              (templates   "$HOME")
-              (videos      "$HOME/videos")))
+         (service home-xdg-user-directories-service-type
+                  %koshi-home-user-directories-configuration)
 
    (simple-service 'home-xdg-utils
                    home-profile-service-type
