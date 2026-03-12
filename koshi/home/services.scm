@@ -11,6 +11,7 @@
   #:use-module (gnu home services)
   #:use-module (gnu home services desktop)
   #:use-module (gnu home services gnupg)
+  #:use-module (gnu home services shells)
   #:use-module (gnu home services sound)
   #:use-module (gnu home services xdg)
   #:use-module (shika services home-emacs-daemon)
@@ -34,10 +35,21 @@
          (service home-xdg-user-directories-service-type
                   %koshi-home-user-directories-configuration)
 
-   (simple-service 'home-xdg-utils
-                   home-profile-service-type
-                   `(,xdg-utils))
-   (service home-emacs-daemon-service-type
-            (home-emacs-daemon-configuration
-             (emacs emacs-pgtk)))
-   %base-home-services))
+         (simple-service 'home-xdg-utils
+                         home-profile-service-type
+                         `(,xdg-utils))
+
+         (simple-service 'setup-nix-hm
+                         home-shell-profile-service-type
+                         (list (plain-file "hm-vars.sh"
+                                           (string-join
+                                            '("NIX_HM_ENV=$HOME/.nix-profile"
+                                              "if [ -r \"$NIX_HM_ENV/etc/profile.d/hm-session-vars.sh\" ]; then"
+                                              ". \"$NIX_HM_ENV/etc/profile.d/hm-session-vars.sh\""
+                                              "fi"
+                                              "unset NIX_HM_ENV") "\n"))))
+
+         (service home-emacs-daemon-service-type
+                  (home-emacs-daemon-configuration
+                   (emacs emacs-pgtk)))
+         %base-home-services))

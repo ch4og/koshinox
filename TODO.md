@@ -34,6 +34,8 @@ Koshi:
 - [ ] fix blueprint dotfiles command
 - [ ] bluepring guix system rootless setup somehow?
 - [ ] earlyoom n maybe ananicy?
+- [ ] home service that sets qt plugins path for guix home
+- [ ] home service that setups nix hm
 
 Shika:
 - [ ] btrfs backups
