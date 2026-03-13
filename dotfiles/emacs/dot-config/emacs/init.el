@@ -22,7 +22,9 @@
 (straight-use-package 'wakatime-mode)
 (straight-use-package 'magit)
 (straight-use-package 'evil)
+(straight-use-package 'dockerfile-mode)
 
+(require 'dockerfile-mode)
 (global-wakatime-mode)
 (evil-mode 1)
 
