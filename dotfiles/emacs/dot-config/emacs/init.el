@@ -22,7 +22,11 @@
 (straight-use-package 'wakatime-mode)
 (straight-use-package 'magit)
 (straight-use-package 'evil)
+(straight-use-package 'dockerfile-mode)
+(straight-use-package 'typescript-mode)
 
+(require 'dockerfile-mode)
+(require 'typescript-mode)
 (global-wakatime-mode)
 (evil-mode 1)
 
