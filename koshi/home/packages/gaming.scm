@@ -9,10 +9,10 @@
   #:use-module (nongnu packages nvidia))
 
 (define-public %koshi-gaming-home-packages
-  `(,@(specifications->packages (list "gamescope"
+  `(,@(specifications->packages (list "freesmlauncher"
+                                      "gamescope"
                                       "mangohud"
                                       "openjdk"
-                                      "prismlauncher-dolly"
                                       "protonplus-sandbox"))
     ,(heroic-for nvdb)
     ,(steam-for nvdb)

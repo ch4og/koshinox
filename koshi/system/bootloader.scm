@@ -5,13 +5,10 @@
   #:use-module (guix gexp)
   #:use-module (gnu bootloader)
   #:use-module (gnu bootloader grub)
-  #:use-module (rosenthal bootloader grub)
   #:use-module (koshi config layout))
 
 (define-public %koshi-bootloader-configuration
   (bootloader-configuration
-    (bootloader grub-efi-luks2-bootloader)
+    (bootloader grub-efi-bootloader)
     (targets '("/efi"))
-    (keyboard-layout %koshi-layout)
-    (theme (grub-theme (inherit (grub-theme))
-                       (gfxmode '("1920x1080x32"))))))
+    (keyboard-layout %koshi-layout)))

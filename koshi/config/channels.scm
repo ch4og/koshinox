@@ -12,7 +12,7 @@
           (name 'nonguix)
           (url "https://gitlab.com/nonguix/nonguix")
           (branch "master")
-          (commit "816b5c6f45ed56cd81e2a6338ed5b710e4e66e98")
+          (commit "7d14e819fc7b2681240023b9e4c001fc3f5cba04")
           (introduction
            (make-channel-introduction
             "897c1a470da759236cc11798f4e0a5f7d4d59fbc"
@@ -22,7 +22,7 @@
           (name 'shikanox)
           (url "https://codeberg.org/ch4og/shikanox.git")
           (branch "main")
-          (commit "7728c6be78b0b56d96cf267438e743f66800ac40")
+          (commit "1cd5ca9d18539d2f48f339cb4017d9679736dee4")
           (introduction
            (make-channel-introduction
             "fe3b5f72aa676c69f4d43507bdd18fb051906917"
@@ -32,7 +32,7 @@
           (name 'aagl)
           (url "https://codeberg.org/ch4og/aagl-guix.git")
           (branch "main")
-          (commit "8b4966a403cecacf74c0d079a7eb6ca2057526b1")
+          (commit "b3d360c3b966ddca1587f6f07a2a89a72220579b")
           (introduction
            (make-channel-introduction
             "1055d880e124d69a2aef85cac98a813d442a55fa"
@@ -49,20 +49,10 @@
             (openpgp-fingerprint
              "5132 3571 CEED 988F 52FC  467C 6F98 DBF3 EA7F 4B37"))))
         (channel
-          (name 'rosenthal)
-          (url "https://codeberg.org/hako/rosenthal.git")
-          (branch "trunk")
-          (commit "f58f1b058338fafa52e164e97b62cf622aef00e4")
-          (introduction
-           (make-channel-introduction
-            "7677db76330121a901604dfbad19077893865f35"
-            (openpgp-fingerprint
-             "13E7 6CD6 E649 C28C 3385  4DF5 5E5A A665 6149 17F7"))))
-        (channel
           (name 'guix)
           (url "https://git.guix.gnu.org/guix.git")
           (branch "master")
-          (commit "6c59ea3e9a3fb07a9661a9b72b2aa2a7ac8e66ec")
+          (commit "4ee924eff75e7bf35a7708c0a887977ff6afae3e")
           (introduction
            (make-channel-introduction
             "9edb3f66fd807b096b48283debdcddccfea34bad"

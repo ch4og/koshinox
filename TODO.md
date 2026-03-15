@@ -22,7 +22,6 @@ Koshi:
 - [ ] yubikey as user password
 - [ ] fix bluetooth
 - [ ] wakatime thru sops
-- [ ] replace grub with upstream package when argon2 gets to guix (!6457)
 - [ ] rofi matugen
 - [ ] spicetify matugen
 - [ ] steam matugen
@@ -48,7 +47,6 @@ Shika:
 - [ ] port chaotic-nyx's discord-krisp
 - [ ] yazi
 - [ ] amneziavpn
-- [ ] wait for upstream kmscon (guix #5889)
 
 Aagl:
 - [ ] autoinstall pre-commit hook

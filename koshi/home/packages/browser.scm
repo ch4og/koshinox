@@ -8,6 +8,5 @@
 (define-public %koshi-browser-home-packages
   (specifications->packages (list "librewolf"
                                   "adaptive-tab-bar-colour-icecat"
-                                  "bitwarden-icecat"
                                   "livemarks-icecat"
                                   "ublock-origin-icecat")))
