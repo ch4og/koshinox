@@ -11,6 +11,7 @@
                                   "git-delta"
                                   "jujutsu"
                                   "lazygit"
+                                  "opencode"
                                   "passt"
                                   "podman"
                                   "podman-compose"
