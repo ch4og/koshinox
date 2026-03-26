@@ -60,3 +60,7 @@ output_path = '~/.config/term-colors.sh'
 input_path = './templates/old-terminals.sh'
 output_path = '~/.cache/old-terminals.sh'
 post_hook = 'sh ~/.cache/old-terminals.sh'
+
+[templates.opencode]
+input_path = './templates/opencode.json'
+output_path = '~/.config/opencode/themes/matugen.json'
