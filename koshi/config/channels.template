@@ -48,6 +48,21 @@
              "63350484aaacc362aea28fb14236019fced4050f"
              (openpgp-fingerprint
               "5132 3571 CEED 988F 52FC 467C 6F98 DBF3 EA7F 4B37"))))
+
+         (channel
+           (name 'guix-ai-cloud)
+           (branch "master")
+           (url "https://codeberg.org/shegeley/guix-ai-cloud")
+           (introduction
+            (make-channel-introduction
+             "ba6015f3120e56a18eeb31ee31cbd0efc25dbb94"
+             (openpgp-fingerprint
+              "76CE C6B1 7274 B465 C02D B3D9 E71A 3554 2C30 BAA5"))))
+
+         (channel
+           (name 'mangowm)
+           (branch "main")
+           (url "https://github.com/mangowm/mango.git"))
          %default-channels))
 ;;; %koshi-chs end
 

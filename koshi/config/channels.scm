@@ -12,7 +12,7 @@
           (name 'nonguix)
           (url "https://gitlab.com/nonguix/nonguix")
           (branch "master")
-          (commit "7d14e819fc7b2681240023b9e4c001fc3f5cba04")
+          (commit "c4541fdb0b472664dafe5d7b1ec2e51e4ef7b772")
           (introduction
            (make-channel-introduction
             "897c1a470da759236cc11798f4e0a5f7d4d59fbc"
@@ -22,7 +22,7 @@
           (name 'shikanox)
           (url "https://codeberg.org/ch4og/shikanox.git")
           (branch "main")
-          (commit "1cd5ca9d18539d2f48f339cb4017d9679736dee4")
+          (commit "8191da28b7e9106a0111bd018de3a390469ac5f9")
           (introduction
            (make-channel-introduction
             "fe3b5f72aa676c69f4d43507bdd18fb051906917"
@@ -32,7 +32,7 @@
           (name 'aagl)
           (url "https://codeberg.org/ch4og/aagl-guix.git")
           (branch "main")
-          (commit "b3d360c3b966ddca1587f6f07a2a89a72220579b")
+          (commit "9a2bcd1157b428c28c3153657af83a1fa7705e1a")
           (introduction
            (make-channel-introduction
             "1055d880e124d69a2aef85cac98a813d442a55fa"
@@ -49,10 +49,25 @@
             (openpgp-fingerprint
              "5132 3571 CEED 988F 52FC  467C 6F98 DBF3 EA7F 4B37"))))
         (channel
+          (name 'guix-ai-cloud)
+          (url "https://codeberg.org/shegeley/guix-ai-cloud")
+          (branch "master")
+          (commit "6ff7288d957b566a56588f4efe470de74bab74c8")
+          (introduction
+           (make-channel-introduction
+            "ba6015f3120e56a18eeb31ee31cbd0efc25dbb94"
+            (openpgp-fingerprint
+             "76CE C6B1 7274 B465 C02D B3D9 E71A 3554 2C30 BAA5"))))
+        (channel
+          (name 'mangowm)
+          (url "https://github.com/mangowm/mango.git")
+          (branch "main")
+          (commit "e3a0d54b9a0167a83f724d710f87f8bca6ecabae"))
+        (channel
           (name 'guix)
           (url "https://git.guix.gnu.org/guix.git")
           (branch "master")
-          (commit "4ee924eff75e7bf35a7708c0a887977ff6afae3e")
+          (commit "7473b051b6dacfd506e0cfacf481dbe17c2a65e7")
           (introduction
            (make-channel-introduction
             "9edb3f66fd807b096b48283debdcddccfea34bad"
