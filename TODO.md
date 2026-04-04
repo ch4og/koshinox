@@ -49,6 +49,7 @@ Shika:
 - [ ] amneziavpn
 
 Aagl:
+- [ ] use new nvidia approach from nonguix
 - [ ] autoinstall pre-commit hook
 - [ ] anime-games-launcher
 - [ ] update license year in pre-commit hook

@@ -9,6 +9,6 @@
   (make-koshi-home "ch"))
 
 (define %koshi-home-nvidia
-  (replace-mesa %koshi-home #:driver nvdb))
+  (replace-mesa %koshi-home #:driver nvda-595))
 
 %koshi-home-nvidia

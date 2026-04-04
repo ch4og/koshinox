@@ -5,15 +5,15 @@
   #:use-module (guix utils)
   #:use-module (gnu packages)
   #:use-module (aagl)
-  #:use-module (nongnu packages game-client)
-  #:use-module (nongnu packages nvidia))
+  #:use-module (nongnu packages nvidia)
+  #:use-module (shika packages steam))
 
 (define-public %koshi-gaming-home-packages
   `(,@(specifications->packages (list "freesmlauncher"
                                       "gamescope"
+                                      "heroic-nvidia@595"
                                       "mangohud"
                                       "openjdk"
-                                      "protonplus-sandbox"))
-    ,(heroic-for nvdb)
-    ,(steam-for nvdb)
-    ,(the-honkers-railway-launcher-for nvdb)))
+                                      "protonplus-sandbox"
+                                      "the-honkers-railway-launcher-nvidia@595"))
+    ,(steam-gamescope-for nvda-595)))
