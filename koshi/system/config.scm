@@ -12,8 +12,9 @@
   (make-koshi-os "ch" "noko"))
 
 (define-public %koshi-os-nvidia
-  ((compose (nonguix-transformation-nvidia #:driver nvdb)
-            (nonguix-transformation-linux #:linux linux-6.18))
+  ((compose (nonguix-transformation-nvidia #:driver nvda-595
+                                           #:remove-nvenc-restriction? #t)
+            (nonguix-transformation-linux #:linux linux-6.19))
    %koshi-os))
 
 %koshi-os-nvidia
