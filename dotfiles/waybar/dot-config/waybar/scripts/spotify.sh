@@ -6,6 +6,12 @@ title=$(playerctl -p spotify,spotifyd,spotatui metadata title 2>/dev/null)
 
 artist=$(playerctl -p spotify,spotifyd,spotatui metadata artist 2>/dev/null)
 
+escape() {
+  sed -e 's/&/\&amp;/g' \
+      -e 's/</\&lt;/g' \
+      -e 's/>/\&gt;/g'
+}
+
 if [[ "$status" == "Playing" ]]; then
 	text="$artist - $title"
 	alt="playing"
@@ -16,6 +22,8 @@ else
 	text=""
 	alt="stopped"
 fi
+
+text=$(printf '%s' "$text" | escape)
 
 output=$(jq -n --unbuffered --compact-output \
 	--arg alt "$alt" \
