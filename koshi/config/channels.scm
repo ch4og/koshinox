@@ -12,7 +12,7 @@
           (name 'nonguix)
           (url "https://gitlab.com/nonguix/nonguix")
           (branch "master")
-          (commit "c4541fdb0b472664dafe5d7b1ec2e51e4ef7b772")
+          (commit "a3f4e7bff779da4593a2922516064a8edaafa3e6")
           (introduction
            (make-channel-introduction
             "897c1a470da759236cc11798f4e0a5f7d4d59fbc"
@@ -52,22 +52,17 @@
           (name 'guix-ai-cloud)
           (url "https://codeberg.org/shegeley/guix-ai-cloud")
           (branch "master")
-          (commit "6ff7288d957b566a56588f4efe470de74bab74c8")
-          (introduction
-           (make-channel-introduction
-            "ba6015f3120e56a18eeb31ee31cbd0efc25dbb94"
-            (openpgp-fingerprint
-             "76CE C6B1 7274 B465 C02D B3D9 E71A 3554 2C30 BAA5"))))
+          (commit "9a45e1b531548a24da6d402a1597f7c8d3b3d636"))
         (channel
           (name 'mangowm)
           (url "https://github.com/mangowm/mango.git")
           (branch "main")
-          (commit "e3a0d54b9a0167a83f724d710f87f8bca6ecabae"))
+          (commit "2512e846715d278c7192f8b796b19415e23d5516"))
         (channel
           (name 'guix)
           (url "https://git.guix.gnu.org/guix.git")
           (branch "master")
-          (commit "7473b051b6dacfd506e0cfacf481dbe17c2a65e7")
+          (commit "9561f5375c7f5aa9a530d4c1f56e864d9da3b5ad")
           (introduction
            (make-channel-introduction
             "9edb3f66fd807b096b48283debdcddccfea34bad"
