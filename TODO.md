@@ -47,6 +47,8 @@ Shika:
 - [ ] port chaotic-nyx's discord-krisp
 - [ ] yazi
 - [ ] amneziavpn
+- [ ] iloader
+- [ ] appimage-run
 
 Aagl:
 - [ ] use new nvidia approach from nonguix
