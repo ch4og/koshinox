@@ -9,17 +9,28 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    ayugram-desktop = {
+      type = "git";
+      submodules = true;
+      url = "https://github.com/ndfined-crp/ayugram-desktop/";
+    };
   };
 
   outputs = {
     nixpkgs,
     home-manager,
+    ayugram-desktop,
     ...
   }: let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
+      overlays = [
+        (final: prev: {
+          ayugram-desktop = ayugram-desktop.packages.${system}.ayugram-desktop;
+        })
+      ];
     };
   in {
     homeConfigurations."ch" = home-manager.lib.homeManagerConfiguration {
