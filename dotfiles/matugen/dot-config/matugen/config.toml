@@ -64,3 +64,7 @@ post_hook = 'sh ~/.cache/old-terminals.sh'
 [templates.opencode]
 input_path = './templates/opencode.json'
 output_path = '~/.config/opencode/themes/matugen.json'
+
+[templates.heroic]
+input_path = './templates/heroic.css'
+output_path = '~/.local/share/guix-sandbox-home/.config/heroic/css/matugen.css'
