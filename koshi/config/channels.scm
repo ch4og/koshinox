@@ -12,7 +12,7 @@
           (name 'nonguix)
           (url "https://gitlab.com/nonguix/nonguix")
           (branch "master")
-          (commit "a3f4e7bff779da4593a2922516064a8edaafa3e6")
+          (commit "5f2630e69fbbe9e79c350a67545f0fef7e93e223")
           (introduction
            (make-channel-introduction
             "897c1a470da759236cc11798f4e0a5f7d4d59fbc"
@@ -32,7 +32,7 @@
           (name 'aagl)
           (url "https://codeberg.org/ch4og/aagl-guix.git")
           (branch "main")
-          (commit "9a2bcd1157b428c28c3153657af83a1fa7705e1a")
+          (commit "c7411002f826cf7cb85801872f19d288522ec29a")
           (introduction
            (make-channel-introduction
             "1055d880e124d69a2aef85cac98a813d442a55fa"
@@ -57,12 +57,12 @@
           (name 'mangowm)
           (url "https://github.com/mangowm/mango.git")
           (branch "main")
-          (commit "2512e846715d278c7192f8b796b19415e23d5516"))
+          (commit "18fa5a22c2236ca8efb53e1dd23366f01c21a5ec"))
         (channel
           (name 'guix)
           (url "https://git.guix.gnu.org/guix.git")
           (branch "master")
-          (commit "9561f5375c7f5aa9a530d4c1f56e864d9da3b5ad")
+          (commit "d9711641a6afd8c029fc0a28f146a16cead3763d")
           (introduction
            (make-channel-introduction
             "9edb3f66fd807b096b48283debdcddccfea34bad"
