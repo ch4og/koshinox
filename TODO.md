@@ -25,7 +25,6 @@ Koshi:
 - [ ] rofi matugen
 - [ ] spicetify matugen
 - [ ] steam matugen
-- [ ] telegram matugen
 - [ ] switch to bash/zsh
 - [ ] apply lutgen on fastfetch image
 - [ ] satty

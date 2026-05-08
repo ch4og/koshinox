@@ -68,3 +68,7 @@ output_path = '~/.config/opencode/themes/matugen.json'
 [templates.heroic]
 input_path = './templates/heroic.css'
 output_path = '~/.local/share/guix-sandbox-home/.config/heroic/css/matugen.css'
+
+[templates.ayugram]
+input_path = './templates/telegram.tdesktop-theme'
+output_path = '~/.local/share/AyuGramDesktop/matugen.tdesktop-theme'
