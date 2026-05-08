@@ -29,4 +29,5 @@
       ("FONTCONFIG_PATH" . ,(home-append "/.guix-home/profile/etc/fonts/"))
       ("QT_PLUGIN_PATH" . ,(string-join
                             (list (home-append "/.guix-home/profile/lib/qt6/plugins")
-                                  (home-append "/.guix-home/profile/lib/qt5/plugins")) ":")))))
+                                  (home-append "/.guix-home/profile/lib/qt5/plugins")) ":"))
+      ("WLR_DRM_NO_ATOMIC" . "1"))))
