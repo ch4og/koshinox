@@ -6,11 +6,13 @@ env ~/.config/mango/scripts/polkit.sh &
 
 swaync &
 
+pywalfox install &
+
 avizo-service &
 
 swww-daemon & swww restore &
 
-env ~/.config/mango/scripts/waybar.sh &
+waybar -c ~/.config/waybar/mangowc/config.jsonc -s ~/.config/waybar/mangowc/style.css &
 
 wl-clip-persist --clipboard regular --reconnect-tries 0 &
 
@@ -18,4 +20,6 @@ wl-paste --watch cliphist store &
 
 wl-paste --type text --watch xclip -selection clipboard &
 
-env ~/.config/mango/scripts/switch_layouts.sh
+env ~/.config/mango/scripts/switch_layouts.sh &
+
+mmsg -d "focusmon,eDP-1"

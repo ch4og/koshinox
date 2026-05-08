@@ -2,7 +2,6 @@
   {
     "layer": "top",
     "height": 34,
-    "output": "@@WAYBAR_OUTPUT@@",
     "modules-left": [
       "ext/workspaces"
     ],
@@ -15,7 +14,7 @@
       "pulseaudio",
       "network",
       "bluetooth",
-      "battery",
+      //"battery",
       "sway/language",
       "clock"
     ],
