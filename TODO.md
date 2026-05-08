@@ -3,7 +3,8 @@
 
 General:
 - [ ] nonguix PR GUIX_SANDBOX_EXTRA_ENVS
-- [ ] package awww when it bumps
+- [ ] package awww (swww -> awww)
+- [ ] package otd
 
 Koshi:
 - [ ] swayidle
