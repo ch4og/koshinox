@@ -23,7 +23,7 @@ automatically linked into =~= via the =blue dots=.
 
 #+begin_src sh
   cd dotfiles
-  stow fish mangowc other-package-name -t ~ --dotfiles
+  stow fish mangowm other-package-name -t ~ --dotfiles
 #+end_src
 
 * Blueprint file

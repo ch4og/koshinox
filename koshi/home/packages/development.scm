@@ -16,6 +16,7 @@
                                   "podman"
                                   "podman-compose"
                                   "reuse"
+                                  "s3cmd"
                                   "slirp4netns"
                                   "vscodium"
                                   "wakatime-cli")))

@@ -53,11 +53,6 @@
            (name 'guix-ai-cloud)
            (branch "master")
            (url "https://codeberg.org/shegeley/guix-ai-cloud"))
-
-         (channel
-           (name 'mangowm)
-           (branch "main")
-           (url "https://github.com/mangowm/mango.git"))
          %default-channels))
 ;;; %koshi-chs end
 

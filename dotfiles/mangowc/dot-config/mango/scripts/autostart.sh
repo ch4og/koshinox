@@ -12,7 +12,7 @@ avizo-service &
 
 swww-daemon & swww restore &
 
-waybar -c ~/.config/waybar/mangowc/config.jsonc -s ~/.config/waybar/mangowc/style.css &
+waybar -c ~/.config/waybar/mangowm/config.jsonc -s ~/.config/waybar/mangowm/style.css &
 
 wl-clip-persist --clipboard regular --reconnect-tries 0 &
 

@@ -4,6 +4,7 @@
 (define-module (koshi system packages)
   #:use-module (gnu)
   #:use-module (gnu packages fonts)
+  #:use-module (gnu packages linux)
   #:use-module (gnu packages nss)
   #:use-module (gnu packages shells)
   #:use-module (gnu packages ssh)
@@ -22,5 +23,6 @@
          font-google-noto-emoji
          font-google-noto-sans-cjk
          (@ (shika packages kmscon) kmscon)
-         mangowc
+         mangowm
+         xpadneo
          %base-packages))
