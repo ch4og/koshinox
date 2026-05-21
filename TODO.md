@@ -5,6 +5,7 @@ General:
 - [ ] nonguix PR GUIX_SANDBOX_EXTRA_ENVS
 - [ ] package awww (swww -> awww)
 - [ ] package otd
+- [ ] package pi-coding-agent
 
 Koshi:
 - [ ] swayidle
