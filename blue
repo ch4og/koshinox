@@ -66,14 +66,13 @@
 
 (define (guix-reconfigure type)
   ;; TODO: Rootless setup somehow.  Maybe deploy?
-  (let* ((time-machine '("sudo" "guix" "time-machine" "-C" "koshi/config/channels.scm" "--"))
+  (let* ((time-machine '("sudo" "guix" "time-machine" "-C" "koshi/config/channels.scm" "--unsafe-channel-evaluation" "--"))
          (guix (if (string=? type "system") time-machine '("guix")))
          (config-file (string-append "koshi/" type "/config.scm"))
          (subs (@ (koshi config substitutes) %koshi-subs-urls))
          (args `(,subs "-L." "--allow-downgrades")))
     (display (string-append "Reconfiguring " type "...\n"))
-    (system (string-join `("cd" ,config-root "&&"
-                           ,@guix ,type
+    (system (string-join `(,@guix ,type
                            "reconfigure" ,config-file
                            ,@args) " "))))
 
@@ -95,8 +94,8 @@
   (let* ((input "koshi/config/channels.template")
          (output "koshi/config/channels.scm")
          (replacement (string-join `("guix" "time-machine"
-                                     "-C" ,input "--"
-                                     "describe"
+                                     "-C" ,input "--unsafe-channel-evaluation"
+                                     "--" "describe"
                                      "-f" "channels") " ")))
     (display "Updating channels.scm...\n")
     (system (string-join `("cd" ,config-root
