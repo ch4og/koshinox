@@ -7,4 +7,5 @@
   '("quiet"
     "module_blacklist=pcspkr"
     "zswap.enabled=1"
-    "zswap.max_pool_percent=20"))
+    "zswap.max_pool_percent=20"
+    "nvme_core.default_ps_max_latency_us=0"))
