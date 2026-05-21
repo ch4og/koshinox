@@ -52,17 +52,12 @@
           (name 'guix-ai-cloud)
           (url "https://codeberg.org/shegeley/guix-ai-cloud")
           (branch "master")
-          (commit "9a45e1b531548a24da6d402a1597f7c8d3b3d636"))
-        (channel
-          (name 'mangowm)
-          (url "https://github.com/mangowm/mango.git")
-          (branch "main")
-          (commit "18fa5a22c2236ca8efb53e1dd23366f01c21a5ec"))
+          (commit "bbd6f710ae3bdb14de8f6f22c1f5d74fcba4dc55"))
         (channel
           (name 'guix)
           (url "https://git.guix.gnu.org/guix.git")
           (branch "master")
-          (commit "d9711641a6afd8c029fc0a28f146a16cead3763d")
+          (commit "bd2b839c3cbe9da524fd75f0995bb109ff45c9c4")
           (introduction
            (make-channel-introduction
             "9edb3f66fd807b096b48283debdcddccfea34bad"
