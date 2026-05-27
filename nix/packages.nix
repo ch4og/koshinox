@@ -5,6 +5,5 @@
     amnezia-vpn
     ayugram-desktop
     spotify
-    vscode
   ];
 }
