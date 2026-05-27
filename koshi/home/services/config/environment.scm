@@ -25,6 +25,7 @@
       ("NPM_CONFIG_CACHE" . ,(string-append xdg-cache "/npm"))
       ("NODE_REPL_HISTORY" . ,(string-append xdg-state "/node_repl_history"))
       ("CARGO_HOME" . ,(string-append xdg-data "/cargo"))
+      ("GOPATH" . ,(string-append xdg-data "/go"))
       ("WAKATIME_HOME" . ,(string-append xdg-config "/wakatime"))
       ("FONTCONFIG_PATH" . ,(home-append "/.guix-home/profile/etc/fonts/"))
       ("QT_PLUGIN_PATH" . ,(string-join
