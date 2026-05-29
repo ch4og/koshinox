@@ -15,7 +15,7 @@
                                   "grimblast"
                                   "gsettings-desktop-schemas"
                                   "hyprpicker"
-                                  "mangowm@git"
+                                  "mangowm"
                                   "mate-polkit"
                                   "matugen"
                                   "networkmanager-dmenu"
