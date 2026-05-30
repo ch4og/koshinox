@@ -12,6 +12,7 @@
   #:use-module (gnu packages admin)
   #:use-module (gnu packages games)
   #:use-module (gnu services containers)
+  #:use-module (gnu services docker)
   #:use-module (gnu services guix)
   #:use-module (gnu services networking)
   #:use-module (gnu services nix)
@@ -93,6 +94,9 @@
          (service polkit-network-manager-service-type)
          (service udev-fido2-service-type)
          (service ntsync-service-type)
+
+         (service docker-service-type)
+         (service containerd-service-type)
 
          (service guix-gc-service-type
                   (guix-gc-configuration (delete-system-generations "14d")))

@@ -13,6 +13,7 @@
     (shell (file-append fish "/bin/fish"))
     (supplementary-groups '("audio"
                             "cgroup"
+                            "docker"
                             "input"
                             "netdev"
                             "plugdev"
