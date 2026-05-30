@@ -32,7 +32,7 @@
           (name 'aagl)
           (url "https://codeberg.org/ch4og/aagl-guix.git")
           (branch "main")
-          (commit "c7411002f826cf7cb85801872f19d288522ec29a")
+          (commit "1dabcc7a5981bd397191321e233dede3572ca924")
           (introduction
            (make-channel-introduction
             "1055d880e124d69a2aef85cac98a813d442a55fa"

@@ -12,7 +12,7 @@
   (make-koshi-os "ch" "noko"))
 
 (define-public %koshi-os-nvidia
-  ((compose (nonguix-transformation-nvidia #:driver nvda-595
+  ((compose (nonguix-transformation-nvidia #:driver nvda-new-feature
                                            #:open-source-kernel-module? #t
                                            #:dynamic-boost? #t
                                            #:remove-nvenc-restriction? #t)

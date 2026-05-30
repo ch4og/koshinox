@@ -11,9 +11,9 @@
 (define-public %koshi-gaming-home-packages
   `(,@(specifications->packages (list "freesmlauncher"
                                       "gamescope"
-                                      "heroic-nvidia@595"
+                                      "heroic-nvidia-new-feature"
                                       "mangohud"
                                       "openjdk"
                                       "protonplus-sandbox"
-                                      "the-honkers-railway-launcher-nvidia@595"))
-    ,(steam-gamescope-for nvda-595)))
+                                      "the-honkers-railway-launcher-nvidia-new-feature"))
+    ,(steam-gamescope-for nvda-new-feature)))
