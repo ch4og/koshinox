@@ -20,6 +20,7 @@
   (load bootstrap-file nil 'nomessage))
 
 (straight-use-package 'wakatime-mode)
+(straight-use-package 'docker-compose-mode)
 (straight-use-package 'magit)
 (straight-use-package 'evil)
 (straight-use-package 'dockerfile-mode)
