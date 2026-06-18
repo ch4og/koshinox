@@ -5,5 +5,6 @@
     amnezia-vpn
     ayugram-desktop
     spotify
+    throne
   ];
 }
