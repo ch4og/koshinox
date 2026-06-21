@@ -30,6 +30,7 @@
     "qtct"
     "rofi"
     "ssh"
+    "starship"
     "swappy"
     "tmux"
     "waybar"
