@@ -6,7 +6,8 @@
   #:use-module (gnu packages))
 
 (define-public %koshi-development-home-packages
-  (specifications->packages (list "blue"
+  (specifications->packages (list "awscli"
+                                  "blue"
                                   "direnv"
                                   "git-delta"
                                   "jujutsu"
