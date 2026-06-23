@@ -6,6 +6,8 @@ General:
 - [ ] package awww (swww -> awww)
 - [ ] package otd
 - [ ] package pi-coding-agent
+- [ ] switch to gui emacs not cli
+- [ ] use dante to socksify
 
 Koshi:
 - [ ] swayidle

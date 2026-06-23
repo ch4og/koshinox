@@ -29,6 +29,9 @@
     ("CARGO_HOME" . "$XDG_DATA_HOME/cargo")
     ("GOPATH" . "$XDG_DATA_HOME/go")
     ("WAKATIME_HOME" . "$XDG_CONFIG_HOME/wakatime")
+    ("AWS_CONFIG_FILE" . "$XDG_CONFIG_HOME/aws/config")
+    ("AWS_SHARED_CREDENTIALS_FILE" . "$XDG_DATA_HOME/aws/credentials")
+    ("S3CMD_CONFIG" . "$XDG_DATA_HOME/s3cmd/s3cfg")
 
     ;; Fix for NVIDIA
     ("WLR_DRM_NO_ATOMIC" . "1")))
