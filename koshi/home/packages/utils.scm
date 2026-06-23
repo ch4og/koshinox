@@ -25,6 +25,7 @@
                                   "playerctl"
                                   "python-yubikey-manager"
                                   "rbw"
+                                  "rclone"
                                   "ripgrep"
                                   "starship"
                                   "stow"
