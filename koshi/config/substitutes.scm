@@ -4,15 +4,13 @@
 (define-module (koshi config substitutes))
 
 (define-public %koshi-subs
-  '("https://ci.guix.gnu.org"
-    "https://hydra-guix-129.guix.gnu.org"
-    "https://bordeaux.guix.gnu.org"
+  '("https://bordeaux.guix.gnu.org"
     "https://nonguix-proxy.ditigal.xyz"
     "https://ci.guix.moe"
     "https://cache-cdn.guix.moe"
-    "https://guix.bordeaux.inria.fr"
     "https://mirror.yandex.ru/mirrors/guix"
-    "https://mirror.sjtu.edu.cn/guix"))
+    "https://mirror.sjtu.edu.cn/guix"
+    "https://ci.guix.gnu.org"))
 
 (define-public %koshi-subs-urls
   (string-append "--substitute-urls=\""
