@@ -14,6 +14,7 @@
                       (guix (guix-for-channels %koshi-chs))
                       (privileged? #f)
                       (substitute-urls %koshi-subs)
+                      (http-proxy "http://127.0.0.1:2080")
                       (extra-options `("--gc-keep-derivations=yes"
                                        "--gc-keep-outputs=yes"
                                        "--cores=16"))
