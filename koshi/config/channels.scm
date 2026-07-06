@@ -12,7 +12,7 @@
           (name 'nonguix)
           (url "https://gitlab.com/nonguix/nonguix")
           (branch "master")
-          (commit "5f2630e69fbbe9e79c350a67545f0fef7e93e223")
+          (commit "3b66965566fe8c96edb5a41fd39a9e5a90ad9b61")
           (introduction
            (make-channel-introduction
             "897c1a470da759236cc11798f4e0a5f7d4d59fbc"
@@ -22,7 +22,7 @@
           (name 'shikanox)
           (url "https://codeberg.org/ch4og/shikanox.git")
           (branch "main")
-          (commit "8191da28b7e9106a0111bd018de3a390469ac5f9")
+          (commit "ee2933221a631cf311c395b9824a4e9dc467a311")
           (introduction
            (make-channel-introduction
             "fe3b5f72aa676c69f4d43507bdd18fb051906917"
@@ -42,22 +42,17 @@
           (name 'bluebox)
           (url "https://codeberg.org/lapislazuli/bluebox")
           (branch "main")
-          (commit "f7f3b1565d626099dd68aae20abb36371ab8a9af")
+          (commit "71628770c8612c041e06672f34c0c8e6fc67c13c")
           (introduction
            (make-channel-introduction
             "63350484aaacc362aea28fb14236019fced4050f"
             (openpgp-fingerprint
              "5132 3571 CEED 988F 52FC  467C 6F98 DBF3 EA7F 4B37"))))
         (channel
-          (name 'guix-ai-cloud)
-          (url "https://codeberg.org/shegeley/guix-ai-cloud")
-          (branch "master")
-          (commit "bbd6f710ae3bdb14de8f6f22c1f5d74fcba4dc55"))
-        (channel
           (name 'guix)
           (url "https://git.guix.gnu.org/guix.git")
           (branch "master")
-          (commit "bd2b839c3cbe9da524fd75f0995bb109ff45c9c4")
+          (commit "cdf709c0574c651a035fb0bf1255d01db79a2cde")
           (introduction
            (make-channel-introduction
             "9edb3f66fd807b096b48283debdcddccfea34bad"

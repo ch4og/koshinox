@@ -48,11 +48,6 @@
              "63350484aaacc362aea28fb14236019fced4050f"
              (openpgp-fingerprint
               "5132 3571 CEED 988F 52FC 467C 6F98 DBF3 EA7F 4B37"))))
-
-         (channel
-           (name 'guix-ai-cloud)
-           (branch "master")
-           (url "https://codeberg.org/shegeley/guix-ai-cloud"))
          %default-channels))
 ;;; %koshi-chs end
 
