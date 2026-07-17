@@ -37,6 +37,8 @@
   #:use-module (koshi system services config screen-locker)
   #:use-module (aagl services hosts)
   #:use-module (shika services btrfs)
+  #:use-module (shika services webhid-for-firefox)
+  #:use-module (shika services opentabletdriver)
   #:use-module (koshi system services endfield-hosts))
 
 (define-public (make-koshi-system-services username)
@@ -111,8 +113,11 @@
                                                             (+ current-time (* 2 7 24 60 60))))
                                                (filesystems '("/dev/mapper/root"
                                                               "/dev/mapper/home"))))
+         (service webhid-for-firefox-service-type)
+         (service opentabletdriver-udev-service-type)
 
-         (udev-rules-service 'steam steam-devices-udev-rules)
+         (udev-rules-service 'steam
+                             steam-devices-udev-rules)
          (service pam-limits-service-type
                   (list (pam-limits-entry "*" 'both 'nofile 524288)))
 
