@@ -10,5 +10,6 @@ if status is-interactive
   alias cat='bat -pp'
   alias t='tmux'
   alias lg='lazygit'
+  alias ssh='env TERM=xterm-256color ssh'
   abbr -a !! --position anywhere --function last_history_item
 end
