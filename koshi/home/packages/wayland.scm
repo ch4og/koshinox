@@ -29,7 +29,7 @@
                                   "swaybg"
                                   "swaylock-effects"
                                   "swaynotificationcenter"
-                                  "swww"
+                                  "awww"
                                   "waybar-experimental"
                                   "wayfreeze"
                                   "waypaper"

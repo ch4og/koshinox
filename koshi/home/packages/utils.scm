@@ -20,6 +20,7 @@
                                   "gnupg"
                                   "imagemagick"
                                   "jq"
+                                  "lsof"
                                   "ncurses"
                                   "pinentry"
                                   "playerctl"
@@ -33,5 +34,6 @@
                                   "unzip"
                                   "xdg-user-dirs"
                                   "xdg-utils"
+                                  "yt-dlp"
                                   "zip"
                                   "zoxide")))

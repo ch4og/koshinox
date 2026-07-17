@@ -10,7 +10,7 @@ pywalfox install &
 
 avizo-service &
 
-swww-daemon & swww restore &
+awww-daemon & awww restore &
 
 waybar -c ~/.config/waybar/mangowm/config.jsonc -s ~/.config/waybar/mangowm/style.css &
 

@@ -7,6 +7,5 @@
 
 (define-public %koshi-browser-home-packages
   (specifications->packages (list "librewolf"
-                                  "adaptive-tab-bar-colour-icecat"
-                                  "livemarks-icecat"
+                                  "webhid-for-firefox-icecat"
                                   "ublock-origin-icecat")))

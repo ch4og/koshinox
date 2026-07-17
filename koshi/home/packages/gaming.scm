@@ -5,8 +5,7 @@
   #:use-module (guix utils)
   #:use-module (gnu packages)
   #:use-module (aagl)
-  #:use-module (nongnu packages nvidia)
-  #:use-module (shika packages steam))
+  #:use-module (nongnu packages nvidia))
 
 (define-public %koshi-gaming-home-packages
   `(,@(specifications->packages (list "freesmlauncher"
@@ -14,6 +13,7 @@
                                       "heroic-nvidia-new-feature"
                                       "mangohud"
                                       "openjdk"
+                                      "osu-lazer-bin"
                                       "protonplus-sandbox"
-                                      "the-honkers-railway-launcher-nvidia-new-feature"))
-    ,(steam-gamescope-for nvda-new-feature)))
+                                      "steam-nvidia-new-feature"
+                                      "the-honkers-railway-launcher-nvidia-new-feature"))))
