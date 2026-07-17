@@ -30,6 +30,7 @@
 [alias]
     amend = commit --amend --no-edit
     st = status -sb
+	head = rev-parse HEAD
 
 [diff]
     colorMoved = default
