@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2026 Nikita Mitasov <me@ch4og.com>
+# SPDX-License-Identifier: GPL-3.0-or-later
+{
+  targets.genericLinux.gpu.nvidia = {
+    enable = true;
+    version = "KOSHINVIDIAVERSION";
+    sha256 = "KOSHINVIDIASHA256";
+  };
+}

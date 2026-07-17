@@ -19,7 +19,10 @@
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
-      config.allowUnfree = true;
+      config = {
+        allowUnfree = true;
+        nvidia.acceptLicense = true;
+      };
     };
   in {
     homeConfigurations."ch" = home-manager.lib.homeManagerConfiguration {
@@ -32,6 +35,7 @@
           home.stateVersion = "25.05";
           targets.genericLinux.enable = true;
         }
+        ./driver.nix
         ./packages.nix
       ];
     };

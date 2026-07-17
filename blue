@@ -132,6 +132,7 @@
   (let ((first (car `(,@args ""))))
     (if (string=? first "")
         (begin
+          (system (string-append config-root "/scripts/update-driver.sh"))
           (display "Reconfiguring Nix Home Manager...\n")
           (system (string-join `("cd" ,(string-append config-root "/nix")
                                  "&&"
@@ -156,10 +157,18 @@
                                         "'nix' 'nix fmt' 'nix up'"
                                         "") "\n")))))))
 
+(define-command (driver-command args)
+  ((invoke "driver")
+   (category 'koshi)
+   (synopsis "Update NVIDIA driver for Nix")
+   (help "Fetch version from Guix package and update nix/driver.nix"))
+  (system (string-append config-root "/scripts/update-driver.sh")))
+
 (blueprint
  (commands (list style-command
                  dotfiles-command
                  update-command
                  system-command
                  home-command
-                 nix-command)))
+                 nix-command
+                 driver-command)))
