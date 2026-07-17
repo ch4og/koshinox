@@ -3,8 +3,8 @@
 
 (define-module (koshi system config)
   #:use-module (koshi system os)
+  #:use-module (koshi config driver)
   #:use-module (nongnu packages linux)
-  #:use-module (nongnu packages nvidia)
   #:use-module (nonguix utils)
   #:use-module (nonguix transformations))
 
@@ -12,7 +12,7 @@
   (make-koshi-os "ch" "noko"))
 
 (define-public %koshi-os-nvidia
-  ((compose (nonguix-transformation-nvidia #:driver nvda-new-feature
+  ((compose (nonguix-transformation-nvidia #:driver %koshi-driver
                                            #:open-source-kernel-module? #t
                                            #:dynamic-boost? #t
                                            #:remove-nvenc-restriction? #t)

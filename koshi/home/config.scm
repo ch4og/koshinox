@@ -2,13 +2,14 @@
 ;;; SPDX-License-Identifier: GPL-3.0-or-later
 
 (define-module (koshi home config)
+  #:use-module (nongnu packages nvidia)
   #:use-module (koshi home home)
-  #:use-module (nongnu packages nvidia))
+  #:use-module (koshi config driver))
 
 (define %koshi-home
   (make-koshi-home "ch"))
 
 (define %koshi-home-nvidia
-  (replace-mesa %koshi-home #:driver nvda-new-feature))
+  (replace-mesa %koshi-home #:driver %koshi-driver))
 
 %koshi-home-nvidia
