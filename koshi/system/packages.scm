@@ -10,7 +10,7 @@
   #:use-module (gnu packages ssh)
   #:use-module (gnu packages version-control)
   #:use-module (gnu packages vim)
-  #:use-module (gnu packages wm)
+  #:use-module (gnu packages window-management)
   #:use-module (shika packages kmscon))
 
 (define-public %koshi-system-packages

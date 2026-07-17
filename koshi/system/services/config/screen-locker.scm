@@ -3,7 +3,7 @@
 
 (define-module (koshi system services config screen-locker)
   #:use-module (gnu services xorg)
-  #:use-module (gnu packages wm)
+  #:use-module (gnu packages window-management)
   #:use-module (guix gexp))
 
 (define-public %koshi-screen-locker-configuration

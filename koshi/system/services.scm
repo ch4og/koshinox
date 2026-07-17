@@ -5,7 +5,7 @@
   #:use-module (gnu)
   #:use-module (guix gexp)
   #:use-module (gnu packages package-management)
-  #:use-module (gnu packages wm)
+  #:use-module (gnu packages window-management)
   #:use-module (gnu services avahi)
   #:use-module (gnu services dbus)
   #:use-module (gnu services desktop)
