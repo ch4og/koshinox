@@ -5,7 +5,7 @@
 
 (define-public %koshi-kernel-arguments
   '("quiet"
-    "module_blacklist=pcspkr"
+    "module_blacklist=pcspkr,wacom"
     "zswap.enabled=1"
     "zswap.max_pool_percent=20"
     "nvme_core.default_ps_max_latency_us=0"))
