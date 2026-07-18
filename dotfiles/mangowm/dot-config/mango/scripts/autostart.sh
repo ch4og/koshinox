@@ -20,4 +20,4 @@ wl-paste --type text --watch xclip -selection clipboard &
 
 env ~/.config/mango/scripts/switch_layouts.sh &
 
-mmsg -d "focusmon,eDP-1"
+mmsg dispatch "focusmon,eDP-1"

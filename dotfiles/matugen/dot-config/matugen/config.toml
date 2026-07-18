@@ -21,7 +21,7 @@ output_path = '~/.config/gtk-4.0/colors.css'
 [templates.mango]
 input_path = './templates/mango.conf'
 output_path = '~/.config/mango/conf.d/generated-colors.conf'
-post_hook = 'mmsg -d reload_config && sleep 0.1 && mmsg -d reload_config && sleep 0.1 && mmsg -d reload_config && sleep 0.1 && mmsg -d reload_config'
+post_hook = 'mmsg dispatch reload_config && sleep 0.2 && mmsg dispatch reload_config && sleep 0.3 && mmsg dispatch reload_config'
 
 [templates.qt5ct]
 input_path = './templates/qtct.conf'
