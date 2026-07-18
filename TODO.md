@@ -3,12 +3,12 @@
 
 General:
 - [ ] nonguix PR GUIX_SANDBOX_EXTRA_ENVS
-- [ ] package awww (swww -> awww)
 - [ ] package pi-coding-agent
 - [ ] switch to gui emacs not cli
 - [ ] use dante to socksify
 - [ ] nixGL or nvidia (https://nix-community.github.io/home-manager/usage/gpu-non-nixos.html)
 - [ ] package all browser ext
+- [ ] hyperheadset
 
 Koshi:
 - [ ] swayidle
@@ -41,7 +41,6 @@ Koshi:
 - [ ] home service that setups nix hm
 
 Shika:
-- [ ] OTD FULL PACKAGE!
 - [ ] btrfs backups
 - [ ] locate-service-type
 - [ ] throne
