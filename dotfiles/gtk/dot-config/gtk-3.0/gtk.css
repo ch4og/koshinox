@@ -3,3 +3,177 @@
 }
 
 @import 'colors.css';
+
+button {
+    color: @theme_fg_color;
+    background-image: none;
+    background-color: @theme_bg_color;
+    border-color: @borders;
+}
+
+button:hover {
+    background-color: shade(@theme_bg_color, 1.1);
+}
+
+button:active,
+button:checked {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+button:disabled {
+    color: insensitive(@theme_fg_color);
+    background-color: @insensitive_base_color;
+    border-color: @insensitive_base_color;
+}
+
+headerbar button {
+    background-color: @headerbar_bg_color;
+    color: @headerbar_fg_color;
+    border-color: @borders;
+}
+
+headerbar button:hover {
+    background-color: shade(@headerbar_bg_color, 1.1);
+}
+
+headerbar button:active,
+headerbar button:checked {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+button.suggested-action {
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
+    border-color: @accent_bg_color;
+}
+
+button.suggested-action:hover {
+    background-color: shade(@accent_bg_color, 1.1);
+}
+
+button.destructive {
+    background-color: @error_color;
+    color: @destructive_fg_color;
+    border-color: @error_color;
+}
+
+button.destructive:hover {
+    background-color: shade(@error_color, 1.1);
+}
+
+entry {
+    background-color: @theme_base_color;
+    color: @theme_text_color;
+    border-color: @borders;
+}
+
+entry:focus {
+    border-color: @focus_color;
+}
+
+label {
+    color: @theme_fg_color;
+}
+
+textview text {
+    background-color: @theme_base_color;
+    color: @theme_text_color;
+}
+
+textview text selection {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+tooltip {
+    background-color: @theme_tooltip_bg_color;
+    color: @theme_tooltip_fg_color;
+}
+
+scrollbar {
+    background-color: @theme_base_color;
+}
+
+scrollbar slider {
+    background-color: alpha(@theme_fg_color, 0.5);
+}
+
+scrollbar slider:hover {
+    background-color: alpha(@theme_fg_color, 0.8);
+}
+
+switch {
+    background-color: @theme_bg_color;
+    border-color: @borders;
+    color: @theme_fg_color;
+}
+
+switch:checked {
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
+}
+
+scale slider {
+    color: @theme_fg_color;
+}
+
+scale highlight {
+    background-color: @accent_bg_color;
+}
+
+notebook tab {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+    border-color: @borders;
+}
+
+notebook tab:checked {
+    background-color: @theme_base_color;
+    color: @theme_fg_color;
+}
+
+list row:selected {
+    background-color: alpha(@theme_selected_bg_color, 0.3);
+    color: @theme_fg_color;
+}
+
+popover {
+    background-color: @popover_bg_color;
+    color: @popover_fg_color;
+}
+
+.sidebar {
+    background-color: @sidebar_bg_color;
+    color: @sidebar_fg_color;
+}
+
+.menu {
+    background-color: @popover_bg_color;
+    color: @popover_fg_color;
+}
+
+.menuitem:hover,
+.menu menuitem:hover {
+    background-color: alpha(@theme_selected_bg_color, 0.3);
+}
+
+separator {
+    background-color: @borders;
+}
+
+dialog .dialog-action-area button {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+    border-color: @borders;
+}
+
+dialog .dialog-action-area button:hover {
+    background-color: shade(@theme_bg_color, 1.1);
+}
+
+messagedialog .dialog-action-area button {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}

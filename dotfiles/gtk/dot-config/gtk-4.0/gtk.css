@@ -3,3 +3,184 @@
 }
 
 @import 'colors.css';
+
+button {
+    color: @window_fg_color;
+    background-color: mix(@window_bg_color, @window_fg_color, 0.05);
+    border-color: alpha(@window_fg_color, 0.15);
+}
+
+button:hover {
+    background-color: mix(@window_bg_color, @window_fg_color, 0.1);
+}
+
+button:active,
+button:checked {
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+headerbar button {
+    background-color: @headerbar_bg_color;
+    color: @headerbar_fg_color;
+    border-color: alpha(@headerbar_fg_color, 0.15);
+}
+
+headerbar button:hover {
+    background-color: mix(@headerbar_bg_color, @headerbar_fg_color, 0.1);
+}
+
+headerbar button:active,
+headerbar button:checked {
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
+}
+
+button.suggested-action {
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
+    border-color: @accent_bg_color;
+}
+
+button.suggested-action:hover {
+    background-color: mix(@accent_bg_color, @accent_fg_color, 0.1);
+}
+
+button.destructive {
+    background-color: @error_color;
+    color: @destructive_fg_color;
+    border-color: @error_color;
+}
+
+button.destructive:hover {
+    background-color: mix(@error_color, @destructive_fg_color, 0.1);
+}
+
+entry {
+    background-color: mix(@window_bg_color, @window_fg_color, 0.05);
+    color: @window_fg_color;
+    border-color: alpha(@window_fg_color, 0.15);
+}
+
+entry:focus {
+    border-color: @accent_color;
+}
+
+label {
+    color: @window_fg_color;
+}
+
+textview text {
+    background-color: @view_bg_color;
+    color: @view_fg_color;
+}
+
+textview text selection {
+    background-color: alpha(@accent_color, 0.3);
+}
+
+textselection {
+    background-color: alpha(@accent_color, 0.3);
+}
+
+popover {
+    background-color: @popover_bg_color;
+    color: @popover_fg_color;
+}
+
+.sidebar {
+    background-color: @sidebar_bg_color;
+    color: @sidebar_fg_color;
+}
+
+scrollbar {
+    background-color: transparent;
+}
+
+scrollbar slider {
+    background-color: alpha(@window_fg_color, 0.4);
+}
+
+scrollbar slider:hover {
+    background-color: alpha(@window_fg_color, 0.6);
+}
+
+switch {
+    background-color: alpha(@window_fg_color, 0.15);
+}
+
+switch:checked {
+    background-color: @accent_bg_color;
+}
+
+switch slider {
+    color: white;
+}
+
+switch:checked slider {
+    color: @accent_fg_color;
+}
+
+scale slider {
+    color: @window_fg_color;
+}
+
+scale highlight {
+    background-color: @accent_color;
+}
+
+notebook tab {
+    background-color: mix(@window_bg_color, @window_fg_color, 0.05);
+    color: @window_fg_color;
+    border-color: alpha(@window_fg_color, 0.15);
+}
+
+notebook tab:checked {
+    background-color: @window_bg_color;
+    color: @accent_color;
+}
+
+list row:selected {
+    background-color: alpha(@accent_color, 0.15);
+    color: @window_fg_color;
+}
+
+menu {
+    background-color: @popover_bg_color;
+    color: @popover_fg_color;
+}
+
+menuitem:hover {
+    background-color: alpha(@accent_color, 0.15);
+}
+
+separator {
+    background-color: alpha(@window_fg_color, 0.15);
+}
+
+dialog .dialog-action-area button {
+    background-color: mix(@window_bg_color, @window_fg_color, 0.05);
+    color: @window_fg_color;
+}
+
+dialog .dialog-action-area button:hover {
+    background-color: mix(@window_bg_color, @window_fg_color, 0.1);
+}
+
+messagedialog .dialog-action-area button {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+}
+
+.titlebar {
+    background-color: @headerbar_bg_color;
+    color: @headerbar_fg_color;
+}
+
+.sidebar row:selected {
+    background-color: alpha(@accent_color, 0.15);
+}
