@@ -53,6 +53,7 @@ Shika:
 - [ ] amneziavpn
 - [ ] iloader
 - [ ] appimage-run
+- [ ] update manifest
 
 Aagl:
 - [ ] use new nvidia approach from nonguix

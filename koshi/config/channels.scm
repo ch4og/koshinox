@@ -22,7 +22,7 @@
           (name 'shikanox)
           (url "https://codeberg.org/ch4og/shikanox.git")
           (branch "main")
-          (commit "ee2933221a631cf311c395b9824a4e9dc467a311")
+          (commit "b864d1d70f525bd83bb77a9dd2d52af5957bbd42")
           (introduction
            (make-channel-introduction
             "fe3b5f72aa676c69f4d43507bdd18fb051906917"
@@ -50,13 +50,13 @@
              "5132 3571 CEED 988F 52FC  467C 6F98 DBF3 EA7F 4B37"))))
         (channel
           (name 'guix)
-          (url "https://git.guix.gnu.org/guix.git")
-          (branch "master")
-          (commit "cdf709c0574c651a035fb0bf1255d01db79a2cde")
+          (url "https://codeberg.org/ch4og/guix")
+          (branch "fix-nix")
+          (commit "9663835164b4d961a23540e2a1fb8fc5f1d6c2fa")
           (introduction
            (make-channel-introduction
-            "9edb3f66fd807b096b48283debdcddccfea34bad"
+            "9663835164b4d961a23540e2a1fb8fc5f1d6c2fa"
             (openpgp-fingerprint
-             "BBB0 2DDF 2CEA F6A8 0D1D  E643 A2A0 6DF2 A33A 54FA"))))))
+             "7C9E 7EBA 828C 58DF DACE  5BED 4DCC 7AB7 FC75 319B"))))))
 
 %koshi-chs
