@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
 
 colors=(
-    "{{base16.base00.default.hex}}"
-    "{{base16.base01.default.hex | lighten: 10.0}}"
-    "{{base16.base02.default.hex | lighten: 10.0}}"
-    "{{base16.base03.default.hex | lighten: 10.0}}"
-    "{{base16.base04.default.hex | lighten: 5.0}}"
-    "{{base16.base05.default.hex}}"
-    "{{base16.base06.default.hex}}"
-    "{{base16.base07.default.hex}}"
-    "{{base16.base08.default.hex}}"
-    "{{base16.base09.default.hex}}"
-    "{{base16.base0a.default.hex}}"
-    "{{base16.base0b.default.hex}}"
-    "{{base16.base0c.default.hex}}"
-    "{{base16.base0d.default.hex}}"
-    "{{base16.base0e.default.hex | lighten: 10.0}}"
-    "{{base16.base0f.default.hex}}"
+    "{{colors.background.default.hex}}"
+    "{{colors.error_container.default.hex}}"
+    "{{colors.tertiary_container.default.hex}}"
+    "{{colors.outline.default.hex}}"
+    "{{colors.primary_container.default.hex}}"
+    "{{colors.secondary_container.default.hex}}"
+    "{{colors.primary.default.hex | lighten: 10.0}}"
+    "{{colors.on_surface.default.hex}}"
+    "{{colors.surface_variant.default.hex}}"
+    "{{colors.error.default.hex}}"
+    "{{colors.tertiary.default.hex}}"
+    "{{colors.on_surface_variant.default.hex}}"
+    "{{colors.primary.default.hex}}"
+    "{{colors.secondary.default.hex}}"
+    "{{colors.primary.default.hex | lighten: 20.0}}"
+    "{{colors.on_surface.default.hex | lighten: 5.0}}"
 )
 
 for i in "${!colors[@]}"; do
