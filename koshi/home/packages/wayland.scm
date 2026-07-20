@@ -30,7 +30,7 @@
                                   "swaylock-effects"
                                   "swaynotificationcenter"
                                   "awww"
-                                  "waybar-experimental"
+                                  "waybar-experimental-git"
                                   "wayfreeze"
                                   "waypaper"
                                   "wl-clipboard"
