@@ -11,5 +11,6 @@ if status is-interactive
   alias t='tmux'
   alias lg='lazygit'
   alias ssh='env TERM=xterm-256color ssh'
+  alias rg='rga'
   abbr -a !! --position anywhere --function last_history_item
 end

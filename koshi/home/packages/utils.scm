@@ -27,7 +27,7 @@
                                   "python-yubikey-manager"
                                   "rbw"
                                   "rclone"
-                                  "ripgrep"
+                                  "ripgrep-all"
                                   "starship"
                                   "stow"
                                   "tmux"
