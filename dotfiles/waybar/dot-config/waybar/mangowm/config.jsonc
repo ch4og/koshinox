@@ -3,7 +3,7 @@
     "layer": "top",
     "height": 34,
     "modules-left": [
-      "ext/workspaces"
+      "mango/workspaces"
     ],
     "modules-center": [
       "custom/spotify"
@@ -15,7 +15,7 @@
       "network",
       "bluetooth",
       //"battery",
-      "sway/language",
+      "mango/language",
       "clock"
     ],
     "battery": {
@@ -74,11 +74,30 @@
       "return-type": "json",
       "tooltip": false
     },
-    "ext/workspaces": {
+    "mango/workspaces": {
         "format": "{icon}",
-        "ignore-hidden": true,
+	"format-icons": {
+		"1": "一",
+		"2": "二",
+                "3": "三",
+                "4": "四",
+                "5": "五",
+                "6": "六",
+                "7": "七",
+                "8": "八",
+                "9": "九",
+		"default": " ",
+	},
+        "hide-empty": false,
         "on-click": "activate",
-        "sort-by-id": true,
+        "on-click-right": "toggle",
+        "overview-label": " ",
+    },
+    "mango/language": {
+    "format": "{short} {variant}",
+    "format-ru": "🚬",
+    "format-en-colemak": "🍔",
+    "format-en": "🇺🇸",
     },
     "memory": {
       "format": "{}% "
