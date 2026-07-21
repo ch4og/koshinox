@@ -8,6 +8,8 @@ ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 TEMPLATE="$ROOT_DIR/nix/driver.template"
 DRIVER_NIX="$ROOT_DIR/nix/driver.nix"
 
+CURRENT_VERSION=$(grep -oP 'version = "\K[^"]+' "$DRIVER_NIX" 2>/dev/null || echo "")
+
 echo "Fetching driver version from Guix..."
 VERSION=$(guix repl -L"$ROOT_DIR" /dev/stdin <<'EOF'
 (use-modules (nongnu packages nvidia) (guix packages))
@@ -15,6 +17,11 @@ VERSION=$(guix repl -L"$ROOT_DIR" /dev/stdin <<'EOF'
 EOF
 )
 echo "Version: $VERSION"
+
+if [ "$VERSION" = "$CURRENT_VERSION" ]; then
+  echo "Version $VERSION is already up to date. Nothing to do."
+  exit 0
+fi
 
 URL="https://download.nvidia.com/XFree86/Linux-x86_64/${VERSION}/NVIDIA-Linux-x86_64-${VERSION}.run"
 echo "Prefetching $URL..."
