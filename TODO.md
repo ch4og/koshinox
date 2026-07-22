@@ -9,6 +9,7 @@ General:
 - [ ] nixGL or nvidia (https://nix-community.github.io/home-manager/usage/gpu-non-nixos.html)
 - [ ] package all browser ext
 - [ ] hyperheadset
+- [ ] gpu-screen-recorder
 
 Koshi:
 - [ ] swayidle

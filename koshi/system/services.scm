@@ -89,6 +89,12 @@
                                    "--user-menu" "--sessions"
                                    "/run/current-system/profile/share/wayland-sessions")))))))))
 
+         (service tlp-service-type
+                  (tlp-configuration
+                    (cpu-scaling-governor-on-ac (list "performance"))
+                    (cpu-scaling-governor-on-bat (list "powersave"))
+                    (sched-powersave-on-bat? #t)))
+
          (service rootless-podman-service-type
                   (rootless-podman-configuration (subgids (list (subid-range (name username))))
                                                  (subuids (list (subid-range (name username))))))
