@@ -22,7 +22,7 @@
           (name 'shikanox)
           (url "https://codeberg.org/ch4og/shikanox.git")
           (branch "main")
-          (commit "b864d1d70f525bd83bb77a9dd2d52af5957bbd42")
+          (commit "cdc3972790007f6afc8fc089755272c4004b3b16")
           (introduction
            (make-channel-introduction
             "fe3b5f72aa676c69f4d43507bdd18fb051906917"
@@ -51,11 +51,11 @@
         (channel
           (name 'guix)
           (url "https://codeberg.org/ch4og/guix")
-          (branch "fix-nix")
-          (commit "9663835164b4d961a23540e2a1fb8fc5f1d6c2fa")
+          (branch "tlp-platform-profiles")
+          (commit "6f1c0779176fe7df78e39757db2112a7c65e928e")
           (introduction
            (make-channel-introduction
-            "9663835164b4d961a23540e2a1fb8fc5f1d6c2fa"
+            "6f1c0779176fe7df78e39757db2112a7c65e928e"
             (openpgp-fingerprint
              "7C9E 7EBA 828C 58DF DACE  5BED 4DCC 7AB7 FC75 319B"))))))
 
