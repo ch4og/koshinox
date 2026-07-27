@@ -13,6 +13,7 @@ General:
 - [ ] claudecode
 - [ ] mimeapps
 - [ ] https://github.com/uwuclxdy/osu-collect
+- [ ] upscayl
 
 Koshi:
 - [ ] swayidle
