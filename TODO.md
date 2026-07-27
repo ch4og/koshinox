@@ -8,8 +8,11 @@ General:
 - [ ] use dante to socksify
 - [ ] nixGL or nvidia (https://nix-community.github.io/home-manager/usage/gpu-non-nixos.html)
 - [ ] package all browser ext
-- [ ] hyperheadset
 - [ ] gpu-screen-recorder
+- [ ] copilot-gateway
+- [ ] claudecode
+- [ ] mimeapps
+- [ ] https://github.com/uwuclxdy/osu-collect
 
 Koshi:
 - [ ] swayidle

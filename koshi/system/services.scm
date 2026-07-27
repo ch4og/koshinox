@@ -5,6 +5,7 @@
   #:use-module (gnu)
   #:use-module (guix gexp)
   #:use-module (gnu packages package-management)
+  #:use-module (gnu packages security-token)
   #:use-module (gnu packages window-management)
   #:use-module (gnu services avahi)
   #:use-module (gnu services dbus)
@@ -16,6 +17,7 @@
   #:use-module (gnu services guix)
   #:use-module (gnu services networking)
   #:use-module (gnu services nix)
+  #:use-module (gnu services pm)
   #:use-module (gnu services security-token)
   #:use-module (gnu services shepherd)
   #:use-module (gnu services ssh)
@@ -25,10 +27,10 @@
   #:use-module (shika services guix-gc)
   #:use-module (shika services ntsync)
   #:use-module (shika services polkit-nm)
-  #:use-module (shika services udev-fido2)
   #:use-module (koshi config channels)
   #:use-module (koshi config keys)
   #:use-module (koshi config substitutes)
+  #:use-module (koshi config udev)
   #:use-module (koshi system services base)
   #:use-module (koshi system services config kmscon)
   #:use-module (koshi system services config network-manager)
@@ -37,8 +39,7 @@
   #:use-module (koshi system services config screen-locker)
   #:use-module (aagl services hosts)
   #:use-module (shika services btrfs)
-  #:use-module (shika services webhid-for-firefox)
-  #:use-module (shika services opentabletdriver)
+  #:use-module (shika packages opentabletdriver)
   #:use-module (koshi system services endfield-hosts))
 
 (define-public (make-koshi-system-services username)
@@ -100,7 +101,6 @@
                                                  (subuids (list (subid-range (name username))))))
 
          (service polkit-network-manager-service-type)
-         (service udev-fido2-service-type)
          (service ntsync-service-type)
 
          (service docker-service-type)
@@ -119,11 +119,20 @@
                                                             (+ current-time (* 2 7 24 60 60))))
                                                (filesystems '("/dev/mapper/root"
                                                               "/dev/mapper/home"))))
-         (service webhid-for-firefox-service-type)
-         (service opentabletdriver-udev-service-type)
 
+         (udev-rules-service 'opentabletdriver
+                             opentabletdriver-udev-rules
+                             #:groups '("plugdev"))
+         (udev-rules-service 'fido2
+                             libfido2
+                             #:groups '("plugdev"))
          (udev-rules-service 'steam
-                             steam-devices-udev-rules)
+                             steam-devices-udev-rules
+                             #:groups '("plugdev"))
+         (udev-rules-service 'custom
+                             %koshi-custom-udev
+                             #:groups '("plugdev"))
+
          (service pam-limits-service-type
                   (list (pam-limits-entry "*" 'both 'nofile 524288)))
 
