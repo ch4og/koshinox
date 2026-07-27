@@ -34,8 +34,7 @@
     "starship"
     "swappy"
     "tmux"
-    "waybar"
-    "wezterm"))
+    "waybar"))
 
 (define config-root
   (dirname (canonicalize-path (current-filename))))
