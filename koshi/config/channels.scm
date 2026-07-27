@@ -12,7 +12,7 @@
           (name 'nonguix)
           (url "https://gitlab.com/nonguix/nonguix")
           (branch "master")
-          (commit "3b66965566fe8c96edb5a41fd39a9e5a90ad9b61")
+          (commit "73baab37361b3a81f326aa3fdec78840f5acc577")
           (introduction
            (make-channel-introduction
             "897c1a470da759236cc11798f4e0a5f7d4d59fbc"
@@ -22,7 +22,7 @@
           (name 'shikanox)
           (url "https://codeberg.org/ch4og/shikanox.git")
           (branch "main")
-          (commit "cdc3972790007f6afc8fc089755272c4004b3b16")
+          (commit "788cd003ac9fda990119136f4069034a05b0c8e4")
           (introduction
            (make-channel-introduction
             "fe3b5f72aa676c69f4d43507bdd18fb051906917"
@@ -50,13 +50,13 @@
              "5132 3571 CEED 988F 52FC  467C 6F98 DBF3 EA7F 4B37"))))
         (channel
           (name 'guix)
-          (url "https://codeberg.org/ch4og/guix")
-          (branch "tlp-platform-profiles")
-          (commit "6f1c0779176fe7df78e39757db2112a7c65e928e")
+          (url "https://git.guix.gnu.org/guix.git")
+          (branch "master")
+          (commit "acf3d19725c9f588ccc60095067d91fe9c578ea7")
           (introduction
            (make-channel-introduction
-            "6f1c0779176fe7df78e39757db2112a7c65e928e"
+            "9edb3f66fd807b096b48283debdcddccfea34bad"
             (openpgp-fingerprint
-             "7C9E 7EBA 828C 58DF DACE  5BED 4DCC 7AB7 FC75 319B"))))))
+             "BBB0 2DDF 2CEA F6A8 0D1D  E643 A2A0 6DF2 A33A 54FA"))))))
 
 %koshi-chs
