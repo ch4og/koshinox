@@ -25,4 +25,6 @@ env ~/.config/mango/scripts/switch_layouts.sh &
 
 mmsg dispatch "focusmon,eDP-1" &
 
+WebHID-for-Firefox-Server &
+
 pkill -9 -f OpenTabletDriver.Daemon 2>/dev/null; sleep 0.1 && otd-daemon

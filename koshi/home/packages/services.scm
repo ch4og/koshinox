@@ -10,4 +10,5 @@
                                   "pipewire"
                                   "wireplumber"
                                   "nftables"
+                                  "webhid-for-firefox"
                                   "zapret")))
