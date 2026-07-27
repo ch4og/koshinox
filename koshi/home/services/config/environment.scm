@@ -1,7 +1,8 @@
 ;;; SPDX-FileCopyrightText: 2025-2026 Nikita Mitasov <me@ch4og.com>
 ;;; SPDX-License-Identifier: GPL-3.0-or-later
 
-(define-module (koshi home services config environment))
+(define-module (koshi home services config environment)
+  #:use-module (koshi home services config user-directories))
 
 (define-public %koshi-home-environment-variables-configuration
   `(("TZ" . "Europe/Moscow")
@@ -20,7 +21,8 @@
     ("GUIX_SANDBOX_EXTRA_SHARES" . ,(string-join
                                      (list "$HOME/.config/MangoHud/"
                                            "$HOME/.config/dxvk/"
-                                           "/games") ":"))
+                                           "/games"
+                                           %koshi-home-download-dir) ":"))
 
     ;; Coding
     ("NPM_CONFIG_USERCONFIG" . "$XDG_CONFIG_HOME/npm/npmrc")

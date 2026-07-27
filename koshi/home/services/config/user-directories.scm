@@ -4,11 +4,14 @@
 (define-module (koshi home services config user-directories)
   #:use-module (gnu home services xdg))
 
+(define-public %koshi-home-download-dir
+  "$HOME/downloads")
+
 (define-public %koshi-home-user-directories-configuration
   (home-xdg-user-directories-configuration
     (desktop     "$HOME")
     (documents   "$HOME/documents")
-    (download    "$HOME/downloads")
+    (download    %koshi-home-download-dir)
     (music       "$HOME")
     (pictures    "$HOME/pictures")
     (publicshare "$HOME")
