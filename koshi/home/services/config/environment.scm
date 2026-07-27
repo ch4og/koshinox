@@ -22,6 +22,7 @@
                                      (list "$HOME/.config/MangoHud/"
                                            "$HOME/.config/dxvk/"
                                            "/games"
+                                           "/run/dbus"
                                            %koshi-home-download-dir) ":"))
 
     ;; Coding
