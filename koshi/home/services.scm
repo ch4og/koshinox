@@ -14,7 +14,7 @@
   #:use-module (gnu home services shells)
   #:use-module (gnu home services sound)
   #:use-module (gnu home services xdg)
-  #:use-module (shika services home-emacs-daemon)
+  #:use-module (shika services home emacs-daemon)
   #:use-module (koshi home services config environment)
   #:use-module (koshi home services config user-directories))
 
