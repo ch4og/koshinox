@@ -9,7 +9,8 @@
  (blue types command))
 
 (define dotfiles-list
-  '("avizo"
+  '("applications"
+    "avizo"
     "btop"
     "dxvk"
     "emacs"
