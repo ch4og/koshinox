@@ -7,7 +7,8 @@
 
 (define-public %koshi-apps-home-packages
   (specifications->packages
-   (list "blueman"
+   (list "audacity"
+         "blueman"
          "emacs-pgtk"
          "file-roller"
          "filezilla"
@@ -15,6 +16,7 @@
          "gimp"
          "imv"
          "kdenlive"
+         "krita"
          "libreoffice"
          "mpv-nvidia"
          "obs-with-cef-nvidia"
