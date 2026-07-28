@@ -16,7 +16,7 @@
                                            #:open-source-kernel-module? #t
                                            #:dynamic-boost? #t
                                            #:remove-nvenc-restriction? #t)
-            (nonguix-transformation-linux #:linux linux-7.0))
+            (nonguix-transformation-linux))
    %koshi-os))
 
 %koshi-os-nvidia
