@@ -8,10 +8,10 @@
   #:use-module (gnu packages nss)
   #:use-module (gnu packages shells)
   #:use-module (gnu packages ssh)
+  #:use-module (gnu packages terminals)
   #:use-module (gnu packages version-control)
   #:use-module (gnu packages vim)
-  #:use-module (shika packages mangowm)
-  #:use-module (shika packages kmscon))
+  #:use-module (shika packages mangowm))
 
 (define-public %koshi-system-packages
   (cons* vim
@@ -22,7 +22,7 @@
          font-google-noto
          font-google-noto-emoji
          font-google-noto-sans-cjk
-         (@ (shika packages kmscon) kmscon)
+         kmscon
          mangowm
          xpadneo
          %base-packages))
