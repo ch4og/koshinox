@@ -37,5 +37,7 @@
     ("AWS_SHARED_CREDENTIALS_FILE" . "$XDG_DATA_HOME/aws/credentials")
     ("S3CMD_CONFIG" . "$XDG_DATA_HOME/s3cmd/s3cfg")
 
+    ("CLAUDE_CONFIG_DIR" . "$XDG_CONFIG_HOME/claude")
+
     ;; Fix for NVIDIA
     ("WLR_DRM_NO_ATOMIC" . "1")))
