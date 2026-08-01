@@ -14,6 +14,7 @@ General:
 - [ ] mimeapps
 - [ ] https://github.com/uwuclxdy/osu-collect
 - [ ] upscayl
+- [ ] https://github.com/kabiiQ/BeatmapExporter
 
 Koshi:
 - [ ] swayidle

@@ -7,6 +7,11 @@ function oc -d "Wrapper for opencode"
             set -l session_id (string split '  ' -- $picked)[1]
             opencode -s $session_id
         end
+    else if test "$argv[1]" = "l"
+        set -l session_id (opencode session list --format json --pure | jq -r '.[0].id')
+        if test -n "$session_id"
+            opencode -s $session_id
+        end
     else if test "$argv[1]" = "run"
         opencode run $argv[2..]
     else
