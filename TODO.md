@@ -3,14 +3,11 @@
 
 General:
 - [ ] nonguix PR GUIX_SANDBOX_EXTRA_ENVS
-- [ ] package pi-coding-agent
 - [ ] switch to gui emacs not cli
 - [ ] use dante to socksify
 - [ ] nixGL or nvidia (https://nix-community.github.io/home-manager/usage/gpu-non-nixos.html)
 - [ ] package all browser ext
 - [ ] gpu-screen-recorder
-- [ ] copilot-gateway
-- [ ] claudecode
 - [ ] mimeapps
 - [ ] https://github.com/uwuclxdy/osu-collect
 - [ ] upscayl
@@ -38,7 +35,6 @@ Koshi:
 - [ ] steam matugen
 - [ ] switch to bash/zsh
 - [ ] apply lutgen on fastfetch image
-- [ ] satty
 - [ ] yazi
 - [ ] fix blueprint dotfiles command
 - [ ] bluepring guix system rootless setup somehow?

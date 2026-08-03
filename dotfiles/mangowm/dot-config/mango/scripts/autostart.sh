@@ -27,4 +27,8 @@ mmsg dispatch "focusmon,eDP-1" &
 
 WebHID-for-Firefox-Server &
 
+tosu &
+
+cli-proxy-api -config /home/ch/.local/share/cli-proxy-api/config.yaml &
+
 pkill -9 -f OpenTabletDriver.Daemon 2>/dev/null; sleep 0.1 && otd-daemon
