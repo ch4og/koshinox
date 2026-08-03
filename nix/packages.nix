@@ -4,7 +4,6 @@
   home.packages = with pkgs; [
     amnezia-vpn
     ayugram-desktop
-    equibop
     spotify
     throne
   ];

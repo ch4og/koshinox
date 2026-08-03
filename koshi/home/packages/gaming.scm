@@ -16,7 +16,9 @@
                                       "mangohud"
                                       "openjdk"
                                       "osu-lazer-bin"
-                                      "protonplus-sandbox"))
+                                      "protonplus-sandbox"
+                                      "tosu"
+                                      "tosu-overlay"))
     ,(nonguix-container->package (heroic-container-for %koshi-driver))
     ,(nonguix-container->package (steam-container-for %koshi-driver))
     ,(the-honkers-railway-launcher-for %koshi-driver)))

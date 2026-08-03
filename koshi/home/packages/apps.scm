@@ -10,6 +10,7 @@
    (list "audacity"
          "blueman"
          "emacs-pgtk"
+         "equibop"
          "file-roller"
          "filezilla"
          "foot"

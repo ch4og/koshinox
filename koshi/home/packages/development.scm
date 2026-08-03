@@ -8,6 +8,7 @@
 (define-public %koshi-development-home-packages
   (specifications->packages (list "awscli"
                                   "blue"
+                                  "cli-proxy-api"
                                   "claude-code-bin"
                                   "corepack-pnpm"
                                   "corepack-yarn"
@@ -20,6 +21,7 @@
                                   "node"
                                   "opencode-bin"
                                   "passt"
+                                  "pipx"
                                   "podman"
                                   "podman-compose"
                                   "reuse"
