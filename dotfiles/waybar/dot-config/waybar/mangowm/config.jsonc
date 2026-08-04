@@ -9,29 +9,40 @@
       "custom/spotify"
     ],
     "modules-right": [
+      "custom/aiquota",
       "custom/swaync",
       "tray",
       "pulseaudio",
       "network",
       "bluetooth",
-      //"battery",
+      "battery",
       "mango/language",
       "clock"
     ],
     "battery": {
       "format": "{icon}",
       "format-icons": [
-        " ",
-        " ",
-        " ",
-        " ",
-        " "
+        "  ",
+        "  ",
+        "  ",
+        "  ",
+        "  "
       ],
       "states": {
         "critical": 15,
         "warning": 30
       },
       "tooltip-format": "{capacity}% {timeTo}"
+    },
+    "custom/aiquota": {
+      "exec": "aiquota",
+      "format": "{icon}",
+      "format-icons": {
+        "codex": "  "
+      },
+      "interval": 120,
+      "on-click": "xdg-open http://localhost:8317/management.html",
+      "return-type": "json"
     },
     "bluetooth": {
       "on-click": "dmenu-bluetooth",
@@ -41,9 +52,6 @@
       "format": "{:%H:%M:%S}",
       "interval": 1,
       "tooltip-format": "{:%a %d %b %R}"
-    },
-    "cpu": {
-      "format": "{usage}% "
     },
     "custom/spotify": {
       "exec": "env $HOME/.config/waybar/scripts/spotify.sh 2> /dev/null",
@@ -64,9 +72,9 @@
       "exec": "$HOME/.config/waybar/scripts/swaync.sh 2> /dev/null",
       "format": "{icon}",
       "format-icons": {
-        "dnd": "  ",
-        "new": " ",
-        "none": " "
+        "dnd": "   ",
+        "new": "   ",
+        "none": "   "
       },
       "interval": 1,
       "on-click": "swaync-client -t",
