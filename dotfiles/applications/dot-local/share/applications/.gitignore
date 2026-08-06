@@ -2,3 +2,4 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 discord-*.desktop
 *-handler.desktop
+userapp-*.desktop
