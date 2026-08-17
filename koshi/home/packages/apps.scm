@@ -12,6 +12,7 @@
          "emacs-pgtk"
          "equibop"
          "file-roller"
+         "flatpak"
          "filezilla"
          "foot"
          "gimp"
