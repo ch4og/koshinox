@@ -106,6 +106,8 @@
     "format-ru": "🚬",
     "format-en-colemak": "🍔",
     "format-en": "🇺🇸",
+    "on-click": "mmsg dispatch \"setoption,xkb_rules_variant,colemak,\"",
+    "on-click-right": "mmsg dispatch \"setoption,xkb_rules_variant,,\"",
     },
     "memory": {
       "format": "{}% "
