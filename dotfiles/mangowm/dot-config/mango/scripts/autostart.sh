@@ -2,6 +2,8 @@
 
 env ~/.config/mango/scripts/polkit.sh &
 
+xwayland-satellite &
+
 swaync &
 
 pywalfox install &
