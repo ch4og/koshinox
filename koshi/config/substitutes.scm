@@ -6,10 +6,8 @@
 (define-public %koshi-subs
   '("https://bordeaux.guix.gnu.org"
     "https://nonguix-proxy.ditigal.xyz"
-    "https://ci.guix.moe"
     "https://cache-cdn.guix.moe"
-    "https://mirror.yandex.ru/mirrors/guix"
-    "https://mirror.sjtu.edu.cn/guix"
+    "https://ci.guix.moe"
     "https://ci.guix.gnu.org"))
 
 (define-public %koshi-subs-urls
