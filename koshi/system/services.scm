@@ -121,17 +121,13 @@
                                                               "/dev/mapper/home"))))
 
          (udev-rules-service 'opentabletdriver
-                             opentabletdriver-udev-rules
-                             #:groups '("plugdev"))
+                             opentabletdriver-udev-rules)
          (udev-rules-service 'fido2
-                             libfido2
-                             #:groups '("plugdev"))
+                             libfido2)
          (udev-rules-service 'steam
-                             steam-devices-udev-rules
-                             #:groups '("plugdev"))
+                             steam-devices-udev-rules)
          (udev-rules-service 'custom
-                             %koshi-custom-udev
-                             #:groups '("plugdev"))
+                             %koshi-custom-udev)
 
          (service pam-limits-service-type
                   (list (pam-limits-entry "*" 'both 'nofile 524288)))
