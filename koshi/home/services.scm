@@ -26,7 +26,7 @@
                   (home-gpg-agent-configuration
                     (ssh-support? #t)
                     (pinentry-program
-                     (file-append pinentry "/bin/pinentry"))))
+                     (file-append pinentry-qt "/bin/pinentry"))))
 
          (simple-service 'env-vars-service
                          home-environment-variables-service-type

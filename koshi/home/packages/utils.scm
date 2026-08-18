@@ -22,7 +22,7 @@
                                   "jq"
                                   "lsof"
                                   "ncurses"
-                                  "pinentry"
+                                  "pinentry-qt"
                                   "playerctl"
                                   "python-yubikey-manager"
                                   "rbw"
