@@ -9,7 +9,7 @@
   (specifications->packages (list "bat"
                                   "bind:utils"
                                   "binutils"
-                                  "btop"
+                                  "btop-nvidia"
                                   "curl"
                                   "dust"
                                   "eza"
