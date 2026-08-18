@@ -8,8 +8,5 @@ if not set -q GUIX_ENVIRONMENT
                 replay source /etc/profile
             end
         end
-
-        # Guix specific fix
-        gpg-connect-agent updatestartuptty /bye >/dev/null 2>&1
     end
 end
