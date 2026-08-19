@@ -26,6 +26,15 @@
 (straight-use-package 'dockerfile-mode)
 (straight-use-package 'typescript-mode)
 
+(when (executable-find "wl-copy")
+  (defun wl-copy (text)
+    (let ((p (make-process :name "wl-copy"
+                           :command '("wl-copy")
+                           :connection-type 'pipe)))
+      (process-send-string p text)
+      (process-send-eof p)))
+  (setq interprogram-cut-function 'wl-copy))
+
 (require 'dockerfile-mode)
 (require 'typescript-mode)
 (global-wakatime-mode)
@@ -37,12 +46,53 @@
 (straight-use-package 'use-package)
 (setq straight-use-package-by-default t)
 
+(use-package inheritenv
+  :ensure t)
+
+(use-package ghostel
+  :straight (:type git :host github :repo "dakra/ghostel"))
+
+(use-package monet
+  :straight (:type git :host github :repo "stevemolitor/monet"))
+
+(use-package evil-ghostel
+  :after (ghostel evil)
+  :hook (ghostel-mode . evil-ghostel-mode))
+
+(use-package claude-code
+  :straight (:type git :host github :repo "stevemolitor/claude-code.el" :branch "main" :depth 1
+                   :files ("*.el" (:exclude "images/*")))
+  :bind-keymap
+  ("C-c c" . claude-code-command-map)
+  :bind
+  (:repeat-map my-claude-code-map ("M" . claude-code-cycle-mode))
+  :custom
+  (claude-code-terminal-backend 'ghostel)
+  :config
+  (add-hook 'claude-code-process-environment-functions #'monet-start-server-function)
+  (monet-mode 1)
+  (claude-code-mode))
+
+(use-package elcord
+  :ensure t
+  :config
+  (elcord-mode))
+
 (use-package nix-mode
   :mode "\\.nix\\'")
 
 (use-package zig-mode
   :mode "\\.zig\\'")
 
+(use-package markdown-mode
+  :mode ("\\.md\\'" . gfm-mode)
+  :custom
+  (markdown-command "pandoc"))
+
+(use-package markdown-mode
+  :mode ("\\.md\\'" . gfm-mode)
+  :custom
+  (markdown-command "pandoc"))
 
 (use-package which-key
   :config

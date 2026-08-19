@@ -10,6 +10,7 @@ pywalfox install &
 
 avizo-service &
 
+emacs --daemon &
 Throne &
 
 

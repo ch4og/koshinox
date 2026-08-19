@@ -10,7 +10,6 @@ General:
 - [ ] upscayl
 - [ ] https://github.com/kabiiQ/BeatmapExporter
 - [ ] https://github.com/uwuclxdy/osu-collect
-- [ ] switch to gui emacs not cli
 - [ ] nixGL or nvidia (https://nix-community.github.io/home-manager/usage/gpu-non-nixos.html)
 
 Koshi:
