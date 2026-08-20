@@ -3,6 +3,8 @@ if status is-interactive
   alias ll='eza -l --icons auto'
   alias tree='eza --tree --icons auto'
   alias cd='z'
+  alias v='nvim'
+  alias vim='nvim'
   alias grep='grep --color=auto'
   alias dust='dust -d 1 '
   alias ip='ip -c'
