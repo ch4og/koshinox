@@ -1,0 +1,3 @@
+plugins/
+!plugins/tpm
+colors.conf
