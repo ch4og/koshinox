@@ -72,3 +72,9 @@ output_path = '~/.local/share/guix-sandbox-home/.config/heroic/css/matugen.css'
 [templates.ayugram]
 input_path = './templates/telegram.tdesktop-theme'
 output_path = '~/.local/share/AyuGramDesktop/matugen.tdesktop-theme'
+
+[templates.tmux]
+input_path = './templates/tmux-colors.conf'
+output_path = '~/.config/tmux/colors.conf'
+post_hook = 'tmux source-file ~/.config/tmux/colors.conf'
+
