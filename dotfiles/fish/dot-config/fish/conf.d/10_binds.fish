@@ -1,3 +1,4 @@
+fish_vi_key_bindings
 bind ctrl-right forward-word
 bind ctrl-left backward-word
 bind alt-right nextd-or-forward-word
