@@ -7,6 +7,16 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
+if vim.fn.filereadable(vim.fn.stdpath("config") .. "/colors/matugen.vim") == 1 then
+  vim.cmd.colorscheme("matugen")
+end
+
+vim.api.nvim_create_autocmd("Signal", {
+  group = group,
+  pattern = "SIGUSR1",
+  command = "colorscheme matugen",
+})
+
 vim.api.nvim_create_autocmd("LspAttach", {
   group = group,
   callback = function(args)

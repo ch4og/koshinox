@@ -7,7 +7,6 @@ end
 
 vim.pack.add({
   { src = github("nvim-neorocks/lz.n"), name = "lz.n" },
-  { src = github("catppuccin/nvim"), name = "catppuccin" },
   { src = github("vyfor/cord.nvim"), name = "cord.nvim" },
   { src = github("nvim-telescope/telescope.nvim"), name = "telescope.nvim" },
   { src = github("nvim-lua/plenary.nvim"), name = "plenary.nvim" },

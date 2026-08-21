@@ -25,14 +25,6 @@ end, { desc = "Find buffers" })
 
 return {
   {
-    "catppuccin",
-    lazy = false,
-    after = function()
-      require("catppuccin").setup({ flavour = "mocha" })
-      vim.cmd.colorscheme("catppuccin")
-    end,
-  },
-  {
     "cord.nvim",
     lazy = false,
     after = function()
