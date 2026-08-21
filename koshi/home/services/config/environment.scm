@@ -7,7 +7,7 @@
 (define-public %koshi-home-environment-variables-configuration
   `(("TZ" . "Europe/Moscow")
     ("PATH" . "$HOME/.local/bin:$PATH")
-    ("EDITOR" . "emacsclient")
+    ("EDITOR" . "nvim")
 
     ;; Nix
     ("NIXPKGS_ALLOW_UNFREE" . "1")
