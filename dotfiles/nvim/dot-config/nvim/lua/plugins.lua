@@ -33,6 +33,17 @@ return {
     end,
   },
   {
+    "cord.nvim",
+    lazy = false,
+    after = function()
+      require("cord").setup({
+        idle = {
+          show_status = false,
+        },
+      })
+    end,
+  },
+  {
     "gitsigns.nvim",
     event = "BufReadPre",
     after = function()
