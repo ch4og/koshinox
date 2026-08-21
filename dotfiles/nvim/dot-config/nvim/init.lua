@@ -13,6 +13,7 @@ vim.pack.add({
   { src = github("lewis6991/gitsigns.nvim"), name = "gitsigns.nvim" },
   { src = github("nvim-treesitter/nvim-treesitter"), name = "nvim-treesitter", version = "main" },
   { src = github("neovim/nvim-lspconfig"), name = "nvim-lspconfig" },
+  { src = github("wakatime/vim-wakatime"), name = "vim-wakatime" },
 }, { load = false, confirm = false })
 
 vim.cmd.packadd("lz.n")

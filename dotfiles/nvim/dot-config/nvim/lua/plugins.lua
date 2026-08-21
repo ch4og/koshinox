@@ -25,6 +25,10 @@ end, { desc = "Find buffers" })
 
 return {
   {
+    "vim-wakatime",
+    lazy = false,
+  },
+  {
     "cord.nvim",
     lazy = false,
     after = function()
