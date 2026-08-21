@@ -9,7 +9,6 @@
   (specifications->packages
    (list "audacity"
          "blueman"
-         "emacs-next-pgtk"
          "equibop"
          "file-roller"
          "flatpak"

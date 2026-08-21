@@ -4,7 +4,6 @@
 (define-module (koshi home services)
   #:use-module (guix gexp)
   #:use-module (gnu packages)
-  #:use-module (gnu packages emacs)
   #:use-module (gnu packages gnupg)
   #:use-module (gnu packages freedesktop)
   #:use-module (gnu home)
@@ -14,7 +13,6 @@
   #:use-module (gnu home services shells)
   #:use-module (gnu home services sound)
   #:use-module (gnu home services xdg)
-  #:use-module (shika services home emacs-daemon)
   #:use-module (koshi home services config environment)
   #:use-module (koshi home services config user-directories))
 
@@ -48,8 +46,4 @@
                                               ". \"$NIX_HM_ENV/etc/profile.d/hm-session-vars.sh\""
                                               "fi"
                                               "unset NIX_HM_ENV") "\n"))))
-
-         (service home-emacs-daemon-service-type
-                  (home-emacs-daemon-configuration
-                   (emacs emacs-pgtk)))
          %base-home-services))
