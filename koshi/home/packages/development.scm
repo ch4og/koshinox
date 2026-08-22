@@ -2,7 +2,6 @@
 ;;; SPDX-License-Identifier: GPL-3.0-or-later
 
 (define-module (koshi home packages development)
-  #:use-module (guix utils)
   #:use-module (gnu packages))
 
 (define-public %koshi-development-home-packages
@@ -15,7 +14,6 @@
                                   "corepack-pnpm"
                                   "corepack-yarn"
                                   "direnv"
-                                  "docker-full"
                                   "gcc-toolchain"
                                   "git-delta"
                                   "jujutsu"
@@ -23,12 +21,7 @@
                                   "neovim"
                                   "node"
                                   "opencode-bin"
-                                  "passt"
                                   "pipx"
-                                  "podman"
-                                  "podman-compose"
                                   "reuse"
-                                  "s3cmd"
-                                  "slirp4netns"
                                   "vscodium"
                                   "wakatime-cli")))

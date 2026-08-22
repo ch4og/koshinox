@@ -1,8 +1,7 @@
 ;;; SPDX-FileCopyrightText: 2026 Nikita Mitasov <me@ch4og.com>
 ;;; SPDX-License-Identifier: GPL-3.0-or-later
 
-(define-module (koshi home packages gaming)
-  #:use-module (guix utils)
+(define-module (koshi home packages games)
   #:use-module (gnu packages)
   #:use-module (koshi config driver)
   #:use-module (nonguix multiarch-container)
@@ -10,7 +9,7 @@
   #:use-module (nongnu packages nvidia)
   #:use-module (nongnu packages game-client))
 
-(define-public %koshi-gaming-home-packages
+(define-public %koshi-games-home-packages
   `(,@(specifications->packages (list "freesmlauncher"
                                       "gamescope"
                                       "mangohud"

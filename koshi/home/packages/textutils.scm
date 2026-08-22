@@ -1,42 +1,25 @@
 ;;; SPDX-FileCopyrightText: 2026 Nikita Mitasov <me@ch4og.com>
 ;;; SPDX-License-Identifier: GPL-3.0-or-later
 
-(define-module (koshi home packages utils)
-  #:use-module (guix utils)
+(define-module (koshi home packages textutils)
   #:use-module (gnu packages))
 
-(define-public %koshi-utils-home-packages
+(define-public %koshi-textutils-home-packages
   (specifications->packages (list "bat"
-                                  "bind:utils"
                                   "binutils"
                                   "btop-nvidia"
-                                  "curl"
                                   "du-dust"
                                   "eza"
                                   "fastfetch-no-zfs"
                                   "fd"
                                   "file"
                                   "fzf"
-                                  "gnupg"
-                                  "imagemagick"
                                   "jq"
                                   "lsof"
-                                  "ncurses"
-                                  "neovim"
-                                  "openssl"
                                   "pandoc"
-                                  "pinentry-qt"
-                                  "playerctl"
-                                  "python-yubikey-manager"
-                                  "rbw"
-                                  "rclone"
                                   "ripgrep-all"
                                   "starship"
                                   "stow"
-                                  "tmux-sixel"
-                                  "unzip"
                                   "xdg-user-dirs"
                                   "xdg-utils"
-                                  "yt-dlp"
-                                  "zip"
                                   "zoxide")))

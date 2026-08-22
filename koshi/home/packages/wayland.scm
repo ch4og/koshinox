@@ -2,11 +2,11 @@
 ;;; SPDX-License-Identifier: GPL-3.0-or-later
 
 (define-module (koshi home packages wayland)
-  #:use-module (guix utils)
   #:use-module (gnu packages))
 
 (define-public %koshi-wayland-home-packages
   (specifications->packages (list "avizo"
+                                  "awww"
                                   "brightnessctl"
                                   "cliphist"
                                   "dmenu-bluetooth"
@@ -22,14 +22,12 @@
                                   "pamixer"
                                   "quickshell"
                                   "rofi"
-                                  "rofi-rbw"
                                   "setxkbmap"
                                   "slurp"
                                   "swappy"
                                   "swaybg"
                                   "swaylock-effects"
                                   "swaynotificationcenter"
-                                  "awww"
                                   "waybar-experimental-git"
                                   "wayfreeze"
                                   "waypaper"
