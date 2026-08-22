@@ -33,6 +33,10 @@
       "rev": "40aedd8a68c78a656a10a8d62d80c54af59420fb",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
     },
+    "vim-emacsmodeline": {
+      "rev": "6827d64644f7fecdd0fe91700e7c4e3c492eb24a",
+      "src": "https://github.com/sfiera/vim-emacsmodeline"
+    },
     "vim-wakatime": {
       "rev": "9f8a1d3b9c6f3a948988a0896b3227c1e1f74a58",
       "src": "https://github.com/wakatime/vim-wakatime"

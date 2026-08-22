@@ -25,6 +25,10 @@ end, { desc = "Find buffers" })
 
 return {
   {
+    "vim-emacsmodeline",
+    lazy = false,
+  },
+  {
     "vim-wakatime",
     lazy = false,
   },
