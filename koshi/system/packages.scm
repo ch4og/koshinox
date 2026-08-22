@@ -23,6 +23,6 @@
          font-google-noto-emoji
          font-google-noto-sans-cjk
          kmscon
-         mangowm-no-xwayland
+         mangowm
          xpadneo
          %base-packages))
