@@ -20,11 +20,13 @@
 (define-public (make-koshi-home-services username)
   (cons* (service home-dbus-service-type)
          (service home-pipewire-service-type)
-         (service home-gpg-agent-service-type
-                  (home-gpg-agent-configuration
-                    (ssh-support? #t)
-                    (pinentry-program
-                     (file-append pinentry-qt "/bin/pinentry"))))
+         ;; TODO: Uncoment when https://codeberg.org/guix/guix/pulls/10664
+         ;; is applied
+         ;;(service home-gpg-agent-service-type
+         ;;         (home-gpg-agent-configuration
+         ;;           (ssh-support? #t)
+         ;;           (pinentry-program
+         ;;            (file-append pinentry-qt "/bin/pinentry"))))
 
          (simple-service 'env-vars-service
                          home-environment-variables-service-type
