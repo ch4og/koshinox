@@ -22,8 +22,6 @@
                                      (list "$HOME/.config/MangoHud/"
                                            "$HOME/.config/dxvk/"
                                            "/games"
-                                           ;; TODO: Remove when https://gitlab.com/nonguix/nonguix/-/merge_requests/914 will be merged
-                                           "/run/dbus"
                                            %koshi-home-download-dir) ":"))
 
     ;; Coding
