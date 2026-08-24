@@ -1,69 +1,70 @@
 {
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-    "logo": {
-        "type": "sixel",
-        "source": "~/.config/fastfetch/shika.png",
-        "width": 22,
-        "padding": {
-            "left": 3,
-            "top": 1
-        }
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "sixel",
+    "source": "~/.config/fastfetch/shika.png",
+    "width": 22,
+    "padding": {
+      "left": 3,
+      "top": 1
+    }
+  },
+  "display": {
+    "separator": " "
+  },
+  "modules": [
+    {
+      "type": "title",
+      "key": "\u001b[37m╭────┬────",
+        "format": "\u001b[33m{1}@{2} \u001b[37m───────────"
     },
-    "display": {
-        "separator": " "
+    {
+      "type": "os",
+      "key": "\u001b[37m│\u001b[33m   \u001b[37m│"
     },
-    "modules": [
-        {
-            "type": "title",
-            "key": "\u001b[37m╭────┬────",
-            "format": "\u001b[33m{1}@{2} \u001b[37m───────────"
-        },
-        {
-            "type": "os",
-            "key": "\u001b[37m│\u001b[33m   \u001b[37m│"
-        },
-        {
-            "type": "kernel",
-            "key": "\u001b[37m│\u001b[33m 󰻀  \u001b[37m│",
-            "format": "{1} {2}"
-        },
-        {
-            "type": "cpu",
-            "key": "\u001b[37m│\u001b[33m   \u001b[37m│",
-	    "format": "{1}"
-        },
-        {
-            "type": "memory",
-            "key": "\u001b[37m│\u001b[33m   \u001b[37m│",
-            "format": "{1} | {2}"
-        },
-        {
-            "type": "command",
-            "key": "\u001b[37m│\u001b[33m   \u001b[37m│",
-	    "text": "env ~/.config/fastfetch/guix"
-        },
-        {
-            "type": "shell",
-            "key": "\u001b[37m│\u001b[33m   \u001b[37m│"
-        },
-        {
-            "type": "terminal",
-            "key": "\u001b[37m│\u001b[33m   \u001b[37m│"
-        },
-        {
-            "type": "wm",
-            "key": "\u001b[37m│\u001b[33m 󰍹  \u001b[37m│"
-        },
-        {
-            "type": "packages",
+    {
+      "type": "kernel",
+      "key": "\u001b[37m│\u001b[33m 󰻀  \u001b[37m│",
+        "format": "{1} {2}"
+    },
+    {
+      "type": "cpu",
+      "key": "\u001b[37m│\u001b[33m   \u001b[37m│",
+        "format": "{1}"
+    },
+    {
+      "type": "memory",
+      "key": "\u001b[37m│\u001b[33m   \u001b[37m│",
+        "format": "{1} | {2}"
+    },
+    {
+      "type": "shell",
+      "key": "\u001b[37m│\u001b[33m   \u001b[37m│"
+    },
+    {
+      "type": "terminal",
+      "key": "\u001b[37m│\u001b[33m   \u001b[37m│"
+    },
+    {
+      "type": "wm",
+      "key": "\u001b[37m│\u001b[33m 󰍹  \u001b[37m│"
+    },
+    {
+      "type": "packages",
 
-            "key": "\u001b[37m│\u001b[33m 󰏖  \u001b[37m│",
-            "format": "{guix-all} Guix, {nix-all} Nix"
-        },
-	{
-            "type": "custom",
-            "key": "\u001b[37m╰────┴────────────────────────",
-            "text": ""
-        }
-    ]
+      "key": "\u001b[37m│\u001b[33m 󰏖  \u001b[37m│",
+        "format": "{guix-all} Guix, {nix-all} Nix"
+    },
+
+    {
+      "type": "command",
+      "key": "\u001b[37m│\u001b[33m 󰃭  \u001b[37m│",
+        "text": "printf '%d days\n' \"$(( ($(date +%s) - $(stat -c %W /)) / 86400 ))\""
+    },
+    {
+      "type": "custom",
+      "key": "\u001b[37m╰────┴────────────────────────",
+        "text": ""
+    }
+      ]
 }
