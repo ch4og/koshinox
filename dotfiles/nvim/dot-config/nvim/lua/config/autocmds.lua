@@ -21,7 +21,7 @@ local EMACS_OPTIONS = "(setq enable-local-eval t enable-local-variables :all)"
 
 local function emacs_indent_expression(first_line, last_line)
   return string.format(
-    "(progn (scheme-mode) (hack-local-variables) (goto-char (point-min)) (forward-line %d) (let ((beg (point))) (goto-char (point-min)) (forward-line %d) (indent-region beg (line-end-position))) (save-buffer))",
+    "(progn (hack-local-variables) (goto-char (point-min)) (forward-line %d) (let ((beg (point))) (goto-char (point-min)) (forward-line %d) (indent-region beg (line-end-position))) (save-buffer))",
     first_line - 1,
     last_line - 1
   )
@@ -45,9 +45,9 @@ local function format_with_emacs(buf, file, first_line, last_line)
   vim.cmd.checktime()
 end
 
--- In projects with .dir-locals.el, delegate Scheme formatting to Emacs so
--- Scheme/Guix indentation matches exactly.
-local function setup_scheme_formatting(buf)
+-- In projects with .dir-locals.el, delegate formatting to Emacs so its local
+-- indentation rules apply. Otherwise, use Neovim's native indentation.
+local function setup_emacs_formatting(buf)
   local file = vim.api.nvim_buf_get_name(buf)
   if file == "" then
     return false
@@ -79,10 +79,9 @@ end
 
 vim.api.nvim_create_autocmd("FileType", {
   group = group,
-  pattern = "scheme",
   callback = function(args)
-    if not setup_scheme_formatting(args.buf) then
-      local opts = { buffer = args.buf, desc = "Indent Scheme code" }
+    if not setup_emacs_formatting(args.buf) then
+      local opts = { buffer = args.buf, desc = "Indent buffer" }
       vim.keymap.set("n", "<C-A-\\>", "gg=G", opts)
       vim.keymap.set("x", "<C-A-\\>", "=", opts)
     end
