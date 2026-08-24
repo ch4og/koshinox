@@ -4,10 +4,11 @@ if status is-interactive
         and test "$SHLVL" -eq 2
     end
         if not string match -q "linux" $TERM
+            echo ""
             if string match -q "*ghostty*" $TERM; or string match -q "*kitty*" $TERM
-                fastfetch --logo-type kitty -c ~/.config/fastfetch/autorun.jsonc
+                fastfetch --logo-type kitty
             else
-                fastfetch -c ~/.config/fastfetch/autorun.jsonc
+                fastfetch
             end
         end
     end

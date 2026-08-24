@@ -6,18 +6,13 @@
         "width": 22,
         "padding": {
             "left": 3,
-            "top": 2
+            "top": 1
         }
     },
     "display": {
         "separator": " "
     },
     "modules": [
-        {
-            "type": "custom",
-            "key": " \n",
-            "text": " "
-        },
         {
             "type": "title",
             "key": "\u001b[37m╭────┬────",
