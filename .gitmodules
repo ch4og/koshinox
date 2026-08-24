@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Nikita Mitasov <me@ch4og.com>
+# SPDX-License-Identifier: MIT
 [submodule "dotfiles/tmux/dot-config/tmux/plugins/tpm"]
 	path = dotfiles/tmux/dot-config/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
