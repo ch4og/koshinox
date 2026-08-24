@@ -7,11 +7,15 @@ end
 
 vim.pack.add({
   { src = github("nvim-neorocks/lz.n"), name = "lz.n" },
+  { src = github("folke/which-key.nvim"), name = "which-key.nvim" },
+  { src = github("folke/snacks.nvim"), name = "snacks.nvim" },
+  { src = github("coder/claudecode.nvim"), name = "claudecode.nvim" },
   { src = github("vyfor/cord.nvim"), name = "cord.nvim" },
   { src = github("nvim-telescope/telescope.nvim"), name = "telescope.nvim" },
   { src = github("nvim-lua/plenary.nvim"), name = "plenary.nvim" },
   { src = github("lewis6991/gitsigns.nvim"), name = "gitsigns.nvim" },
   { src = github("nvim-treesitter/nvim-treesitter"), name = "nvim-treesitter", version = "main" },
+  { src = github("julienvincent/nvim-paredit"), name = "nvim-paredit" },
   { src = github("neovim/nvim-lspconfig"), name = "nvim-lspconfig" },
   { src = github("sfiera/vim-emacsmodeline"), name = "vim-emacsmodeline" },
   { src = github("wakatime/vim-wakatime"), name = "vim-wakatime" },
