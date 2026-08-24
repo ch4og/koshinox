@@ -10,6 +10,12 @@ avizo-service &
 
 Throne &
 
+# Not supported yet
+mmsg dispatch "spawn_on_tag,librewolf,2" &
+mmsg dispatch "spawn_on_tag,AyuGram,4" &
+mmsg dispatch "spawn_on_tag,spotify,6" &
+mmsg dispatch "spawn_on_tag,steam,5" &
+mmsg dispatch "spawn_on_tag,qbittorrent,8" &
 
 awww-daemon & awww restore &
 
