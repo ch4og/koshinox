@@ -14,6 +14,7 @@
                                   "corepack-pnpm"
                                   "corepack-yarn"
                                   "direnv"
+                                  "emacs-no-x"
                                   "gcc-toolchain"
                                   "git-delta"
                                   "jujutsu"
@@ -23,5 +24,6 @@
                                   "opencode-bin"
                                   "pipx"
                                   "reuse"
+                                  "tree-sitter-cli"
                                   "vscodium"
                                   "wakatime-cli")))
