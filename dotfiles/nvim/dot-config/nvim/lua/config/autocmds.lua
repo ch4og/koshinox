@@ -17,6 +17,78 @@ vim.api.nvim_create_autocmd("Signal", {
   command = "colorscheme matugen",
 })
 
+local EMACS_OPTIONS = "(setq enable-local-eval t enable-local-variables :all)"
+
+local function emacs_indent_expression(first_line, last_line)
+  return string.format(
+    "(progn (scheme-mode) (hack-local-variables) (goto-char (point-min)) (forward-line %d) (let ((beg (point))) (goto-char (point-min)) (forward-line %d) (indent-region beg (line-end-position))) (save-buffer))",
+    first_line - 1,
+    last_line - 1
+  )
+end
+
+local function format_with_emacs(buf, file, first_line, last_line)
+  vim.cmd.update()
+  local out = vim.fn.system({
+    "emacs",
+    "--batch",
+    "--quick",
+    "--eval",
+    EMACS_OPTIONS,
+    file,
+    "--eval",
+    emacs_indent_expression(first_line, last_line),
+  })
+  if vim.v.shell_error ~= 0 then
+    vim.notify(out, vim.log.levels.ERROR)
+  end
+  vim.cmd.checktime()
+end
+
+-- In projects with .dir-locals.el, delegate Scheme formatting to Emacs so
+-- Scheme/Guix indentation matches exactly.
+local function setup_scheme_formatting(buf)
+  local file = vim.api.nvim_buf_get_name(buf)
+  if file == "" then
+    return false
+  end
+
+  local dir_locals = vim.fs.find(".dir-locals.el", {
+    path = vim.fs.dirname(file),
+    upward = true,
+    type = "file",
+    limit = 1,
+  })[1]
+  if not dir_locals then
+    return false
+  end
+
+  vim.keymap.set("n", "<C-A-\\>", function()
+    format_with_emacs(buf, file, 1, vim.api.nvim_buf_line_count(buf))
+  end, { buffer = buf, desc = "Format buffer with Emacs (.dir-locals.el)" })
+
+  vim.keymap.set("x", "<C-A-\\>", function()
+    local first_line = vim.fn.line("v")
+    local last_line = vim.api.nvim_win_get_cursor(0)[1]
+
+    format_with_emacs(buf, file, math.min(first_line, last_line), math.max(first_line, last_line))
+  end, { buffer = buf, desc = "Format selection with Emacs (.dir-locals.el)" })
+
+  return true
+end
+
+vim.api.nvim_create_autocmd("FileType", {
+  group = group,
+  pattern = "scheme",
+  callback = function(args)
+    if not setup_scheme_formatting(args.buf) then
+      local opts = { buffer = args.buf, desc = "Indent Scheme code" }
+      vim.keymap.set("n", "<C-A-\\>", "gg=G", opts)
+      vim.keymap.set("x", "<C-A-\\>", "=", opts)
+    end
+  end,
+})
+
 vim.api.nvim_create_autocmd("LspAttach", {
   group = group,
   callback = function(args)
