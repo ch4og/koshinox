@@ -3,16 +3,11 @@
 
 General:
 - [ ] nonguix PR GUIX_SANDBOX_EXTRA_ENVS
-- [ ] mimeapps
-- [ ] package all browser ext
-- [ ] use dante to socksify
-- [ ] gpu-screen-recorder
-- [ ] upscayl
-- [ ] https://github.com/kabiiQ/BeatmapExporter
-- [ ] https://github.com/uwuclxdy/osu-collect
-- [ ] nixGL or nvidia (https://nix-community.github.io/home-manager/usage/gpu-non-nixos.html)
 
 Koshi:
+- [ ] mimeapps
+- [ ] use dante to socksify
+- [ ] nixGL or nvidia (https://nix-community.github.io/home-manager/usage/gpu-non-nixos.html)
 - [ ] btrfs backups
 - [ ] fix blueprint dotfiles command
 - [ ] fix bluetooth
@@ -33,8 +28,6 @@ Koshi:
 - [ ] spicetify matugen
 - [ ] steam matugen
 - [ ] swaync (with matugen)
-- [ ] Waybar new config (with matugen colors)
-- [ ] yazi
 - [ ] apply lutgen on fastfetch image
 - [ ] switch to bash/zsh
 - [ ] bluepring guix system rootless setup somehow?
@@ -42,6 +35,11 @@ Koshi:
 - [ ] home service that setups nix hm
 
 Shika:
+- [ ] package all browser ext
+- [ ] gpu-screen-recorder
+- [ ] upscayl
+- [ ] https://github.com/kabiiQ/BeatmapExporter
+- [ ] https://github.com/uwuclxdy/osu-collect
 - [ ] btrfs backups
 - [ ] locate-service-type
 - [ ] lavd sched (maybe ext)
@@ -51,13 +49,10 @@ Shika:
 - [ ] port chaotic-nyx's discord-krisp
 - [ ] yazi
 - [ ] throne
-- [ ] superfile
-- [ ] amneziavpn
 - [ ] autoinstall pre-commit hook
 - [ ] update license year in pre-commit hook
 
 Aagl:
 - [ ] anime-games-launcher
-- [ ] use new nvidia approach from nonguix
 - [ ] autoinstall pre-commit hook
 - [ ] update license year in pre-commit hook
