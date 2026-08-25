@@ -2,15 +2,16 @@
 //SPDX-FileCopyrightText: 2024-2026 Nikita Mitasov <me@ch4og.com>
 //SPDX-License-Identifier: GPL-3.0-or-later
 
+@import "~/.config/rofi/colors.rasi"
+
 * {
 background-color: transparent;
-bg0: #24242499;
-bg1: #7E7E7E60;
-bg2: #0860f299;
-fg0: #DEDEDE;
-fg1: #FFFFFF;
-fg2: #DEDEDE80;
-font: "Noto Sans 12";
+bg0: @surface-container-high;
+bg1: @outline-variant;
+bg2: @primary;
+fg0: @on-surface;
+fg1: @on-primary;
+fg2: @on-surface-variant;
 margin: 0;
 padding: 0;
 spacing: 0;
