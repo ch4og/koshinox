@@ -6,6 +6,9 @@
 }
 
 @OBSThemeVars {
+    /* Set this to use a different UI font. */
+    --font_family: 'ComicCode Nerd Font';
+
     /* --- MATUGEN COLOR MAPPING --- */
 
     /* Primary Accents (Blue mapping) */
@@ -101,6 +104,8 @@
 
     --text_disabled: var(--text_muted);
     --text_inactive: var(--white2);
+    --text_selected: {{colors.on_primary.default.hex}};
+    --text_selected_hover: {{colors.on_primary_container.default.hex}};
 
     /* Layout */
     --font_base_value: var(--obsFontScale);
@@ -234,7 +239,7 @@
     --palette_mid: var(--grey7);
     --palette_dark: var(--grey6);
     --palette_highlight: var(--primary);
-    --palette_highlightedText: var(--text);
+    --palette_highlightedText: var(--text_selected);
     --palette_text: var(--text);
     --palette_link: var(--blue2);
     --palette_linkVisited: var(--blue2);
@@ -457,9 +462,9 @@ QWidget {
     alternate-background-color: var(--bg_base);
     color: var(--text);
     selection-background-color: var(--primary);
-    selection-color: var(--text);
+    selection-color: var(--text_selected);
     font-size: var(--font_base);
-    font-family: 'Open Sans', '.AppleSystemUIFont', Helvetica, Arial, 'MS Shell Dlg', sans-serif;
+    font-family: var(--font_family), '.AppleSystemUIFont', Helvetica, Arial, 'MS Shell Dlg', sans-serif;
 }
 
 QWidget:disabled {
@@ -587,6 +592,7 @@ QMenuBar::item {
 
 QMenuBar::item:selected {
     background: var(--primary);
+    color: var(--text_selected);
 }
 
 /* Item Lists */
@@ -654,6 +660,7 @@ QListView::item:selected,
 QListWidget::item:selected {
     background-color: var(--primary);
     border-color: var(--primary_light);
+    color: var(--text_selected);
 }
 
 QMenu::item:hover,
@@ -677,7 +684,7 @@ QListView::item:selected:hover,
 QListWidget::item:selected:hover {
     background: var(--primary_light);
     border: 1px solid var(--primary_lighter);
-    color: var(--text);
+    color: var(--text_selected_hover);
 }
 
 QListView::item:disabled,
@@ -1049,7 +1056,7 @@ QTabBar::tab:focus {
 
 QTabBar::tab:selected {
     background: var(--tab_bg_down);
-    color: var(--text);
+    color: var(--text_selected);
 }
 
 QTabBar::tab:top {
@@ -1092,6 +1099,7 @@ QComboBox QAbstractItemView::item {
 QComboBox QAbstractItemView::item:selected,
 QComboBox QAbstractItemView::item:hover {
     background-color: var(--list_item_bg_selected);
+    color: var(--text_selected);
 }
 
 QComboBox:hover,
@@ -1312,6 +1320,7 @@ QDoubleSpinBox::down-arrow {
 #modeSwitch:!hover:!pressed.state-active,
 #broadcastButton:!hover:!pressed.state-active {
     background: var(--primary);
+    color: var(--text_selected);
 }
 
 /* Primary Control Button Hover Coloring */
@@ -1323,7 +1332,7 @@ QDoubleSpinBox::down-arrow {
 #modeSwitch:hover:!pressed.state-active,
 #broadcastButton:hover:!pressed.state-active {
     background: var(--primary_light);
-    color: var(--text);
+    color: var(--text_selected_hover);
 }
 
 
@@ -1359,6 +1368,7 @@ QPushButton::flat {
 QPushButton:checked {
     background-color: var(--primary);
     border-color: var(--primary_light);
+    color: var(--text_selected);
 }
 
 QPushButton:checked:hover,
@@ -1936,10 +1946,12 @@ SceneTree {
 
 .list-grid SceneTree::item:selected {
     background-color: var(--list_item_bg_selected);
+    color: var(--text_selected);
 }
 
 .list-grid SceneTree::item:checked {
     background-color: var(--primary);
+    color: var(--text_selected);
 }
 
 .list-grid SceneTree::item:hover {
@@ -1948,6 +1960,7 @@ SceneTree {
 
 .list-grid SceneTree::item:selected:hover {
     background-color: var(--list_item_bg_hover);
+    color: var(--text_selected_hover);
 }
 
 /* Studio Mode T-Bar */
@@ -1990,11 +2003,12 @@ OBSYoutubeActions {
 #ytEventList .row-selected {
     background-color: var(--primary);
     border: none;
+    color: var(--text_selected);
 }
 
 #ytEventList .row-selected:hover {
     background-color: var(--primary_light);
-    color: var(--text);
+    color: var(--text_selected_hover);
 }
 
 /* Calendar Widget */
@@ -2345,6 +2359,7 @@ idian--Row QComboBox QAbstractItemView::item {
 idian--Row QComboBox QAbstractItemView::item:hover,
 idian--Row QComboBox QAbstractItemView::item:selected {
     background-color: var(--list_item_bg_selected);
+    color: var(--text_selected);
     padding: var(--padding_base) var(--padding_large);
 }
 
