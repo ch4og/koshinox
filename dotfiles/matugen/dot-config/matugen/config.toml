@@ -69,9 +69,18 @@ output_path = '~/.config/opencode/themes/matugen.json'
 input_path = './templates/heroic.css'
 output_path = '~/.local/share/guix-sandbox-home/.config/heroic/css/matugen.css'
 
+[templates.ayugram_background]
+pre_hook = 'mkdir -p ~/.local/share/AyuGramDesktop/matugen'
+input_path = './templates/telegram-background-solid.svg'
+output_path = '~/.local/share/AyuGramDesktop/matugen/background.svg'
+post_hook = 'convert ~/.local/share/AyuGramDesktop/matugen/background.svg ~/.local/share/AyuGramDesktop/matugen/background.jpg'
+index = 0
+
 [templates.ayugram]
 input_path = './templates/telegram.tdesktop-theme'
-output_path = '~/.local/share/AyuGramDesktop/matugen.tdesktop-theme'
+output_path = '~/.local/share/AyuGramDesktop/matugen/colors.tdesktop-theme'
+post_hook = 'zip -qj - ~/.local/share/AyuGramDesktop/matugen/colors.tdesktop-theme ~/.local/share/AyuGramDesktop/matugen/background.jpg >~/.local/share/AyuGramDesktop/matugen.tdesktop-theme'
+index = 1
 
 [templates.tmux]
 input_path = './templates/tmux-colors.conf'
