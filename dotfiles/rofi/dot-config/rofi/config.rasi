@@ -1,4 +1,3 @@
-/* Copyright © 2025 Nikita Mitasov <mitanick@ya.ru> */
 configuration {
 location: 0;
 xoffset: 0;
