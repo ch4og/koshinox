@@ -109,3 +109,8 @@ output_path = '~/.config/equibop/themes/midnight.css'
 [templates.rofi]
 input_path = './templates/rofi-colors.rasi'
 output_path = '~/.config/rofi/colors.rasi'
+
+[templates.steam]
+input_path = './templates/steam.css'
+output_path = '~/.cache/adwaita-for-steam/custom.css'
+post_hook = 'adwaita-for-steam --custom-css ~/.cache/adwaita-for-steam/custom.css --font system --target ~/.local/share/guix-sandbox-home/.local/share/Steam/'
