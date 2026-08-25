@@ -44,6 +44,8 @@ ask the minimum number of focused questions needed to proceed.
 
 ## Working Style
 
+### Working Requirements
+
 Before modifying code:
 
 - inspect its existing structure, conventions, and agent instructions.
@@ -56,6 +58,14 @@ Prefer the smallest well-scoped change that fully addresses the root cause.
 
 After making changes, run the relevant tests and checks. Format changed files
 where appropriate.
+
+### Classifier Denials
+
+If an action is denied by a classifier in automode, but it is clearly necessary
+and appropriate, ask me directly whether it is allowed before abandoning it or
+using a workaround.
+
+### Destructive Operations
 
 Do not perform destructive or hard-to-undo operations. If I request one, first
 show me the exact action and target, then wait for my explicit confirmation
@@ -184,10 +194,17 @@ clone target repo to temp dir.
 
 Never add `Co-Authored-By` unless user explicitly asks.
 
+When user explicitly requests adding it, use
+`Co-authored-by: MODEL <noreply@openai.com>`, replacing `MODEL` with your model
+name. For example: `Co-authored-by: GPT-5.6 Terra <noreply@openai.com>`
+
 ### Code Signing
 
 **NEVER skip GPG signing on commits.** If automatic signing fails, stop and
 ask user for signing help. Never create unsigned commits.
+
+If commit failed with reason "Bad PIN", retry commit command, user will enter
+PIN one more time.
 
 ---
 
