@@ -195,8 +195,15 @@ clone target repo to temp dir.
 Never add `Co-Authored-By` unless user explicitly asks.
 
 When user explicitly requests adding it, use
-`Co-authored-by: MODEL <noreply@openai.com>`, replacing `MODEL` with your model
-name. For example: `Co-authored-by: GPT-5.6 Terra <noreply@openai.com>`
+`Co-authored-by: MODEL (via TOOL) <noreply@DOMAIN>`, replacing `MODEL` with your
+model name, `TOOL` with the coding agent used (Claude Code, Codex, ...), and
+`DOMAIN` with the email domain of model provider 
+(`openai.com`, `anthropic.com`, ...). For example:
+
+```text
+Co-authored-by: GPT-5.6 Terra (via Claude Code) <noreply@openai.com>
+Co-authored-by: Claude Fable (via OpenCode) <noreply@anthropic.com>
+```
 
 ### Code Signing
 
