@@ -4,87 +4,88 @@
 
 @import 'colors.css';
 
-/* Redefine named colors for adw-gtk3-dark */
-@define-color theme_bg_color @window_bg_color;
-@define-color theme_fg_color @window_fg_color;
-@define-color theme_base_color @view_bg_color;
-@define-color theme_text_color @view_fg_color;
-@define-color theme_selected_bg_color @accent_color;
-@define-color theme_selected_fg_color @accent_fg_color;
-@define-color theme_tooltip_bg_color @popover_bg_color;
-@define-color theme_tooltip_fg_color @popover_fg_color;
-@define-color insensitive_bg_color mix(@window_bg_color, @window_fg_color, 0.05);
-@define-color insensitive_fg_color mix(@window_fg_color, @window_bg_color, 0.3);
-@define-color borders @outline_variant;
-@define-color focus_color @accent_color;
-@define-color backdrop_color @window_bg_color;
-@define-color insensitive_base_color mix(@window_bg_color, @window_fg_color, 0.05);
-
-/* Buttons — higher specificity than adw-gtk3-dark */
-.background button,
-.background button:not(:checked):not(:active):not(:backdrop) {
-    background-image: none;
-    -gtk-icon-effect: none;
-    background-color: @window_bg_color;
-    color: @window_fg_color;
-    border-color: @borders;
-}
-
-.background button:hover {
-    background-image: none;
-    background-color: mix(@window_bg_color, @window_fg_color, 0.1);
-}
-
-.background button:active,
-.background button:checked {
-    background-image: none;
-    background-color: @accent_color;
-    color: @accent_fg_color;
-}
-
-.background button:disabled {
-    background-image: none;
-    background-color: @insensitive_bg_color;
-    color: @insensitive_fg_color;
-}
-
-.background button.suggested-action {
-    background-image: none;
-    background-color: @accent_color;
-    color: @accent_fg_color;
-    border-color: @accent_color;
-}
-
-.background button.suggested-action:hover {
-    background-image: none;
-    background-color: mix(@accent_color, @accent_fg_color, 0.1);
-}
-
-.background button.destructive {
-    background-image: none;
-    background-color: @error_color;
-    color: @destructive_fg_color;
-    border-color: @error_color;
-}
-
-/* Combo/dropdown buttons */
-.background combobox button,
-.background combobox button:hover {
-    background-image: none;
-    background-color: @window_bg_color;
-    color: @window_fg_color;
-    border-color: @borders;
-}
-
-/* Dialog action buttons */
-.background dialog .dialog-action-area button {
-    background-image: none;
-    background-color: @window_bg_color;
-    color: @window_fg_color;
-    border-color: @borders;
-}
-
-.background dialog .dialog-action-area button:hover {
-    background-image: none;
-    background-color: mix(@window_bg_color, @window_fg_color, 0.1);
-}
+/*/* Redefine named colors for adw-gtk3-dark */
+/*@define-color theme_bg_color @window_bg_color;
+/*@define-color theme_fg_color @window_fg_color;
+/*@define-color theme_base_color @view_bg_color;
+/*@define-color theme_text_color @view_fg_color;
+/*@define-color theme_selected_bg_color @accent_color;
+/*@define-color theme_selected_fg_color @accent_fg_color;
+/*@define-color theme_tooltip_bg_color @popover_bg_color;
+/*@define-color theme_tooltip_fg_color @popover_fg_color;
+/*@define-color insensitive_bg_color mix(@window_bg_color, @window_fg_color, 0.05);
+/*@define-color insensitive_fg_color mix(@window_fg_color, @window_bg_color, 0.3);
+/*@define-color borders @outline_variant;
+/*@define-color focus_color @accent_color;
+/*@define-color backdrop_color @window_bg_color;
+/*@define-color insensitive_base_color mix(@window_bg_color, @window_fg_color, 0.05);
+/*
+/*/* Buttons — higher specificity than adw-gtk3-dark */
+/*.background button,
+/*.background button:not(:checked):not(:active):not(:backdrop) {
+/*    background-image: none;
+/*    -gtk-icon-effect: none;
+/*    background-color: @window_bg_color;
+/*    color: @window_fg_color;
+/*    border-color: @borders;
+/*}
+/*
+/*.background button:hover {
+/*    background-image: none;
+/*    background-color: mix(@window_bg_color, @window_fg_color, 0.1);
+/*}
+/*
+/*.background button:active,
+/*.background button:checked {
+/*    background-image: none;
+/*    background-color: @accent_color;
+/*    color: @accent_fg_color;
+/*}
+/*
+/*.background button:disabled {
+/*    background-image: none;
+/*    background-color: @insensitive_bg_color;
+/*    color: @insensitive_fg_color;
+/*}
+/*
+/*.background button.suggested-action {
+/*    background-image: none;
+/*    background-color: @accent_color;
+/*    color: @accent_fg_color;
+/*    border-color: @accent_color;
+/*}
+/*
+/*.background button.suggested-action:hover {
+/*    background-image: none;
+/*    background-color: mix(@accent_color, @accent_fg_color, 0.1);
+/*}
+/*
+/*.background button.destructive {
+/*    background-image: none;
+/*    background-color: @error_color;
+/*    color: @destructive_fg_color;
+/*    border-color: @error_color;
+/*}
+/*
+/*/* Combo/dropdown buttons */
+/*.background combobox button,
+/*.background combobox button:hover {
+/*    background-image: none;
+/*    background-color: @window_bg_color;
+/*    color: @window_fg_color;
+/*    border-color: @borders;
+/*}
+/*
+/*/* Dialog action buttons */
+/*.background dialog .dialog-action-area button {
+/*    background-image: none;
+/*    background-color: @window_bg_color;
+/*    color: @window_fg_color;
+/*    border-color: @borders;
+/*}
+/*
+/*.background dialog .dialog-action-area button:hover {
+/*    background-image: none;
+/*    background-color: mix(@window_bg_color, @window_fg_color, 0.1);
+/*}
+ */
