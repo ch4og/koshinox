@@ -40,6 +40,7 @@
   #:use-module (aagl services hosts)
   #:use-module (shika services btrfs)
   #:use-module (shika packages opentabletdriver)
+  #:use-module (shika packages hyperheadset)
   #:use-module (koshi system services endfield-hosts))
 
 (define-public (make-koshi-system-services username)
@@ -126,6 +127,8 @@
                              libfido2)
          (udev-rules-service 'steam
                              steam-devices-udev-rules)
+         (udev-rules-service 'hyperheadset
+                             hyperheadset-udev-rules)
          (udev-rules-service 'custom
                              %koshi-custom-udev)
 
