@@ -127,6 +127,7 @@ window#waybar {
 }
 
 #battery.warning:not(.charging) {
+  color: @on_error_container;
   animation: battery-warn 0.8s ease-in-out infinite alternate;
   border-radius: 10px;
 }
@@ -153,7 +154,7 @@ window#waybar {
 
 
 #pulseaudio.muted {
-  color: alpha(@on_surface, 0.5);
+  color: @on_surface_variant;
   background: alpha(@surface_variant, 0.6);
 }
 
