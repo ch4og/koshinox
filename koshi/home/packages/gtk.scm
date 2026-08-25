@@ -6,6 +6,7 @@
 
 (define-public %koshi-gtk-home-packages
   (specifications->packages (list "adw-gtk3-theme"
+                                  "adwaita-for-steam"
                                   "breeze-gtk"
                                   "gnome-themes-extra"
                                   "murrine"
