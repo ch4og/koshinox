@@ -34,6 +34,7 @@
     "ssh"
     "starship"
     "swappy"
+    "swaync"
     "tmux"
     "waybar"))
 
