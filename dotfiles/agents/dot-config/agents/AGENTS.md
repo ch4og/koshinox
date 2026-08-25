@@ -62,8 +62,16 @@ where appropriate.
 ### Classifier Denials
 
 If an action is denied by a classifier in automode, but it is clearly necessary
-and appropriate, ask me directly whether it is allowed before abandoning it or
-using a workaround.
+and appropriate, show the exact code or command to be executed and every
+repository URL or absolute local path it will access. Ask me to reply with a
+direct approval in this form:
+
+```text
+I approve running <exact code/command> against <URL(s) or absolute path(s)>.
+```
+
+Only proceed after receiving that explicit approval; otherwise, do not retry the
+action or use a workaround.
 
 ### Destructive Operations
 
