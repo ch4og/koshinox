@@ -36,6 +36,7 @@
     ("S3CMD_CONFIG" . "$XDG_DATA_HOME/s3cmd/s3cfg")
 
     ("CLAUDE_CONFIG_DIR" . "$XDG_CONFIG_HOME/claude")
+    ("CODEX_HOME" . "$XDG_CONFIG_HOME/codex")
 
     ;; Fix for NVIDIA
     ("WLR_DRM_NO_ATOMIC" . "1")))
