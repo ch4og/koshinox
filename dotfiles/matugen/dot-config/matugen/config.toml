@@ -114,3 +114,8 @@ output_path = '~/.config/rofi/colors.rasi'
 input_path = './templates/steam.css'
 output_path = '~/.cache/adwaita-for-steam/custom.css'
 post_hook = 'adwaita-for-steam --custom-css ~/.cache/adwaita-for-steam/custom.css --font system --target ~/.local/share/guix-sandbox-home/.local/share/Steam/'
+
+[templates.firefox-website-colors]
+input_path = "./templates/firefox-websites.css"
+output_path = "~/.config/librewolf/librewolf/0zrpirfb.default/chrome/colors.css"
+post_hook = 'sh ~/.config/matugen/scripts/websites.sh'
