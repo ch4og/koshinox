@@ -7,14 +7,24 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
-if vim.fn.filereadable(vim.fn.stdpath("config") .. "/colors/matugen.vim") == 1 then
-  vim.cmd.colorscheme("matugen")
+local matugen_path = vim.fs.joinpath(vim.fn.stdpath("config"), "matugen.lua")
+
+local function source_matugen()
+  local file = io.open(matugen_path, "r")
+  if not file then
+    return
+  end
+
+  file:close()
+  dofile(matugen_path)
 end
+
+source_matugen()
 
 vim.api.nvim_create_autocmd("Signal", {
   group = group,
   pattern = "SIGUSR1",
-  command = "colorscheme matugen",
+  callback = source_matugen,
 })
 
 local EMACS_OPTIONS = "(setq enable-local-eval t enable-local-variables :all)"

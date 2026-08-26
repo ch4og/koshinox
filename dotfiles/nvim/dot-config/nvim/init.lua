@@ -6,6 +6,7 @@ local function github(repo)
 end
 
 vim.pack.add({
+  { src = github("RRethy/base16-nvim"), name = "base16-nvim" },
   { src = github("nvim-neorocks/lz.n"), name = "lz.n" },
   { src = github("folke/which-key.nvim"), name = "which-key.nvim" },
   { src = github("folke/snacks.nvim"), name = "snacks.nvim" },
@@ -22,6 +23,7 @@ vim.pack.add({
 }, { load = false, confirm = false })
 
 vim.cmd.packadd("lz.n")
+vim.cmd.packadd("base16-nvim")
 
 require("config.options")
 require("config.keymaps")
