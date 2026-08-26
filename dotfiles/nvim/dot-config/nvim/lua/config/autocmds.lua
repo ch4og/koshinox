@@ -7,6 +7,12 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+  group = group,
+  pattern = "org",
+  command = "syntax enable",
+})
+
 local matugen_path = vim.fs.joinpath(vim.fn.stdpath("config"), "matugen.lua")
 
 local function source_matugen()
