@@ -7,6 +7,7 @@ end
 
 vim.pack.add({
   { src = github("RRethy/base16-nvim"), name = "base16-nvim" },
+  { src = github("nvim-lualine/lualine.nvim"), name = "lualine.nvim" },
   { src = github("nvim-neorocks/lz.n"), name = "lz.n" },
   { src = github("folke/which-key.nvim"), name = "which-key.nvim" },
   { src = github("folke/snacks.nvim"), name = "snacks.nvim" },

@@ -15,14 +15,23 @@ vim.api.nvim_create_autocmd("FileType", {
 
 local matugen_path = vim.fs.joinpath(vim.fn.stdpath("config"), "matugen.lua")
 
+local function setup_lualine()
+  if package.loaded.lualine then
+    require("config.lualine").setup()
+  end
+end
+
 local function source_matugen()
   local file = io.open(matugen_path, "r")
   if not file then
+    vim.cmd.colorscheme("base16-catppuccin-mocha")
+    setup_lualine()
     return
   end
 
   file:close()
   dofile(matugen_path)
+  setup_lualine()
 end
 
 source_matugen()

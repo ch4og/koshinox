@@ -36,6 +36,13 @@ return {
     end,
   },
   {
+    "lualine.nvim",
+    lazy = false,
+    after = function()
+      require("config.lualine").setup()
+    end,
+  },
+  {
     "vim-emacsmodeline",
     lazy = false,
   },
