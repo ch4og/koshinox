@@ -40,7 +40,7 @@
   #:use-module (aagl services hosts)
   #:use-module (shika services btrfs)
   #:use-module (shika packages opentabletdriver)
-  #:use-module (shika packages hyperheadset)
+  #:use-module (shika packages desktop)
   #:use-module (koshi system services endfield-hosts))
 
 (define-public (make-koshi-system-services username)
