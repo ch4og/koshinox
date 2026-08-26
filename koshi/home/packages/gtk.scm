@@ -9,5 +9,6 @@
                                   "adwaita-for-steam"
                                   "breeze-gtk"
                                   "gnome-themes-extra"
+                                  "hicolor-icon-theme"
                                   "murrine"
                                   "tokyonight-gtk-theme")))
