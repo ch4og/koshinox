@@ -31,6 +31,7 @@
                                   "waybar-experimental-git"
                                   "wayfreeze"
                                   "waypaper"
+                                  "wayvnc"
                                   "wl-clipboard"
                                   "wl-clip-persist"
                                   "wl-mirror"

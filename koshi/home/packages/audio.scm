@@ -10,5 +10,6 @@
                                   "pipewire"
                                   "playerctl"
                                   "spotatui"
+                                  "spotify-bin"
                                   "uxplay"
                                   "wireplumber")))

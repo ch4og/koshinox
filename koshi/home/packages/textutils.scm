@@ -16,6 +16,7 @@
                                   "fzf"
                                   "jq"
                                   "lsof"
+                                  "man-pages"
                                   "pandoc"
                                   "ripgrep"
                                   "ripgrep-all"
