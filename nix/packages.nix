@@ -3,7 +3,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     ayugram-desktop
-    spotify
     throne
   ];
 }
