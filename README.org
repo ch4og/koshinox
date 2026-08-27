@@ -34,6 +34,7 @@ Instead of running long guix and nix invocations manually, you can for example d
 
 #+BEGIN_SRC sh
   blue system
+  blue time-machine build hello
   blue style
   blue nix up
 #+END_SRC

@@ -67,10 +67,15 @@
        (run-stow '("--dotfiles" "-t") dotfile))
      dotfiles-list)))
 
+(define guix-time-machine
+  '("guix" "time-machine" "-C" "koshi/config/channels.scm"
+    "--unsafe-channel-evaluation" "--"))
+
 (define (guix-reconfigure type)
   ;; TODO: Rootless setup somehow.  Maybe deploy?
-  (let* ((time-machine '("sudo" "guix" "time-machine" "-C" "koshi/config/channels.scm" "--unsafe-channel-evaluation" "--"))
-         (guix (if (string=? type "system") time-machine '("guix")))
+  (let* ((guix (if (string=? type "system")
+                   (cons "sudo" guix-time-machine)
+                   '("guix")))
          (config-file (string-append "koshi/" type "/config.scm"))
          (subs (@ (koshi config substitutes) %koshi-subs-urls))
          (args `(,subs "-L." "--allow-downgrades")))
@@ -78,6 +83,13 @@
     (system (string-join `(,@guix ,type
                                   "reconfigure" ,config-file
                                   ,@args) " "))))
+
+(define-command (time-machine-command args)
+  ((invoke "time-machine")
+   (category 'koshi)
+   (synopsis "Run a command with pinned Guix channels")
+   (help "Run the provided command through Guix time-machine"))
+  (system (string-join `(,@guix-time-machine ,@args) " ")))
 
 (define emacs-options
   "(setq enable-local-eval t enable-local-variables :all)")
@@ -184,6 +196,7 @@
                  dotfiles-command
                  update-command
                  system-command
+                 time-machine-command
                  home-command
                  nix-command
                  driver-command)))
