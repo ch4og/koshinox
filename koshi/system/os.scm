@@ -3,6 +3,7 @@
 
 (define-module (koshi system os)
   #:use-module (gnu)
+  #:use-module (gnu packages linux)
   #:use-module (koshi config layout)
   #:use-module (koshi system bootloader)
   #:use-module (koshi system filesystems)
@@ -15,6 +16,10 @@
 (define-public (make-koshi-os username hostname)
   (operating-system
     (kernel-arguments %koshi-kernel-arguments)
+    (kernel linux-debian)
+    (initrd-modules (cons* "nvme"
+                           "ahci"
+                           (base-initrd-modules kernel)))
     (host-name hostname)
     (timezone "Etc/UTC")
     (locale "en_US.utf8")
