@@ -169,6 +169,11 @@ breaking something that runs in production.
 
 ## Working on Guix or Guile Scheme code
 
+### Formatting
+
+Never use the `guix style` command. Format Guile Scheme code with Emacs instead,
+or use the `blue style` command when it is available.
+
 ### Checking code with REPL
 
 After writing or editing a Guile Scheme module, verify it compiles before
