@@ -51,6 +51,7 @@ Shika:
 - [ ] throne
 - [ ] autoinstall pre-commit hook
 - [ ] update license year in pre-commit hook
+- [ ] https://github.com/Shiro836/waydroid-nvidia (see https://github.com/waydroid/waydroid/issues/1883)
 
 Aagl:
 - [ ] anime-games-launcher

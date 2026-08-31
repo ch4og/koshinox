@@ -1,0 +1,84 @@
+@-moz-document domain("codeberg.org") {
+    :root {
+        /* Core surfaces */
+        --color-body: var(--background) !important;
+        --color-box-body: var(--surface_container_lowest) !important;
+        --color-box-body-highlight: var(--surface_container_low) !important;
+        --color-box-header: var(--surface_container) !important;
+        --color-card: var(--surface_container) !important;
+        --color-menu: var(--surface_container) !important;
+        --color-button: var(--surface_container_high) !important;
+        --color-secondary-bg: var(--surface_container_low) !important;
+        --color-code-bg: var(--surface_container_lowest) !important;
+        --color-footer: var(--surface_container_lowest) !important;
+
+        /* Navigation */
+        --color-nav-bg: var(--surface_container) !important;
+        --color-nav-hover-bg: var(--surface_container_high) !important;
+        --color-nav-text: var(--on_surface) !important;
+        --color-secondary-nav-bg: var(--surface_container_low) !important;
+
+        /* Text */
+        --color-text-dark: var(--on_surface) !important;
+        --color-text: var(--on_surface) !important;
+        --color-text-light: var(--on_surface_variant) !important;
+        --color-text-light-1: var(--on_surface_variant) !important;
+        --color-text-light-2: var(--outline) !important;
+        --color-text-light-3: var(--outline) !important;
+        --color-placeholder-text: var(--on_surface_variant) !important;
+
+        /* Borders and inputs */
+        --color-light-border: var(--outline_variant) !important;
+        --color-input-text: var(--on_surface) !important;
+        --color-input-background: var(--surface_container_low) !important;
+        --color-input-border: var(--outline_variant) !important;
+        --color-input-border-hover: var(--outline) !important;
+        --color-input-toggle-background: var(--surface_container_high) !important;
+
+        /* Primary and secondary colors */
+        --color-primary: var(--primary) !important;
+        --color-primary-contrast: var(--on_primary) !important;
+        --color-primary-hover: var(--primary_fixed_dim) !important;
+        --color-primary-active: var(--primary_fixed) !important;
+        --color-accent: var(--primary) !important;
+        --color-small-accent: var(--primary_container) !important;
+        --color-highlight-bg: var(--primary_container) !important;
+        --color-highlight-fg: var(--on_primary_container) !important;
+        --color-secondary: var(--surface_variant) !important;
+        --color-secondary-hover: var(--surface_bright) !important;
+        --color-secondary-active: var(--surface_container_highest) !important;
+        --color-secondary-dark-2: var(--outline) !important;
+        --color-secondary-light-1: var(--surface_container_high) !important;
+
+        /* Used directly by primary buttons and links. */
+        --color-primary-light-1: var(--primary) !important;
+        --color-primary-light-5: var(--primary_container) !important;
+        --color-primary-dark-2: var(--primary_fixed_dim) !important;
+        --color-primary-dark-3: var(--primary_fixed_dim) !important;
+
+        /* Labels and passive controls */
+        --color-label-bg: rgb(var(--on_surface_rgb) / 0.10) !important;
+        --color-label-hover-bg: rgb(var(--on_surface_rgb) / 0.16) !important;
+        --color-label-active-bg: var(--surface_container_highest) !important;
+        --color-label-text: var(--on_surface) !important;
+        --color-active: var(--surface_container_highest) !important;
+        --color-hover: rgb(var(--on_surface_rgb) / 0.08) !important;
+    }
+
+    /* The navbar redeclares these variables on #navbar. */
+    #navbar {
+        --color-nav-bg: var(--surface_container) !important;
+        --color-nav-hover-bg: var(--surface_container_high) !important;
+        --color-nav-text: var(--on_surface) !important;
+        --color-primary: var(--on_surface) !important;
+        --color-text: var(--on_surface) !important;
+        --color-nav-active: var(--surface_container_highest) !important;
+        --color-contrast-boost: transparent !important;
+    }
+
+    /* Keep commit hashes readable when a view applies its own label color. */
+    .ui.sha.label,
+    .ui.sha.label .shortsha {
+        color: var(--on_surface) !important;
+    }
+}
