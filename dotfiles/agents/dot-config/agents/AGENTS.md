@@ -96,9 +96,6 @@ and fall back to `origin` otherwise. Use DeepWiki only for GitHub repositories.
 Do not use DeepWiki for repositories under the `ch4og` GitHub username, as well
 as `csmplay`, `csmpro` and `ch4ogVPN` organisation repositories.
 
-Prefer the Keenable MCP for complex web searches and research. It is much more
-effective than built-in web search tool. Rate limits are huge.
-
 ---
 
 ## Declarative System
