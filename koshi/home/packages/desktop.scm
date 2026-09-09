@@ -6,10 +6,11 @@
 
 (define-public %koshi-desktop-home-packages
   (specifications->packages (list "equibop"
+                                  "exo"
                                   "file-roller"
                                   "flatpak"
                                   "libreoffice"
                                   "opentabletdriver"
-                                  "pcmanfm"
                                   "remmina"
+                                  "thunar"
                                   "virt-manager")))
