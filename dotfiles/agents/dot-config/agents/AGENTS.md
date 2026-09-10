@@ -164,6 +164,9 @@ when task involves any of:
 Assume user runs remote commands himself. This acts like a second wall from
 breaking something that runs in production.
 
+If the user explicitly confirms that Docker commands target a local,
+disposable test environment, they may be executed automatically.
+
 ---
 
 ## Working on Guix or Guile Scheme code
