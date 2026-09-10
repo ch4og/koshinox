@@ -4,6 +4,7 @@
 (define-module (koshi system config)
   #:use-module (koshi system os)
   #:use-module (koshi config driver)
+  #:use-module (gnu packages linux)
   #:use-module (nongnu packages linux)
   #:use-module (nonguix utils)
   #:use-module (nonguix transformations))
