@@ -19,7 +19,8 @@
     (kernel linux-debian)
     (initrd-modules (cons* "nvme"
                            "ahci"
-                           (base-initrd-modules kernel)))
+                           (base-initrd-modules
+                            (operating-system-kernel this-operating-system))))
     (host-name hostname)
     (timezone "Etc/UTC")
     (locale "en_US.utf8")
