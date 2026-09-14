@@ -1,54 +1,55 @@
 [core]
-    pager = delta
+  pager = delta
 
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 
 [delta]
-    navigate = true
-    dark = true
+  navigate = true
+  dark = true
 
 [commit]
-	gpgsign = true
+  gpgsign = true
 
 [user]
-	name = Nikita Mitasov
-	email = me@ch4og.com
+  name = Nikita Mitasov
+  email = me@ch4og.com
 
 [init]
-    defaultBranch = main
+  defaultBranch = main
 
 [tag]
-    gpgSign = true
+  gpgSign = true
 
 [pull]
-    rebase = true
+  rebase = true
 
 [rebase]
-    autoStash = true
+  autoStash = true
 
 [alias]
-    amend = commit --amend --no-edit
-    st = status -sb
-	head = rev-parse HEAD
+  amend = commit --amend --no-edit
+  st = status -sb
+  head = rev-parse HEAD
+  prepush = !git push origin HEAD~1:$(git branch --show-current)
 
 [diff]
-    colorMoved = default
-    algorithm = histogram
+  colorMoved = default
+  algorithm = histogram
 
 [merge]
-    conflictStyle = zdiff3
+  conflictStyle = zdiff3
 
 [push]
-    autoSetupRemote = true
+  autoSetupRemote = true
 
 [url "git@github.com:"]
-    pushInsteadOf = https://github.com/
+  pushInsteadOf = https://github.com/
 [url "git@codeberg.org:"]
-    pushInsteadOf = https://codeberg.org/
+  pushInsteadOf = https://codeberg.org/
 [url "git@gitlab.com:"]
-    pushInsteadOf = https://gitlab.com/
+  pushInsteadOf = https://gitlab.com/
 
 # For other remotes that I don't want to show publically
 [include]
-    path = ~/.config/git/extra-config
+  path = ~/.config/git/extra-config
