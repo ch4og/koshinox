@@ -65,19 +65,16 @@ Prefer the smallest well-scoped change that fully addresses the root cause.
 After making changes, run the relevant tests and checks. Format changed files
 where appropriate.
 
-### Classifier Denials
+### Approvals and Tool Denials
 
-If an action is denied by a classifier in automode, but it is clearly necessary
-and appropriate, show the exact code or command to be executed and every
-repository URL or absolute local path it will access. Ask me to reply with a
-direct approval in this form:
+Proceed with routine local work needed for the task, including relevant builds
+and dependency fetching. Interpret "approved", "retry", and similar replies in
+context; do not demand exact wording or repeat an approval request unless the
+actual tool policy requires it. Keep the safeguards below.
 
-```text
-I approve running <exact code/command> against <URL(s) or absolute path(s)>.
-```
-
-Only proceed after receiving that explicit approval; otherwise, do not retry the
-action or use a workaround.
+After a denial, follow the actual tool policy and explain the blocker briefly.
+Do not invent harness requirements or bypass restrictions. Retry when permitted;
+otherwise continue useful permitted work without an approval loop.
 
 ### Destructive Operations
 

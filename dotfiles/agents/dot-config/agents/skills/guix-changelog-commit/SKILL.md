@@ -218,9 +218,9 @@ names separate and complete.
    Type CONFIRM to create this signed commit.
    ```
 
-Do not commit until the user explicitly replies with `CONFIRM`.  Any changed or
-regenerated message, author, author date, or trailers require a new
-confirmation.
+Accept clear contextual approval in any language; no exact keyword is
+required. Approval applies only to the displayed message and commit metadata.
+Changes to either require renewed confirmation.
 
 ### Create and verify the commit
 
