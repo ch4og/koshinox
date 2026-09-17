@@ -44,7 +44,7 @@ output_path = '~/.config/Kvantum/matugen/matugen.svg'
 [templates.pywalfox]
 input_path = './templates/pywalfox.json'
 output_path = '~/.cache/wal/colors.json'
-post_hook = 'pywalfox update'
+post_hook = 'pywalfox install --manifest-path ~/.mozilla/native-messaging-hosts/ --profile-path ~/.config/librewolf/librewolf/ && pywalfox update'
 
 [templates.obs]
 input_path = './templates/obs.obt'
