@@ -21,7 +21,7 @@ awww-daemon & awww restore &
 
 waybar -c ~/.config/waybar/mangowm/config.jsonc -s ~/.config/waybar/mangowm/style.css &
 
-stash watch &
+stash watch --persist &
 
 #wl-paste --type text --watch xclip -selection clipboard &
 
