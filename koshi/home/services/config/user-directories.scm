@@ -13,6 +13,7 @@
     (documents   "$HOME/documents")
     (download    %koshi-home-download-dir)
     (music       "$HOME")
+    (projects    "$HOME/code")
     (pictures    "$HOME/pictures")
     (publicshare "$HOME")
     (templates   "$HOME")
