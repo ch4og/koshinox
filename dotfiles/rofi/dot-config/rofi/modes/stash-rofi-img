@@ -1,25 +1,37 @@
 #!/usr/bin/env bash
-# SPDX-FileCopyrightText: 2023 Senan Kelly
+# SPDX-FileCopyrightText: 2023-2026 Senan Kelly
 # SPDX-FileCopyrightText: 2026 Nikita Mitasov
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 tmp_dir="/tmp/stash"
 rm -rf "$tmp_dir"
 
-if [[ -n "$1" ]]; then
-    stash decode <<<"$1" | wl-copy
+if [[ -n "${1:-}" ]]; then
+    id="${ROFI_INFO:-${1%%$'\t'*}}"
+
+    if [[ "$id" =~ ^[0-9]+$ ]]; then
+        # Rofi waits for script descendants that inherit its output pipe.
+        (
+            stash decode "$id" | wl-copy --regular
+        ) >/dev/null 2>&1 &
+    fi
+
     exit
 fi
 
 mkdir -p "$tmp_dir"
 
 read -r -d '' prog <<EOF
-/^[0-9]+\s<meta http-equiv=/ { next }
-match(\$0, /^([0-9]+)\s(\[\[\s)?binary.*(jpg|jpeg|png|bmp)/, grp) {
-    system("echo " grp[1] "\\\\\t | stash decode >$tmp_dir/"grp[1]"."grp[3])
-    print \$0"\0icon\x1f$tmp_dir/"grp[1]"."grp[3]
+\$2 ~ /^<meta http-equiv=/ { next }
+\$2 ~ /^\[\[ binary data .* image\// {
+    match(\$2, /image\/([[:alnum:].+-]+)/, grp)
+    icon="$tmp_dir/"\$1"."grp[1]
+    system("stash decode "\$1" >"icon)
+    print \$1"\t"\$2"\0icon\x1f"icon"\0info\x1f"\$1
     next
 }
-1
+{
+    print \$1"\t"\$2"\0info\x1f"\$1
+}
 EOF
-stash list | gawk "$prog"
+stash list --format tsv | gawk -F'\t' "$prog"
