@@ -10,6 +10,7 @@
                                   "brightnessctl"
                                   "dmenu-bluetooth"
                                   "glib:bin"
+                                  "gnome-keyring"
                                   "grim"
                                   "grimblast"
                                   "gsettings-desktop-schemas"
