@@ -5,12 +5,12 @@
   #:use-module (gnu packages))
 
 (define-public %koshi-desktop-home-packages
-  (specifications->packages (list "equibop"
+  (specifications->packages (list "dolphin"
+                                  "equibop"
                                   "exo"
                                   "file-roller"
                                   "flatpak"
                                   "libreoffice"
                                   "opentabletdriver"
                                   "remmina"
-                                  "thunar"
                                   "virt-manager")))

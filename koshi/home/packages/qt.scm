@@ -8,5 +8,6 @@
   (specifications->packages (list "breeze"
                                   "kvantum"
                                   "kvantum5"
+                                  "qtsvg"
                                   "qt5ct"
                                   "qt6ct")))
