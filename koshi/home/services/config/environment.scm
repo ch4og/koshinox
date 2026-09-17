@@ -34,6 +34,7 @@
     ("AWS_CONFIG_FILE" . "$XDG_CONFIG_HOME/aws/config")
     ("AWS_SHARED_CREDENTIALS_FILE" . "$XDG_DATA_HOME/aws/credentials")
     ("S3CMD_CONFIG" . "$XDG_DATA_HOME/s3cmd/s3cfg")
+    ("STASH_SENSITIVE_REGEX_FILE" . "$HOME/.config/stash/clipboard_filter")
 
     ("CLAUDE_CONFIG_DIR" . "$XDG_CONFIG_HOME/claude")
     ("CODEX_HOME" . "$XDG_CONFIG_HOME/codex")
