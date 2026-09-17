@@ -9,7 +9,6 @@
                                   "pavucontrol"
                                   "pipewire"
                                   "playerctl"
-                                  "spotatui"
-                                  "spotify-bin"
+                                  "spotifast"
                                   "uxplay"
                                   "wireplumber")))
