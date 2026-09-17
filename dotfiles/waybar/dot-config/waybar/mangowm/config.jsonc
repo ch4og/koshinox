@@ -55,17 +55,18 @@
     },
     "custom/spotify": {
       "exec": "env $HOME/.config/waybar/scripts/spotify.sh 2> /dev/null",
-      "exec-if": "pgrep spotify || pgrep spotifyd || pgrep spotatui",
+      "exec-if": "$HOME/.config/waybar/scripts/spotify.sh 2> /dev/null | jq -e '.alt != \"none\"' > /dev/null",
       "format": "{icon} {text}",
       "format-icons": {
         "default": "",
         "paused": " ",
-        "playing": " "
+        "playing": " ",
+        "stopped": " "
       },
       "interval": 1,
-      "on-click": "playerctl -p spotify,spotifyd,spotatui play-pause",
-      "on-click-middle": "playerctl -p spotify,spotifyd,spotatui previous",
-      "on-click-right": "playerctl -p spotify,spotifyd,spotatui next",
+      "on-click": "$HOME/.config/waybar/scripts/spotify.sh play-pause",
+      "on-click-middle": "$HOME/.config/waybar/scripts/spotify.sh previous",
+      "on-click-right": "$HOME/.config/waybar/scripts/spotify.sh next",
       "return-type": "json"
     },
     "custom/swaync": {
