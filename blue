@@ -36,7 +36,8 @@
     "swappy"
     "swaync"
     "tmux"
-    "waybar"))
+    "waybar"
+    "yt-dlp"))
 
 (define config-root
   (dirname (canonicalize-path (current-filename))))
