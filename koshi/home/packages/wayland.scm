@@ -33,6 +33,7 @@
                                   "wayfreeze"
                                   "waypaper"
                                   "wayvnc"
+                                  "wl-clipboard"
                                   "wl-mirror"
                                   "wlr-dpms"
                                   "wtype"
