@@ -21,11 +21,9 @@ awww-daemon & awww restore &
 
 waybar -c ~/.config/waybar/mangowm/config.jsonc -s ~/.config/waybar/mangowm/style.css &
 
-wl-clip-persist --clipboard regular --reconnect-tries 0 &
+stash watch &
 
-wl-paste --watch cliphist store &
-
-wl-paste --type text --watch xclip -selection clipboard &
+#wl-paste --type text --watch xclip -selection clipboard &
 
 env ~/.config/mango/scripts/switch_layouts.sh &
 
