@@ -1,4 +1,4 @@
-#!/usr/bin/env -S guix shell blue emacs-no-x stow -- env -S blue -f
+#!/usr/bin/env -S guix shell guix blue guile emacs-no-x stow -- sh -c 'exec guile -e main -s "$(command -v blue)" "$@"' sh -f
 ;; -*- mode: scheme -*-
 ;; SPDX-FileCopyrightText: 2026 Nikita Mitasov <me@ch4og.com>
 ;; SPDX-License-Identifier: GPL-3.0-or-later
