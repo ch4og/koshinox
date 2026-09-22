@@ -12,7 +12,7 @@
           (name 'nonguix)
           (url "https://gitlab.com/nonguix/nonguix")
           (branch "master")
-          (commit "6c2abf40f05fac2850216a66bf7ffc275343187c")
+          (commit "f9171dd0d0a58d63c0811d61e51493a3fa4ae4f3")
           (introduction
            (make-channel-introduction
             "897c1a470da759236cc11798f4e0a5f7d4d59fbc"
@@ -22,7 +22,7 @@
           (name 'shikanox)
           (url "https://codeberg.org/ch4og/shikanox.git")
           (branch "main")
-          (commit "74a320c02ae12828bb829b33bcc9ec42a8a9d609")
+          (commit "e2b1fe2e33d6f1c12250b0a00725f8c6373c7cb2")
           (introduction
            (make-channel-introduction
             "fe3b5f72aa676c69f4d43507bdd18fb051906917"
@@ -52,7 +52,7 @@
           (name 'guix)
           (url "https://codeberg.org/guix/guix.git")
           (branch "master")
-          (commit "e0fe2626060a8cd45cf93a2c2daaf4e19bf6c0fd")
+          (commit "d3a1e134ae5e843c0d22857c091c9f1ae9a041f5")
           (introduction
            (make-channel-introduction
             "9edb3f66fd807b096b48283debdcddccfea34bad"
