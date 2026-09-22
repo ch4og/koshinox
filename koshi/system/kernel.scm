@@ -5,6 +5,15 @@
 
 (define-public %koshi-kernel-arguments
   '("quiet"
+    "vfio_pci.disable_idle_d3=1"
+    "pcie_port_pm=off"
+    "pcie_asmp=off"
+    "no_ibs"
+    "amd_iommu=on"
+    "nmi_watchdog=0"
+    "mitigations=off"
+    "acpi_osi=Linux-Dell-Video"
+
     "module_blacklist=pcspkr,wacom"
     "zswap.enabled=1"
     "zswap.max_pool_percent=20"
