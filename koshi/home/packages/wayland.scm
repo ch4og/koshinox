@@ -15,7 +15,7 @@
                                   "grimblast"
                                   "gsettings-desktop-schemas"
                                   "hyprpicker"
-                                  "mangowm"
+                                  "mangowm-no-xwayland"
                                   "mate-polkit"
                                   "matugen"
                                   "networkmanager-dmenu"
@@ -41,4 +41,5 @@
                                   ;; "xdg-desktop-portal"
                                   "xdg-desktop-portal-gtk"
                                   "xdg-desktop-portal-wlr"
-                                  "xeyes")))
+                                  "xeyes"
+                                  "xwayland-satellite")))

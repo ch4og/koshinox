@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+xwayland-satellite &
+
 env ~/.config/mango/scripts/polkit.sh &
 
 swaync &
