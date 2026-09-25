@@ -1,4 +1,4 @@
-#!/usr/bin/env -S guix shell guix blue guile emacs-no-x stow -- sh -c 'exec guile -e main -s "$(command -v blue)" "$@"' sh -f
+#!/usr/bin/env -S guix shell blue guile emacs-no-x stow -- sh -c 'exec guile -e main -s "$(command -v blue)" "$@"' sh -f
 ;; -*- mode: scheme -*-
 ;; SPDX-FileCopyrightText: 2026 Nikita Mitasov <me@ch4og.com>
 ;; SPDX-License-Identifier: GPL-3.0-or-later
@@ -74,14 +74,16 @@
   '("guix" "time-machine" "-C" "koshi/config/channels.scm"
     "--unsafe-channel-evaluation" "--"))
 
-(define (guix-reconfigure type)
+(define* (guix-reconfigure type #:optional (load-path #f))
   ;; TODO: Rootless setup somehow.  Maybe deploy?
   (let* ((guix (if (string=? type "system")
                    (cons "sudo" guix-time-machine)
                    '("guix")))
          (config-file (string-append "koshi/" type "/config.scm"))
          (subs (@ (koshi config substitutes) %koshi-subs-urls))
-         (args `(,subs "-L." "--allow-downgrades")))
+         (args `(,subs "-L."
+                      ,@(if load-path (list "-L" load-path) '())
+                      "--allow-downgrades")))
     (display (string-append "Reconfiguring " type "...\n"))
     (system (string-join `(,@guix ,type
                                   "reconfigure" ,config-file
@@ -147,12 +149,26 @@
    (help "Run 'guix system reconfigure' of current config"))
   (guix-reconfigure "system"))
 
+(define-command (presystem-command args)
+  ((invoke "presystem")
+   (category 'koshi)
+   (synopsis "Reconfigure Guix System with Shikanox modules")
+   (help "Run 'guix system reconfigure' with -L ../shikanox"))
+  (guix-reconfigure "system" "../shikanox"))
+
 (define-command (home-command args)
   ((invoke "home")
    (category 'koshi)
    (synopsis "Reconfigure Guix Home")
    (help "Run 'guix home reconfigure' of current config"))
   (guix-reconfigure "home"))
+
+(define-command (prehome-command args)
+  ((invoke "prehome")
+   (category 'koshi)
+   (synopsis "Reconfigure Guix Home with Shikanox modules")
+   (help "Run 'guix home reconfigure' with -L ../shikanox"))
+  (guix-reconfigure "home" "../shikanox"))
 
 (define-command (nix-command args)
   ((invoke "nix")
@@ -199,7 +215,9 @@
                  dotfiles-command
                  update-command
                  system-command
+                 presystem-command
                  time-machine-command
                  home-command
+                 prehome-command
                  nix-command
                  driver-command)))
