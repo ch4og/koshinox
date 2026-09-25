@@ -2,7 +2,20 @@
 ;;; SPDX-License-Identifier: GPL-3.0-or-later
 
 (define-module (koshi home services config environment)
+  #:use-module (ice-9 ftw)
+  #:use-module (srfi srfi-13)
   #:use-module (koshi home services config user-directories))
+
+(define %koshi-vulkan-icd-directory
+  "/run/current-system/profile/share/vulkan/icd.d")
+
+(define %koshi-vulkan-icd-files
+  (string-join
+   (map (lambda (file)
+          (string-append %koshi-vulkan-icd-directory "/" file))
+        (scandir %koshi-vulkan-icd-directory
+                 (lambda (file) (string-suffix? ".json" file))))
+   ":"))
 
 (define-public %koshi-home-environment-variables-configuration
   `(("TZ" . "Europe/Moscow")
@@ -14,6 +27,7 @@
     ("NIXOS_OZONE_WL" . "1")
 
     ;; Guix and Nonguix
+    ("VK_DRIVER_FILES" . ,%koshi-vulkan-icd-files)
     ("FONTCONFIG_PATH" . "$HOME/.guix-home/profile/etc/fonts/")
     ("QT_PLUGIN_PATH" . ,(string-join
                           (list "$HOME/.guix-home/profile/lib/qt6/plugins"
