@@ -15,6 +15,8 @@
                             "cgroup"
                             "docker"
                             "input"
+                            "kvm"
+                            "libvirt"
                             "netdev"
                             "plugdev"
                             "video"
