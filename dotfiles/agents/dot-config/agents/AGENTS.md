@@ -76,6 +76,14 @@ After a denial, follow the actual tool policy and explain the blocker briefly.
 Do not invent harness requirements or bypass restrictions. Retry when permitted;
 otherwise continue useful permitted work without an approval loop.
 
+### Environment Files
+
+Do not read, print, or inspect `.env` or `.env.*` files yourself unless I
+explicitly ask you to. It is fine to run a build or tool that needs to load
+them, as long as their contents are not shown in command output or added to
+your context. Permission to read does not mean permission to edit. If I ask you
+to edit one, read only what you need for that edit.
+
 ### Destructive Operations
 
 Do not perform destructive or hard-to-undo operations. If I request one, first
@@ -91,7 +99,11 @@ target repository from the git remote URL. Prefer `upstream` URL if it exists
 and fall back to `origin` otherwise. Use DeepWiki only for GitHub repositories.
 
 Do not use DeepWiki for repositories under the `ch4og` GitHub username, as well
-as `csmplay`, `csmpro` and `ch4ogVPN` organisation repositories.
+as `csmplay`, `csm`, `csmpro` and `ch4ogVPN` organisation repositories.
+
+When I ask you to preview or inspect a webpage, including a local app, use
+Firefox DevTools MCP. Take screenshots to check how it looks; use DOM snapshots
+or page text to check its structure.
 
 ---
 
@@ -206,6 +218,12 @@ clone target repo to temp dir.
 
 ## Committing
 
+### Commit scope
+
+Keep commits small and focused. Commit the current changes before moving on to
+unrelated work, and keep that work in a separate commit. Never include
+unrelated changes or changes I already had.
+
 ### Commit body
 
 Never add `Co-Authored-By` unless user explicitly asks.
@@ -223,8 +241,8 @@ Co-authored-by: Claude Fable (via OpenCode) <noreply@anthropic.com>
 
 ### Code Signing
 
-**NEVER skip GPG signing on commits.** If automatic signing fails, stop and
-ask user for signing help. Never create unsigned commits.
++**NEVER skip GPG signing unless I explicitly ask you to.** If automatic signing
++fails, stop and ask me for help. Do not create unsigned commits otherwise.
 
 If commit failed with reason "Bad PIN", retry commit command, user will enter
 PIN one more time.
