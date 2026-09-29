@@ -29,6 +29,7 @@
 
 [alias]
   amend = commit --amend --no-edit
+  rename = commit --amend --only
   st = status -sb
   head = rev-parse HEAD
   prepush = !git push origin HEAD~1:$(git branch --show-current)
