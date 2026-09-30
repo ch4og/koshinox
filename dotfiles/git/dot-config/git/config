@@ -32,6 +32,7 @@
   rename = commit --amend --only
   st = status -sb
   head = rev-parse HEAD
+  negative = !sh ~/.config/git/negative.sh
   prepush = !git push origin HEAD~1:$(git branch --show-current)
 
 [diff]
