@@ -62,8 +62,10 @@ Before modifying code:
 
 Prefer the smallest well-scoped change that fully addresses the root cause.
 
-After making changes, run the relevant tests and checks. Format changed files
-where appropriate.
+After making changes, run the relevant existing tests and checks. If tests do
+not exist, do not write them. Format changed files where appropriate using
+existing project tooling. If formatting tooling or checks do not exist, do not
+introduce new ones.
 
 ### Approvals and Tool Denials
 
