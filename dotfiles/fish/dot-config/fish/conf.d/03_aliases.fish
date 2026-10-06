@@ -13,5 +13,6 @@ if status is-interactive
   alias lg='lazygit'
   alias ssh='env TERM=xterm-256color ssh'
   alias rg='rga'
+  alias jq='yq'
   abbr -a !! --position anywhere --function last_history_item
 end

@@ -24,4 +24,5 @@
                                   "stow"
                                   "xdg-user-dirs"
                                   "xdg-utils"
+                                  "yq"
                                   "zoxide")))
