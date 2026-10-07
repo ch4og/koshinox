@@ -9,5 +9,6 @@
   (sysctl-configuration
     (settings (append '(("fs.inotify.max_user_instances" . "8192")
                         ("fs.inotify.max_user_watches" . "524288")
-                        ("vm.max_map_count" . "1048576"))
+                        ("vm.max_map_count" . "1048576")
+                        ("vm.swappiness" . "100"))
                       %default-sysctl-settings))))
