@@ -7,7 +7,7 @@
   '("quiet"
     "vfio_pci.disable_idle_d3=1"
     "pcie_port_pm=off"
-    "pcie_asmp=off"
+    "pcie_aspm=off"
     "no_ibs"
     "amd_iommu=on"
     "nmi_watchdog=0"
