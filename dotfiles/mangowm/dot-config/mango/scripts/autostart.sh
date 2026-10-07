@@ -26,7 +26,7 @@ waybar -c ~/.config/waybar/mangowm/config.jsonc -s ~/.config/waybar/mangowm/styl
 
 stash watch --persist &
 
-wl-paste --type text --watch xclip -selection clipboard &
+wl-paste --watch xclip -selection clipboard &
 
 env ~/.config/mango/scripts/switch_layouts.sh &
 
