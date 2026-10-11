@@ -52,7 +52,4 @@
 
     ("CLAUDE_CONFIG_DIR" . "$XDG_CONFIG_HOME/claude")
     ("CODEX_HOME" . "$XDG_CONFIG_HOME/codex")
-    ("KIMI_CODE_HOME" . "$XDG_CONFIG_HOME/kimi")
-
-    ;; Fix for NVIDIA
-    ("WLR_DRM_NO_ATOMIC" . "1")))
+    ("KIMI_CODE_HOME" . "$XDG_CONFIG_HOME/kimi")))
