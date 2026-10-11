@@ -7,6 +7,7 @@
 (define-public %koshi-web-home-packages
   (specifications->packages (list "librewolf-sidebar-chatbot"
                                   "pywalfox"
+                                  "torbrowser"
                                   "ublock-origin-icecat"
                                   "webhid-for-firefox"
                                   "webhid-for-firefox-icecat")))
