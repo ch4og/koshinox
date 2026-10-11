@@ -5,7 +5,7 @@ xwayland-satellite &
 env ~/.config/mango/scripts/polkit.sh &
 
 swaync &
-wl-mirror --backend screencopy-shm eDP-1 &
+wl-mirror --backend extcopy-dmabuf eDP-1 &
 
 pywalfox install &
 
