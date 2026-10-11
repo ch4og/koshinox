@@ -11,7 +11,7 @@
   #:use-module (gnu packages terminals)
   #:use-module (gnu packages version-control)
   #:use-module (gnu packages vim)
-  #:use-module (shika packages window-management))
+  #:use-module (gnu packages window-management))
 
 (define-public %koshi-system-packages
   (cons* vim
