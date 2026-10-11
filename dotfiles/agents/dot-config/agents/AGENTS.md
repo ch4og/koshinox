@@ -243,11 +243,13 @@ Co-authored-by: Claude Fable (via OpenCode) <noreply@anthropic.com>
 
 ### Code Signing
 
-+**NEVER skip GPG signing unless I explicitly ask you to.** If automatic signing
-+fails, stop and ask me for help. Do not create unsigned commits otherwise.
+**NEVER skip GPG signing unless I explicitly ask you to.** Do not create
+unsigned commits otherwise.
 
-If commit failed with reason "Bad PIN", retry commit command, user will enter
-PIN one more time.
+If a commit fails because GPG signing failed, **retry the same signed commit
+command once before stopping or asking me for help**. Signing failures can be
+transient or caused by human input. If the retry also fails, stop and ask me
+for help.
 
 ---
 
