@@ -11,7 +11,8 @@ pywalfox install &
 
 avizo-service &
 
-Throne &
+pkill -x Throne 2>/dev/null || true
+Throne >/dev/null 2>&1 &
 qbittorrent &
 
 # Not supported yet
