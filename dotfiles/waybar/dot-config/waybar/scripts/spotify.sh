@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-spotify_players=(fastpotify spotify spotifyd)
+spotify_players=(spotifast spotify spotifyd)
 ayugram_player=AyuGramDesktop
 
 player_status() {
