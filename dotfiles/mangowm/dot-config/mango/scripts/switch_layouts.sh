@@ -38,7 +38,7 @@ use_default_layout() {
 mmsg watch focusing-client | while read -r client; do
     source "$rules_file"
 
-    app_id=$(printf '%s\n' "$client" | jq -r '.appid // empty') || continue
+    app_id=$(printf '%s\n' "$client" | jq -r '.app_id // empty') || continue
     window_title=$(printf '%s\n' "$client" | jq -r '.title // empty') || continue
 
     if is_target "$app_id" "$window_title"; then
