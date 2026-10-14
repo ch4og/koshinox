@@ -29,12 +29,15 @@
       inherit pkgs;
 
       modules = [
-        {
+        ({lib, ...}: {
           home.username = "ch";
           home.homeDirectory = "/home/ch";
           home.stateVersion = "25.05";
           targets.genericLinux.enable = true;
-        }
+          home.activation.refreshFontCache = lib.hm.dag.entryAfter ["linkGeneration"] ''
+            run ${lib.getBin pkgs.fontconfig}/bin/fc-cache -fv
+          '';
+        })
         ./driver.nix
         ./packages.nix
       ];
