@@ -5,11 +5,9 @@
   #:use-module (gnu services nix))
 
 (define-public %koshi-nix-subs
-  '("https://mirror.yandex.ru/nixos"
+  '("https://cache.nixos.org/"
     "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-    "https://cache.nixos.kz"
-    "https://nixos-cache-proxy.cofob.dev"
-    "https://cache.nixos.org/"))
+    "https://cache.nixos.kz"))
 
 (define-public %koshi-nix-configuration
   (nix-configuration
