@@ -7,10 +7,11 @@
   #:use-module (nonguix multiarch-container)
   #:use-module (aagl)
   #:use-module (nongnu packages nvidia)
-  #:use-module (nongnu packages game-client))
+  #:use-module (nongnu packages game-client)
+  #:use-module (shika packages gamescope))
 
 (define-public %koshi-games-home-packages
-  `(,@(specifications->packages (list "freesmlauncher"
+  `(,@(specifications->packages (list "prismlauncher-dolly"
                                       "gamescope"
                                       "mangohud"
                                       "openjdk"
@@ -18,6 +19,6 @@
                                       "protonplus-sandbox"
                                       "tosu"
                                       "tosu-overlay"))
-    ,(nonguix-container->package (heroic-container-for %koshi-driver))
-    ,(nonguix-container->package (steam-container-for %koshi-driver))
+    ,(heroic-for %koshi-driver #:extra-packages `(("gamescope" ,gamescope)))
+    ,(steam-for %koshi-driver #:extra-packages `(("gamescope" ,gamescope)))
     ,(the-honkers-railway-launcher-for %koshi-driver)))
