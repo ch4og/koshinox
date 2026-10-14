@@ -6,5 +6,9 @@
   #:use-module (gnu packages ssh))
 
 (define-public %koshi-openssh-configuration
-  (openssh-configuration (openssh openssh-sans-x)
-                         (port-number 2222)))
+  (openssh-configuration
+    (openssh openssh-sans-x)
+    (port-number 2222)
+    (permit-root-login #f)
+    (password-authentication? #f)
+    (challenge-response-authentication? #f)))
