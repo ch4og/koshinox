@@ -1,3 +1,9 @@
+[Icons]
+Theme=Qogir-Dark
+
+[KDE]
+widgetStyle=kvantum
+
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
@@ -12,12 +18,6 @@ Sort directories first=true
 Sort hidden files last=false
 Sort reversed=false
 Speedbar Width=208
-View Style=DetailTree
 TerminalApplication=foot
 TerminalService=foot.desktop
-
-[Icons]
-Theme=Qogir-Dark
-
-[KDE]
-widgetStyle=kvantum
+View Style=DetailTree
