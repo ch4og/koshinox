@@ -5,7 +5,7 @@
   #:use-module (gnu packages))
 
 (define-public %koshi-web-home-packages
-  (specifications->packages (list "librewolf-sidebar-chatbot"
+  (specifications->packages (list "librewolf"
                                   "pywalfox"
                                   "torbrowser"
                                   "ublock-origin-icecat"
