@@ -13,12 +13,24 @@
       "custom/swaync",
       "tray",
       "pulseaudio",
+      "backlight",
       "network",
       "bluetooth",
       "battery",
       "mango/language",
       "clock"
     ],
+    "backlight": {
+      "format": "{icon}",
+      "format-icons": [
+        "󰃞",
+        "󰃟",
+        "󰃠"
+      ],
+      "on-scroll-up": "brightnessctl -c backlight -n set +5%",
+      "on-scroll-down": "brightnessctl -c backlight -n set 5%-",
+      "tooltip-format": "{percent}%"
+    },
     "battery": {
       "format": "{icon}",
       "format-icons": [
