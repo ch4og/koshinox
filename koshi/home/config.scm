@@ -10,6 +10,6 @@
   (make-koshi-home "ch"))
 
 (define %koshi-home-nvidia
-  (replace-mesa %koshi-home #:driver %koshi-driver))
+  (koshi-nvidia-transform %koshi-home))
 
 %koshi-home-nvidia

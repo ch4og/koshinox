@@ -10,14 +10,11 @@
   #:use-module (nonguix transformations))
 
 (define-public %koshi-os
-  (make-koshi-os "ch" "noko"))
+  ((nonguix-transformation-linux #:linux linux)
+   (make-koshi-os "ch" "noko")))
 
 (define-public %koshi-os-nvidia
-  ((compose (nonguix-transformation-nvidia #:driver %koshi-driver
-                                           #:open-source-kernel-module? #t
-                                           #:dynamic-boost? #t
-                                           #:remove-nvenc-restriction? #t)
-            (nonguix-transformation-linux #:linux linux))
+  (koshi-nvidia-transform
    %koshi-os))
 
 %koshi-os-nvidia
